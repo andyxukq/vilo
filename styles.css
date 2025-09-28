@@ -50,7 +50,7 @@ body {
 .banner-container {
     width: 100%;
     height: calc(100vh - 40px);
-    background-color: #201f21;
+    background-color: #1f2124;
     background-image: url('banner-web.jpg');
     background-size: contain;
     background-position: center bottom;
@@ -98,26 +98,6 @@ body {
     
     .content p {
         font-size: 1rem;
-    }
-}
-
-
-/* Additional responsive breakpoints */
-@media (max-width: 480px) {
-    .top-bar {
-        height: 60px;
-    }
-    
-    .logo {
-        max-height: 40px;
-    }
-    
-    .main-content {
-        min-height: calc(100vh - 40px);
-    }
-    
-    .banner-container {
-        height: calc(100vh - 40px);
     }
 }
 
