@@ -13,14 +13,194 @@
   <!-- Black top bar with centered logo -->
   <header class="top-bar">
     <div class="logo-container">
-      <img src="./images/logo.png" alt="Vilo Logo" class="logo">
+      <img src="./images/svg/Vilo-logo.svg" alt="Vilo">
     </div>
   </header>
 
-  <!-- Main content area with responsive banner -->
+  <!-- Main content area: semantic sections following the design -->
   <main class="main-content">
-    <div class="banner-container">
-    </div>
+
+    <!-- Hero: accessible heading, subheading, and CTA -->
+    <section id="hero" class="hero" role="region" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <h1 id="hero-title" class="hero-title">Build beautiful products faster</h1>
+          <p class="hero-subhead">Design-led components and patterns for modern teams.</p>
+          <div class="hero-ctas">
+            <a href="#features" class="btn btn-secondary" role="button">See Features</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="heading-section">
+      <div class="container">
+        <h2 class="section-title">Jewelry Before Technology</h2>
+        <p class="section-subhead">Designed to be seen, felt, and chosen—an expression of taste, not a wearable compromise.</p>
+      </div>
+    </section>
+
+    <!-- Features: feature cards / icons grid -->
+    <section class="gallery-section" >
+      <div class="container">
+        <div class="gallery-grid">
+          <figure class="gallery-item">
+            <img src="./images/home-page/product-image-1.webp" alt="Gallery 1">
+          </figure>
+          <figure class="gallery-item">
+            <img src="./images/home-page/product-image-2.webp" alt="Gallery 2">
+          </figure>
+          <figure class="gallery-item">
+            <img src="./images/home-page/product-image-3.webp" alt="Gallery 3">
+          </figure>
+          <figure class="gallery-item">
+            <img src="./images/home-page/product-image-4.webp" alt="Gallery 4">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="heading-section">
+      <div class="container">
+        <h2 class="section-title">Vital × Love, made wearable</h2>
+        <p class="section-subhead">Not “wearable tech.” It’s wearable identity—a fine ring that listens, learns, and gently leads you toward better sleep, calmer days, and graceful longevity.</p>
+        <a href="#features" class="btn btn-secondary" role="button">Pre-Order Now</a>
+        <span class="arrow-down-icon">
+          <svg width="25px" height="48px" viewBox="0 0 25 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g transform="translate(-925, -9839)" fill="currentColor">
+                      <g transform="translate(585, 9543)">
+                          <path d="M364.941906,333.092507 L354.691151,343.121308 C353.493633,344.292897 351.553654,344.292897 350.356136,343.121308 L340.057481,333.045643 C339.98084,332.970661 339.98084,332.853503 340.057481,332.778521 L341.954349,330.922724 C342.030991,330.847742 342.150742,330.847742 342.227384,330.922724 L350.64354,339.156651 C350.763292,339.27381 350.969265,339.189456 350.969265,339.025433 L350.969265,296.187454 C350.969265,296.084354 351.055487,296 351.160868,296 L353.843309,296 C353.94869,296 354.034911,296.084354 354.034911,296.187454 L354.034911,339.072297 C354.034911,339.241006 354.240885,339.320674 354.360636,339.203515 L362.776793,330.969588 C362.853434,330.894606 362.973186,330.894606 363.049827,330.969588 L364.946696,332.825384 C365.018547,332.900366 365.018547,333.017525 364.941906,333.092507 Z"></path>
+                      </g>
+                  </g>
+              </g>
+          </svg>
+        </span>
+      </div>
+    </section>
+
+    <section class="image-with-copy-section">
+      <div class="container image-with-copy-container">
+        <div class="image-with-copy-image">
+          <img src="./images/home-page/image-1.webp" alt="Product 1 screenshot">
+        </div>
+        <div class="image-with-copy-text">
+          <h2 class="section-title">Made to Disappear on You</h2>
+          <p class="section-subhead">Slim, gentle, and effortless—crafted for women, for sleep, for living. So comfortable, it quietly becomes part of you.</p>
+          <a href="#contact-us">Join the quiet revolution.</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="image-with-copy-section">
+      <div class="container image-with-copy-container">
+        <div class="image-with-copy-image">
+          <img src="./images/home-page/image-2.webp" alt="Product 1 screenshot">
+        </div>
+        <div class="image-with-copy-text">
+          <h2 class="section-title">Sleep, Deeply Understood</h2>
+          <p class="section-subhead">Not just data at dawn. We learn your rhythms, translate your nights, and offer small, thoughtful guidance to help you truly rest.</p>
+          <a href="#contact-us">Join the quiet revolution.</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="image-with-copy-section">
+      <div class="container image-with-copy-container">
+        <div class="image-with-copy-image">
+          <img src="./images/home-page/image-3.webp" alt="Product 1 screenshot">
+        </div>
+        <div class="image-with-copy-text">
+          <h2 class="section-title">Intelligence That Cares</h2>
+          <p class="section-subhead">An AI that listens before it speaks—guiding, reassuring, and helping you grow healthier without fear, pressure, or noise.</p>
+          <a href="#contact-us">Join the quiet revolution.</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="image-with-copy-section">
+      <div class="container image-with-copy-container">
+        <div class="image-with-copy-image">
+          <img src="./images/home-page/image-4.webp" alt="Product 1 screenshot">
+        </div>
+        <div class="image-with-copy-text">
+          <h2 class="section-title">Understand Your Daily Energy</h2>
+          <p class="section-subhead">Instead of imperfect calories or noisy workouts, we reveal your energy range—how much you have, and how gently to use it.</p>
+          <a href="#contact-us">Join the quiet revolution.</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="image-with-copy-section">
+      <div class="container image-with-copy-container">
+        <div class="image-with-copy-image">
+          <img src="./images/home-page/image-5.webp" alt="Product 1 screenshot">
+        </div>
+        <div class="image-with-copy-text">
+          <h2 class="section-title">Built on Hormonal Truth</h2>
+          <p class="section-subhead">By tracing short- and long-term hormonal rhythms, we help you understand yourself—and treat your body with more kindness.</p>
+          <a href="#contact-us">Join the quiet revolution.</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact-us" class="contact-us-section">
+      <div class="container">
+        <div class="contact-us-content">
+          <h2 class="section-title">Join the Journey</h2>
+          <p>
+            We’re building Vilo as a quiet revolution—one that helps you understand yourself, your sleep, and your health more deeply.By joining early, you’re not just signing up for a product.
+          </p>
+          <p>
+            You’re becoming part of the process
+          </p>
+        </div>
+        <div class="contact-us-form">
+          <form action="#" method="post">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email address">
+            <textarea id="message" name="message" rows="4" placeholder="Share your thoughts, shape what we build, and help Vilo grow with you. In return, we’ll offer our earliest supporters the best access, care, and pricing—always."></textarea>
+            <button type="submit" class="btn btn-primary">Sign up</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="parallax-section">
+      <div class="container-full">
+        <h2 class="section-title">Loved by teams</h2>
+        <p>For centuries, rings signified power, promise, and self. Vilo honors that heritage—then adds an intuition only AI can bring.</p>
+        <span class="arrow-down-icon">
+          <svg width="25px" height="48px" viewBox="0 0 25 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g transform="translate(-925, -9839)" fill="currentColor">
+                      <g transform="translate(585, 9543)">
+                          <path d="M364.941906,333.092507 L354.691151,343.121308 C353.493633,344.292897 351.553654,344.292897 350.356136,343.121308 L340.057481,333.045643 C339.98084,332.970661 339.98084,332.853503 340.057481,332.778521 L341.954349,330.922724 C342.030991,330.847742 342.150742,330.847742 342.227384,330.922724 L350.64354,339.156651 C350.763292,339.27381 350.969265,339.189456 350.969265,339.025433 L350.969265,296.187454 C350.969265,296.084354 351.055487,296 351.160868,296 L353.843309,296 C353.94869,296 354.034911,296.084354 354.034911,296.187454 L354.034911,339.072297 C354.034911,339.241006 354.240885,339.320674 354.360636,339.203515 L362.776793,330.969588 C362.853434,330.894606 362.973186,330.894606 363.049827,330.969588 L364.946696,332.825384 C365.018547,332.900366 365.018547,333.017525 364.941906,333.092507 Z"></path>
+                      </g>
+                  </g>
+              </g>
+          </svg>
+        </span>
+        <div class="parallax-image-holder">
+          <img src="./images/home-page/parallax-image-1.1.webp" alt="">
+        </div>
+        <div class="parallax-image-holder">
+          <img src="./images/home-page/parallax-image-2.2.webp" alt="">
+        </div>
+        <div class="parallax-image-holder">
+          <img src="./images/home-page/parallax-image-3.3.webp" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="free-scroll-products-section">
+      <div class="container-full free-scroll-products-container">
+        <img src="./images/home-page/swiper-img-1.webp" alt="">
+        <img src="./images/home-page/swiper-img-2.webp" alt="">
+        <img src="./images/home-page/swiper-img-3.webp" alt="">
+        <img src="./images/home-page/swiper-img-4.webp" alt="">
+      </div>
+    </section>
   </main>
 
   <script type="module" src="./scripts/script.js"></script>
