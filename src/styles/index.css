@@ -1,0 +1,19 @@
+@import './reset.css';
+@import './fonts.css';
+@import './variables.css';
+@import './flex.css';
+
+/* components */
+@import './components/base.css';
+@import './components/header.css';
+@import './components/hero.css';
+@import './components/heading-section.css';
+@import './components/gallery-grid.css';
+@import './components/image-with-cta.css';
+@import './components/contact-us.css';
+@import './components/parallax.css';
+
+@import './components/free-scroll-products.css';
+
+
+@import './media-queries.css';

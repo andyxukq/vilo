@@ -1,0 +1,20 @@
+.free-scroll-products-section {
+    overflow-x: scroll;
+}
+.free-scroll-products-container {
+    display: flex;
+    gap: 1.6rem;
+}
+
+.free-scroll-products-container img {
+    max-width: 75%;
+}
+.free-scroll-products-section .additional-space {
+    width: 1.5rem;
+    flex: 0 0 1.5rem;
+}
+
+.free-scroll-section .title{
+  font-size: 2.8rem;
+  line-height: 3.4rem;
+}

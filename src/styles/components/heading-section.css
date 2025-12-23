@@ -1,0 +1,43 @@
+.heading-section-with-cta,
+.heading-section {
+    padding-block: 5rem 4.2rem;
+    text-align: center;
+}
+.heading-section-with-cta .heading-section-content-holder,
+.heading-section .heading-section-content-holder {
+    max-width: 35rem;
+}
+.heading-section .section-title {
+    font-size: 2.8rem;
+    line-height: 3.4rem;
+    color: var(--text-color);
+    padding-bottom: .9rem;
+}
+.heading-section .section-subhead {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    color: var(--text-color-secondary);
+}
+.heading-section-with-cta .section-title {
+    font-size: 2.8rem;
+    line-height: 3.4rem;
+    color: var(--text-color);
+    padding-bottom: 2.5rem;
+}
+.heading-section-with-cta .section-subhead {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    color: var(--text-color-secondary);
+}
+.heading-section-with-cta .btn-primary {
+    display: inline-block;
+    margin-top: 3rem;
+}
+.heading-section-with-cta .icon-holder {
+    display: flex;
+    justify-content: center;
+    padding-top: 4rem;
+}
+.heading-section-with-cta .icon-holder svg{
+    width: 1.3rem;
+}
