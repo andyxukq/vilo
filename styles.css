@@ -51,7 +51,7 @@ body {
     width: 100%;
     height: calc(100vh - 40px);
     background-color: #1f2124;
-    background-image: url('banner-web.jpg');
+    background-image: url('../images/banner-web.jpg');
     background-size: contain;
     background-position: center bottom;
     background-repeat: no-repeat;
@@ -60,7 +60,7 @@ body {
 /* Mobile banner */
 @media (max-width: 768px) {
     .banner-container {
-        background-image: url('banner-mobile.jpg');
+        background-image: url('../images/banner-mobile.jpg');
     }
 }
 
@@ -91,11 +91,11 @@ body {
     .content {
         padding: 40px 15px;
     }
-    
+
     .content h1 {
         font-size: 2rem;
     }
-    
+
     .content p {
         font-size: 1rem;
     }

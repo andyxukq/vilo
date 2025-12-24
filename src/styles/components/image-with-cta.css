@@ -1,0 +1,29 @@
+.features-sections-wrapper {
+    gap: 5rem
+}
+
+.image-with-copy-container {
+    display: flex;
+    gap: 2.4rem;
+    flex-direction: column;
+}
+.image-with-copy-image {
+    display: flex;
+    justify-content: center;
+    aspect-ratio: 1;
+}
+.desktop-row-reverse .image-with-copy-image img{
+    max-width: 60%;
+}
+
+.image-with-copy-text .title {
+    font-size: 2.8rem;
+    line-height: 3.4rem;
+}
+.image-with-copy-text .subtitle {
+    font-size: 1.5rem;
+    line-height: 2.1rem;
+}
+.image-with-copy-text .cta {
+    display: none;
+}

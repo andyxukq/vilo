@@ -1,0 +1,230 @@
+@media (min-width: 768px) {
+    header .announcement-bar {
+        font-size: 1.6rem;
+        line-height: 1.4rem;
+        padding-block: .9rem .6rem;
+        height: 6rem;
+        flex-direction: row;
+        gap: .4rem;
+    }
+    header .announcement-bar a {
+        display: inline;
+    }
+    .header-content-wrapper {
+        height: 70px;
+        padding-inline: 4rem;
+        width: calc(100% - 16rem);
+    }
+    header .nav-links a {
+        display: inline-block;
+    }
+    .container {
+        padding-inline: 8rem;
+    }
+    header button[variant="outlined"] {
+        border: 1px solid var(--primary-color);
+        color: var(--primary-color);
+    }
+    header .logo {
+        width: 6.8rem;
+        color: var(--primary-color);
+    }
+    header .mobile-menu-btn {
+        display: none;
+    }
+    .hero-section-wrapper {
+        max-height: 1296px;
+        align-items: center;
+        justify-content: center;
+        padding-block: 8rem 5.5rem;
+        text-align: left;
+        background-image: url('../images/home-page/hero-background.webp');
+    }
+    .hero-section-title {
+        max-width: 95rem;
+        font-size: 10rem;
+        line-height: 8.8rem;
+    }
+    .hero-section-subhead {
+        max-width: 45rem;
+        font-size: 2.2rem;
+        line-height: 2.8rem;
+    }
+    .hero-section-subhead,
+    .hero-section-title {
+        margin-bottom: 3.6rem;
+        padding-left: 5.8rem;
+    }
+    .hero-section-ctas {
+        padding-left: 5.8rem;
+    }
+    .heading-section-with-cta,
+    .heading-section {
+        padding-block: 9.6rem 10rem;
+        text-align: center;
+    }
+    .heading-section .heading-section-content-holder {
+        max-width: 118rem;
+    }
+    .heading-section .section-title {
+        font-size: 4.8rem;
+        line-height: 6.2rem;
+        padding-bottom: 2.3rem;
+    }
+    .heading-section .section-subhead {
+        font-size: 1.8rem;
+        line-height: 1.8rem;
+    }
+    .heading-section-with-cta .heading-section-content-holder {
+        max-width: 82rem;
+    }
+    .heading-section-with-cta .section-title {
+        font-size: 4.8rem;
+        line-height: 6.2rem;
+        padding-bottom: 2.3rem;
+    }
+    .heading-section-with-cta .section-subhead {
+        font-size: 1.8rem;
+    }
+    .heading-section-with-cta .btn-primary {
+        margin-top: 6rem;
+    }
+    .heading-section-with-cta .icon-holder{
+        padding-top: 2.4rem;
+    }
+    .heading-section-with-cta .icon-holder svg{
+        width: 25px;
+    }
+    .gallery-grid {
+        column-count: 2;
+        column-gap: 1.9rem;
+        display: block;
+    }
+    .gallery-grid .gallery-item {
+        break-inside: avoid;
+        margin-bottom: 1.6rem;
+    }
+    .gallery-grid .gallery-item img {
+        border-radius: var(--border-radius-30);
+    }
+    .gallery-grid .aspect-rect {
+        aspect-ratio: 2 / 1;
+    }
+    .gallery-slider,
+    .swiper-nav-holder {
+        display: none !important;
+    }
+
+    .contact-us-content {
+        max-width: 66rem;
+        text-align: center;
+    }
+
+    .contact-us-form {
+        max-width: 52rem;
+    }
+
+    .contact-us-form form{
+        gap: 1.6rem;
+    }
+
+    .contact-us-form button[type="submit"] {
+        margin-top: 2rem;
+    }
+
+    .parallax-text-content {
+        max-width: 70.5rem;
+    }
+
+    .parallax-text-content .title {
+        font-size: 4.8rem;
+        line-height: 6.2rem;
+    }
+
+    .parallax-text-content .subtitle {
+        font-size: 1.8rem;
+        line-height: 2.6rem;
+    }
+
+    .parallax-text-content .arrow-icon {
+        padding-top: 6rem;
+    }
+
+    .parallax-text-content .arrow-icon svg {
+        width: 2.5rem;
+    }
+
+    .pos-top-left { top: 2%; left: 11%; }
+    .pos-center-right { top: 40%; right: 5%; }
+    .pos-bottom-left { top: 75%; left: 24%; }
+
+    .free-scroll-products-container {
+        gap: 3rem;
+    }
+    .free-scroll-products-container img {
+        max-width: 46.6rem;
+    }
+    .free-scroll-products-section .additional-space {
+        flex: 0 0 5rem;
+    }
+
+    .free-scroll-section .title{
+        font-size: 4.8rem;
+        line-height: 6.2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .features-sections-wrapper {
+        gap: 14rem
+    }
+    .image-with-copy-container {
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+    }
+    .desktop-row-reverse {
+        flex-direction: row-reverse;
+    }
+    .desktop-row-reverse .image-with-copy-text {
+        padding-left: 8%;
+        max-width: 65rem;
+    }
+    .desktop-row-reverse .image-with-copy-image {
+        padding-right: 5rem;
+        justify-content: flex-end;
+    }
+    .image-with-copy-image {
+        max-width: 90rem;
+    }
+    .image-with-copy-text {
+        max-width: 59rem;
+        padding-left: 10%;
+    }
+    .image-with-copy-text .title {
+        font-size: 4.8rem;
+        line-height: 6.2rem;
+        padding-bottom: 1.5rem;
+    }
+    .image-with-copy-text .subtitle {
+        font-size: 1.8rem;
+        line-height: 2.6rem;
+    }
+    .image-with-copy-text .cta {
+        width: fit-content;
+        display: block;
+        margin-top: 11rem;
+    }
+    .parallax-image-holder {
+        width: 23.4rem;
+    }
+}
+
+@media (min-width: 1875px) {
+    .header-content-wrapper {
+        width: calc(1715px - 8rem);
+    }
+    .parallax-image-holder {
+        width: 33.4rem;
+    }
+}
