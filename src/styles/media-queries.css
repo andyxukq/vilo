@@ -11,9 +11,10 @@
         display: inline;
     }
     .header-content-wrapper {
-        height: 70px;
+        height: 7rem;
         padding-inline: 4rem;
         width: calc(100% - 16rem);
+        top: calc(100% + 3.5rem);
     }
     header .nav-links a {
         display: inline-block;
@@ -33,12 +34,24 @@
         display: none;
     }
     .hero-section-wrapper {
-        max-height: 1296px;
+        max-height: 86rem;
         align-items: center;
         justify-content: center;
-        padding-block: 8rem 5.5rem;
+        padding-block: 8rem;
         text-align: left;
-        background-image: url('../images/home-page/hero-background.webp');
+        background-image: linear-gradient(207deg,
+                rgba(179, 203, 218, 0.77) 6%,
+                rgba(104, 142, 176, 0.77) 94%);
+    }
+    .hero-section-content{
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .hero-main-image {
+        display: block;
+    }
+    .hero-secondary-image {
+        display: block;
     }
     .hero-section-title {
         max-width: 95rem;
@@ -93,7 +106,7 @@
         padding-top: 2.4rem;
     }
     .heading-section-with-cta .icon-holder svg{
-        width: 25px;
+        width: 2.5rem;
     }
     .gallery-grid {
         column-count: 2;
@@ -175,6 +188,9 @@
 }
 
 @media (min-width: 1024px) {
+    .hero-section-wrapper {
+        max-height: 130rem;
+    }
     .features-sections-wrapper {
         gap: 14rem
     }
@@ -189,10 +205,6 @@
     .desktop-row-reverse .image-with-copy-text {
         padding-left: 8%;
         max-width: 65rem;
-    }
-    .desktop-row-reverse .image-with-copy-image {
-        padding-right: 5rem;
-        justify-content: flex-end;
     }
     .image-with-copy-image {
         max-width: 90rem;
@@ -222,7 +234,7 @@
 
 @media (min-width: 1875px) {
     .header-content-wrapper {
-        width: calc(1715px - 8rem);
+        width: calc(1875px - 16rem);
     }
     .parallax-image-holder {
         width: 33.4rem;
