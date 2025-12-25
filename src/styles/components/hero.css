@@ -12,9 +12,41 @@
     background-position: top;
     background-repeat: no-repeat;
 }
-.hero-title-custom-font {
-    font-style: italic;
+
+.hero-section-content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-block: 0;
+    position: relative;
 }
+
+.hero-main-image {
+    position: absolute;
+    bottom: 0;
+    right: 10rem;
+    height: auto;
+    width: 52%;
+    display: none;
+}
+
+.hero-secondary-image {
+    position: absolute;
+    bottom: 6rem;
+    right: 47%;
+    height: auto;
+    width: 25%;
+    display: none;
+}
+
+.hero-section-title,
+.hero-section-subhead,
+.hero-section-ctas {
+    z-index: 1;
+}
+
 .hero-section-title,
 .hero-section-subhead {
     color: var(--primary-color-inverse);
@@ -31,4 +63,5 @@
     font-size: 1.6rem;
     line-height: 1.9rem;
     margin-bottom: 3rem;
+    max-width: 27rem;
 }
