@@ -16,4 +16,6 @@
     --border-radius-12: 1.2rem;
     --border-radius-30: 3rem;
     --border-radius-full: 100rem;
+    --primary-font: 'GeographWeb-Regular', sans-serif;
+    --secondary-font: 'Rastano-3', sans-serif;
 }
