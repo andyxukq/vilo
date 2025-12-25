@@ -34,7 +34,7 @@
         display: none;
     }
     .hero-section-wrapper {
-        max-height: 86rem;
+        min-height: 86rem;
         align-items: center;
         justify-content: center;
         padding-block: 8rem;
@@ -189,7 +189,7 @@
 
 @media (min-width: 1024px) {
     .hero-section-wrapper {
-        max-height: 130rem;
+        min-height: 90rem;
     }
     .features-sections-wrapper {
         gap: 14rem
@@ -229,6 +229,22 @@
     }
     .parallax-image-holder {
         width: 23.4rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .hero-section-wrapper {
+        min-height: 103rem;
+    }
+}
+@media (min-width: 1440px) {
+    .hero-section-wrapper {
+        min-height: 114rem;
+    }
+}
+@media (min-width: 1600px) {
+    .hero-section-wrapper {
+        min-height: 130rem;
     }
 }
 
