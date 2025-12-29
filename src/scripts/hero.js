@@ -18,7 +18,6 @@ mm.add("(min-width: 1024px)", () => {
     pin: heroContent,
     pinSpacing: false,
     scrub: 1,
-    markers: true,
   });
 
   const nodes = [
@@ -54,16 +53,15 @@ mm.add("(min-width: 1024px)", () => {
     start: "top top",
     end: "bottom 75%",
     scrub: 0,
-    animation: gsap.to(heroImageHolder, { y: "30vh" }),
+    animation: gsap.to(heroImageHolder, { y: "30dvh" }),
   });
 
   ScrollTrigger.create({
     trigger: heroSectionWrapper,
     start: "top top",
-    end: "bottom 75%",
-    scrub: 0,
-    ease: "none",
-    animation: gsap.to(heroSecondaryImage, { y: "-50vh" }),
+    end: "bottom bottom",
+    scrub: 1,
+    animation: gsap.to(heroSecondaryImage, { y: "-120dvh" }),
   });
 });
 
@@ -82,9 +80,9 @@ mm.add("(max-width: 1023px)", () => {
 
   ScrollTrigger.create({
     trigger: heroSectionWrapper,
-    start: "top bottom",
+    start: "top top",
     end: "bottom top",
     scrub: 1,
-    animation: gsap.to(heroSecondaryImage, { y: "-200vh", ease: "none" }),
+    animation: gsap.to(heroSecondaryImage, { y: "-100dvh", ease: "none" }),
   });
 });

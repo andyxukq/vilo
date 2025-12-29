@@ -58,3 +58,7 @@ h1, h2, h3, h4, h5, h6 {
 .secondary-text {
     font-family: var(--secondary-font);
 }
+
+.no-padding {
+    padding: 0;
+}
