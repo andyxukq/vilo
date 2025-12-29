@@ -166,7 +166,7 @@
         height: 150dvh;
         align-items: flex-start;
         justify-content: center;
-        padding-block: 14rem 0rem;
+        padding-block: 14rem 8rem;
         text-align: left;
         background-image: linear-gradient(207deg,
                 rgba(179, 203, 218, 0.77) 6%,
@@ -267,10 +267,13 @@
     }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1600px) {
     .hero-section-title {
         font-size: 10rem;
         line-height: 8.8rem;
+    }
+    .hero-section-wrapper {
+        padding-block: 14rem 0rem;
     }
 }
 
