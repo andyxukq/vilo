@@ -14,7 +14,7 @@ mm.add("(min-width: 1024px)", () => {
   ScrollTrigger.create({
     trigger: heroSectionWrapper,
     start: "top top",
-    end: "bottom 75%",
+    end: "bottom bottom",
     pin: heroContent,
     pinSpacing: false,
     scrub: 1,
@@ -51,14 +51,6 @@ mm.add("(min-width: 1024px)", () => {
   ScrollTrigger.create({
     trigger: heroSectionWrapper,
     start: "top top",
-    end: "bottom 75%",
-    scrub: 0,
-    animation: gsap.to(heroImageHolder, { y: "30dvh" }),
-  });
-
-  ScrollTrigger.create({
-    trigger: heroSectionWrapper,
-    start: "top top",
     end: "bottom bottom",
     scrub: 1,
     animation: gsap.to(heroSecondaryImage, { y: "-120dvh" }),
@@ -68,21 +60,9 @@ mm.add("(min-width: 1024px)", () => {
 mm.add("(max-width: 1023px)", () => {
   ScrollTrigger.create({
     trigger: heroSectionWrapper,
-    start: "50% top",
-    end: "bottom top",
-    scrub: true,
-    animation: gsap.to(heroContent, {
-      opacity: 0,
-      y: -50,
-      ease: "power1.inOut",
-    }),
-  });
-
-  ScrollTrigger.create({
-    trigger: heroSectionWrapper,
     start: "top top",
-    end: "bottom top",
+    end: "bottom bottom",
     scrub: 1,
-    animation: gsap.to(heroSecondaryImage, { y: "-100dvh", ease: "none" }),
+    animation: gsap.to(heroSecondaryImage, { y: "-100dvh" }),
   });
 });
