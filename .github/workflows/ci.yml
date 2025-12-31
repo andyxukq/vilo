@@ -29,6 +29,8 @@ jobs:
       - name: Build
         run: npm run build
 
+      # Vite emits any src/*/index.html into the dist folder thanks to rollupOptions.input
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
