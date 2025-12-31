@@ -41,7 +41,6 @@ button[variant="primary"] {
     border-radius: var(--border-radius-full);
     font-size: 1.2rem;
     line-height: 1.5rem;
-    text-transform: uppercase;
     cursor: pointer;
 }
 
