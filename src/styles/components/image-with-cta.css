@@ -15,6 +15,7 @@
 }
 .desktop-row-reverse .image-with-copy-image img{
     max-width: 60%;
+    border-radius: var(--border-radius-12);
 }
 
 .image-with-copy-text .title {
