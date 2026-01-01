@@ -94,6 +94,11 @@
         margin-top: 2rem;
     }
 
+    .contact-us-section-alt {
+        margin-top: 9rem;
+        border-radius: var(--border-radius-30) var(--border-radius-30) 0 0;
+    }
+
     .parallax-text-content {
         max-width: 70.5rem;
     }
@@ -133,6 +138,41 @@
     .free-scroll-section .title{
         font-size: 4.8rem;
         line-height: 6.2rem;
+    }
+    .tech-specifications-wrapper {
+        flex-direction: row;
+        gap: 4.5rem;
+        padding: 6rem;
+    }
+    .tech-specifications-description,
+    .tech-specifications-details {
+        flex: 1 1 50%;
+    }
+    .tech-specifications-description {
+        flex-direction: column;
+        max-width: 43rem;
+        gap: 2rem;
+    }
+    .tech-specifications-description img {
+        max-width: 100%;
+    }
+    .tech-specifications-details ul {
+        gap: 4rem 6rem;
+    }
+    .tech-specifications-description .title {
+        font-size: 2.2rem;
+        line-height: 3.2rem;
+        padding-block: 0 1.8rem;
+    }
+    .tech-specifications-description .subtitle {
+        font-size: 1.8rem;
+        line-height: 3.1rem;
+    }
+    .tech-specifications-details-info {
+        line-height: 2.2rem;
+    }
+    .tech-specifications-section {
+        padding-top: 14.5rem;
     }
 }
 
@@ -246,6 +286,9 @@
     .image-with-copy-image {
         max-width: 90rem;
     }
+    .image-with-copy-image img{
+        border-radius: var(--border-radius-30);
+    }
     .image-with-copy-text {
         max-width: 59rem;
         padding-left: 10%;
@@ -273,6 +316,10 @@
     .hero-section-title {
         font-size: 10rem;
         line-height: 8.8rem;
+    }
+    .tech-specifications-wrapper {
+        gap: 11rem;
+        padding: 8rem 10rem;
     }
 }
 

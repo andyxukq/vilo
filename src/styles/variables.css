@@ -3,6 +3,8 @@
     --primary-color-inverse: #FFFFFF;
     --secondary-color: #091237;
     --secondary-color-inverse: #FFFFFF;
+    --tertiary-color: #D3DAE2;
+    --tertiary-color-inverse: #FFFFFF;
     --text-color: #000000;
     --text-color-form: #3F4142;
     --text-color-secondary: #212121;
@@ -17,5 +19,6 @@
     --border-radius-30: 3rem;
     --border-radius-full: 100rem;
     --primary-font: 'GeographWeb-Regular', sans-serif;
+    --primary-media-font: 'GeographWeb-Medium', sans-serif;
     --secondary-font: 'Rastano-3', sans-serif;
 }
