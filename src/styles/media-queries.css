@@ -10,15 +10,6 @@
     header .announcement-bar a {
         display: inline;
     }
-    .hero-section-title {
-        font-size: 8rem;
-        line-height: 6.8rem;
-    }
-    .hero-section-subhead {
-        max-width: 45rem;
-        font-size: 2.2rem;
-        line-height: 2.8rem;
-    }
 
     .heading-section-with-cta,
     .heading-section {
@@ -77,28 +68,6 @@
         display: none !important;
     }
 
-    .contact-us-content {
-        max-width: 66rem;
-        text-align: center;
-    }
-
-    .contact-us-form {
-        max-width: 52rem;
-    }
-
-    .contact-us-form form{
-        gap: 1.6rem;
-    }
-
-    .contact-us-form button[type="submit"] {
-        margin-top: 2rem;
-    }
-
-    .contact-us-section-alt {
-        margin-top: 9rem;
-        border-radius: var(--border-radius-30) var(--border-radius-30) 0 0;
-    }
-
     .parallax-text-content {
         max-width: 70.5rem;
     }
@@ -139,41 +108,6 @@
         font-size: 4.8rem;
         line-height: 6.2rem;
     }
-    .tech-specifications-wrapper {
-        flex-direction: row;
-        gap: 4.5rem;
-        padding: 6rem;
-    }
-    .tech-specifications-description,
-    .tech-specifications-details {
-        flex: 1 1 50%;
-    }
-    .tech-specifications-description {
-        flex-direction: column;
-        max-width: 43rem;
-        gap: 2rem;
-    }
-    .tech-specifications-description img {
-        max-width: 100%;
-    }
-    .tech-specifications-details ul {
-        gap: 4rem 6rem;
-    }
-    .tech-specifications-description .title {
-        font-size: 2.2rem;
-        line-height: 3.2rem;
-        padding-block: 0 1.8rem;
-    }
-    .tech-specifications-description .subtitle {
-        font-size: 1.8rem;
-        line-height: 3.1rem;
-    }
-    .tech-specifications-details-info {
-        line-height: 2.2rem;
-    }
-    .tech-specifications-section {
-        padding-top: 14.5rem;
-    }
 }
 
 @media (min-width: 1024px) {
@@ -199,73 +133,6 @@
     }
     header .mobile-menu-btn {
         display: none;
-    }
-
-    .hero-section-wrapper {
-        height: 110dvh;
-        align-items: flex-start;
-        justify-content: center;
-        padding-block: 14rem 8rem;
-        text-align: left;
-        background-image: linear-gradient(207deg,
-                rgba(179, 203, 218, 0.77) 6%,
-                rgba(104, 142, 176, 0.77) 94%);
-    }
-
-    .hero-section-content{
-        justify-content: center;
-        align-items: flex-start;
-        height: auto;
-        top:0;
-        padding-block: 0;
-        padding-top: calc(100dvh / 3);
-        position: absolute;
-        box-sizing: border-box;
-        width: auto;
-    }
-
-    .hero-image-holder {
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-        height: auto;
-        top: 0;
-        margin: 0;
-        position: relative;
-    }
-    .hero-main-image {
-        display: block;
-    }
-    .hero-main-image-mobile {
-        display: none;
-    }
-    .hero-main-image-desktop {
-        display: block;
-    }
-    .hero-secondary-image {
-        bottom: -15dvh;
-        right: 50%;
-        width: 25%;
-        max-width: 54rem;
-    }
-
-    .hero-section-title {
-        max-width: 95rem;
-        font-size: 8rem;
-        line-height: 6.8rem;
-    }
-    .hero-section-subhead {
-        max-width: 45rem;
-        font-size: 2.2rem;
-        line-height: 2.8rem;
-    }
-    .hero-section-subhead,
-    .hero-section-title {
-        margin-bottom: 3.6rem;
-        padding-left: 5.8rem;
-    }
-    .hero-section-ctas {
-        padding-left: 5.8rem;
     }
 
     .features-sections-wrapper {
@@ -309,17 +176,6 @@
     }
     .parallax-image-holder {
         width: 23.4rem;
-    }
-}
-
-@media (min-width: 1600px) {
-    .hero-section-title {
-        font-size: 10rem;
-        line-height: 8.8rem;
-    }
-    .tech-specifications-wrapper {
-        gap: 11rem;
-        padding: 8rem 10rem;
     }
 }
 

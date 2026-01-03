@@ -78,3 +78,23 @@
   background-color: var(--white);
   border-radius: var(--border-radius-12) var(--border-radius-12) 0 0;
 }
+
+@media (min-width: 768px) {
+  .contact-us-content {
+      max-width: 66rem;
+      text-align: center;
+  }
+  .contact-us-form {
+      max-width: 52rem;
+  }
+  .contact-us-form form{
+      gap: 1.6rem;
+  }
+  .contact-us-form button[type="submit"] {
+      margin-top: 2rem;
+  }
+  .contact-us-section-alt {
+      margin-top: 9rem;
+      border-radius: var(--border-radius-30) var(--border-radius-30) 0 0;
+  }
+}
