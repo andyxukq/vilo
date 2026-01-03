@@ -37,7 +37,7 @@
 .tech-specifications-description .subtitle {
   font-size: 1.2rem;
   line-height: 2.2rem;
-  color: var(--text-color-form);
+  color: var(--text-color-tertiary);
 }
 
 .tech-specifications-details {
@@ -87,5 +87,50 @@
   gap: 1.2rem;
   font-size: 1.4rem;
   line-height: 2rem;
-  color: var(--text-color-form);
+  color: var(--text-color-tertiary);
+}
+
+@media (min-width: 768px) {
+    .tech-specifications-wrapper {
+        flex-direction: row;
+        gap: 4.5rem;
+        padding: 6rem;
+    }
+    .tech-specifications-description,
+    .tech-specifications-details {
+        flex: 1 1 50%;
+    }
+    .tech-specifications-description {
+        flex-direction: column;
+        max-width: 43rem;
+        gap: 2rem;
+    }
+    .tech-specifications-description img {
+        max-width: 100%;
+    }
+    .tech-specifications-details ul {
+        gap: 4rem 6rem;
+    }
+    .tech-specifications-description .title {
+        font-size: 2.2rem;
+        line-height: 3.2rem;
+        padding-block: 0 1.8rem;
+    }
+    .tech-specifications-description .subtitle {
+        font-size: 1.8rem;
+        line-height: 3.1rem;
+    }
+    .tech-specifications-details-info {
+        line-height: 2.2rem;
+    }
+    .tech-specifications-section {
+        padding-top: 14.5rem;
+    }
+}
+
+@media (min-width: 1600px) {
+    .tech-specifications-wrapper {
+        gap: 11rem;
+        padding: 8rem 10rem;
+    }
 }
