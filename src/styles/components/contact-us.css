@@ -5,7 +5,7 @@
 .contact-us-wrapper {
   background-color: var(--white);
   border-radius: var(--border-radius-12);
-  padding-inline: 1.6rem;
+  padding-inline: 3rem;
   padding-top: 6rem;
   padding-bottom: 6rem;
   display: flex;
@@ -32,11 +32,11 @@
 
 .contact-us-form form input,
 .contact-us-form form textarea {
+  font-family: var(--primary-font), sans-serif;
   border: 1px solid var(--border-color-primary);
   border-radius: var(--border-radius-12);
   padding: 1.2rem 1.4rem;
   line-height: 1.6rem;
-
 }
 
 .contact-us-form form input {
@@ -52,7 +52,6 @@
 
 .contact-us-form form textarea::placeholder {
   color: var(--text-color-disabled);
-  font-family: GeographWeb-Regular, sans-serif;
 }
 
 .contact-us-form button[type="submit"] {
