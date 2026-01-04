@@ -17,9 +17,13 @@
     --white: #FFFFFF;
     --black: #000000;
     --border-radius-12: 1.2rem;
+    --border-radius-18: 1.8rem;
     --border-radius-30: 3rem;
     --border-radius-full: 100rem;
     --primary-font: 'GeographWeb-Regular', sans-serif;
     --primary-media-font: 'GeographWeb-Medium', sans-serif;
+    --primary-bold-font: 'GeographWeb-Bold', sans-serif;
     --secondary-font: 'Rastano-3', sans-serif;
+
+    --focus-color: #007bff;
 }
