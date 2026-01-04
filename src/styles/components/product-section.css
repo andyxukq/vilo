@@ -1,0 +1,201 @@
+.product-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.product-media {
+  height: 66dvh;
+  width: 100%;
+}
+.product-mobile-image{
+  height: 100%;
+  object-fit: cover;
+  width: 100% ;
+}
+.product-desktop-image{
+  display: none;
+}
+
+.product-content {
+  padding: 3.4rem 2rem 0;
+  border-radius: var(--border-radius-18);
+  margin-top: -2.5rem;
+  position: relative;
+  z-index: 1;
+  background-color: var(--background-color);
+}
+
+.product-title {
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  color: var(--text-color-secondary);
+  padding-bottom: .5rem;
+}
+
+.product-subtitle{
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: var(--primary-color);
+  font-family: var(--primary-media-font);
+  padding-bottom: 1.3rem;
+}
+
+.product-price {
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  color: var(--text-color-secondary);
+  padding-bottom: 1.4rem;
+}
+
+.product-description {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: var(--text-color-tertiary);
+  padding-bottom: 1.4rem;
+}
+
+.product-info-ctas {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+}
+
+.product-info-ctas a {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--black)
+}
+
+/* Container layout */
+.swatch-container {
+  border: none;
+  padding-block: .7rem 2.4rem;
+}
+
+.swatch-container-label {
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+}
+
+.swatch-list {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Hide the radio button visually but keep it accessible */
+.swatch-item input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.swatch-visual {
+  display: block;
+  width: 6.8rem;
+  height: 6.8rem;
+  border-radius: var(--border-radius-12);
+  border: .08rem solid var(--text-color-disabled);
+  overflow: hidden;
+  cursor: pointer;
+  background-color: var(--border-color-primary);
+}
+
+.swatch-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .5;
+}
+
+.swatch-item:hover .swatch-visual {
+  border-color: #999;
+}
+
+.swatch-item input:checked + .swatch-visual {
+  border-color: var(--primary-color);
+  border-width: .1rem;
+}
+
+.swatch-item input:checked + .swatch-visual img {
+  opacity: 1;
+}
+
+.swatch-item input:focus-visible + .swatch-visual {
+  outline: 1px solid var(--focus-color);
+  outline-offset: 1px;
+}
+
+.swatch-item.disabled {
+  cursor: not-allowed;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.product-promo-info,
+.product-promo-info-secondary {
+  padding: 2rem 1.8rem;
+  border-radius: var(--border-radius-12);
+  margin-top: 1rem;
+}
+
+.product-promo-info h5,
+.product-promo-info-secondary h5 {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: var(--primary-color);
+  padding-bottom: 1rem;
+  font-family: var(--primary-media-font);
+}
+
+.product-promo-info p,
+.product-promo-info-secondary p {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  color: var(--text-color-tertiary)
+}
+
+.product-promo-info strong,
+.product-promo-info-secondary strong {
+  font-family: var(--primary-bold-font);
+}
+
+.product-promo-info {
+  background-color: var(--border-color-primary);
+  border: 1px solid var(--primary-color);
+}
+
+.product-promo-info-secondary {
+  border: 1px solid var(--text-color-disabled);
+}
+
+.product-promo-offer-title {
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  color: var(--text-color-secondary)
+}
+
+.preorder-button {
+  width: 100%;
+  background: var(--primary-color);
+  color: var(--primary-color-inverse);
+  border: 1px solid var(--primary-color);
+  border-radius: var(--border-radius-12);
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  height: 4.8rem;
+  margin-top: 1.5rem;
+  cursor: pointer;
+}
