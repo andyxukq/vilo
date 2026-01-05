@@ -2,6 +2,10 @@
     position: relative;
 }
 
+.gallery-section .container {
+    max-width: 1200px;
+}
+
 .gallery-grid {
     width: 100%;
     display: none;
