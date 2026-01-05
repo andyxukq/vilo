@@ -74,6 +74,10 @@ header button[variant="outlined"] {
     justify-content: center;
 }
 
+header .logo-link {
+    display: flex;
+}
+
 header .logo {
     height: auto;
     width: 3.4rem;
