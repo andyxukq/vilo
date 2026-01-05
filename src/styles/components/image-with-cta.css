@@ -11,12 +11,11 @@
 .image-with-copy-image {
     display: flex;
     justify-content: center;
-    aspect-ratio: 1;
     max-width: 100%;
 }
 .image-with-copy-image img {
     object-fit: contain;
-    border-radius: var(--border-radius-12);
+    max-height: 35rem;
 }
 
 .image-with-copy-text .title {

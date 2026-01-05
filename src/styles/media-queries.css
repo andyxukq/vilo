@@ -147,14 +147,15 @@
         flex-direction: row-reverse;
     }
     .desktop-row-reverse .image-with-copy-text {
-        padding-left: 8%;
+        padding-left: 0%;
+        padding-right: 10%;
         max-width: 65rem;
     }
     .image-with-copy-image {
-        max-height: 50rem;      
+        max-width: 60rem;  
     }
-    .image-with-copy-image img{
-        border-radius: var(--border-radius-30);
+    .image-with-copy-image img {
+        max-height: 50rem;
     }
     .image-with-copy-text {
         max-width: 59rem;
