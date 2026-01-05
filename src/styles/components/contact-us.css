@@ -55,7 +55,6 @@
 }
 
 .contact-us-form button[type="submit"] {
-  font-family: var(--primary-font), sans-serif;
   width: 23rem;
   align-self: center;
   margin-top: 1rem;

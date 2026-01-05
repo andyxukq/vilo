@@ -22,6 +22,10 @@ img {
     padding: 1.5rem 1.8rem;
 }
 
+button {
+    font-family: var(--primary-font), sans-serif;
+}
+
 button[variant="outlined"] {
     background: transparent;
     border: 1px solid var(--primary-color);
