@@ -67,32 +67,6 @@
         display: none !important;
     }
 
-    .parallax-text-content {
-        max-width: 70.5rem;
-    }
-
-    .parallax-text-content .title {
-        font-size: 4.8rem;
-        line-height: 6.2rem;
-    }
-
-    .parallax-text-content .subtitle {
-        font-size: 1.8rem;
-        line-height: 2.6rem;
-    }
-
-    .parallax-text-content .arrow-icon {
-        padding-top: 6rem;
-    }
-
-    .parallax-text-content .arrow-icon svg {
-        width: 2.5rem;
-    }
-
-    .pos-top-left { top: 2%; left: 11%; }
-    .pos-center-right { top: 40%; right: 5%; }
-    .pos-bottom-left { top: 75%; left: 24%; }
-
     .free-scroll-products-container {
         gap: 3rem;
     }
@@ -151,7 +125,7 @@
         max-width: 65rem;
     }
     .image-with-copy-image {
-        max-width: 60rem;  
+        max-width: 60rem;
     }
     .image-with-copy-image img {
         max-height: 50rem;
@@ -174,16 +148,10 @@
         display: block;
         margin-top: 11rem;
     }
-    .parallax-image-holder {
-        width: 23.4rem;
-    }
 }
 
 @media (min-width: 1875px) {
     .header-content-wrapper {
         width: calc(1875px - 16rem);
-    }
-    .parallax-image-holder {
-        width: 33.4rem;
     }
 }
