@@ -1,5 +1,5 @@
 .parallax-section {
-  height: 68dvh;
+  height: 88dvh;
   position: relative;
 }
 
@@ -65,14 +65,14 @@
   z-index: -1;
 }
 
-.pos-top-left { top: 2%; left: -3%; }
-.pos-center-right { top: 60%; right: -5%; }
-.pos-bottom-left { bottom: 0; left: 8%; }
+.pos-top-left { top: 6%; left: 6%; }
+.pos-center-right { top: 56%; right: 6%; }
+.pos-bottom-left { bottom: 6%; left: 2%; }
 
 
 @media (min-width: 768px) {
     .parallax-section {
-      height: 100dvh;
+      height: 110dvh;
     }
 
     .parallax-text-content {
@@ -97,9 +97,9 @@
         width: 2.5rem;
     }
 
-    .pos-top-left { top: 2%; left: 11%; }
+    .pos-top-left { top: 10%; left: 11%; }
     .pos-center-right { top: 40%; right: 5%; }
-    .pos-bottom-left { bottom: 0; left: 24%; }
+    .pos-bottom-left { bottom: 5%; left: 24%; }
 }
 
 @media (min-width: 1024px) {
