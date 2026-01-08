@@ -46,7 +46,7 @@ header .container {
     top: calc(100% + 1.5rem);
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1;
+    z-index: 100;
 }
 
 header .nav-links {
@@ -89,4 +89,14 @@ header .mobile-menu-btn {
     display: flex;
     color: var(--primary-color-inverse);
     padding-right: 4px;
+}
+
+/* mobile drawer styles */
+.drawer-navigation-links {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    padding-block: 2.4rem;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
 }
