@@ -6,3 +6,4 @@ import './hero.js';
 import './mobile-nav.js';
 import './home-page-product-swiper.js';
 import './parallax.js';
+import './ProductMedia.js';

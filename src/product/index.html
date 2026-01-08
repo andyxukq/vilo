@@ -11,10 +11,12 @@
 
 <body>
   <mobile-menu title="Navigation">
-    <a href="#home">Home</a>
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
+    <div class="container drawer-navigation-links">
+      <a href="/">Home</a>
+      <a href="/product/">Product</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
   </mobile-menu>
   <header>
     <div class="announcement-bar">
@@ -63,17 +65,28 @@
 
     <section class="product-section">
       <div class="product-wrapper product-wrapper-pdp">
-        <div class="product-media">
+        <product-media>
+          <div class="mobile-image-stage"></div>
           <img class="product-mobile-image" src="/images/product-page/vilo-main-image-mobile.webp" alt="Vilo Product Image">
-          <img class="product-desktop-image" src="/images/product-page/vilo-main-image.webp" alt="Vilo Product Image">
+          <img class="product-desktop-image" src="/images/product-page/R01/product-image-1.webp" alt="Vilo Product Image">
           <div class="product-media-images-grid">
-            <img src="/images/product-page/product-image-1.webp" alt="Product Image 1">
-            <img src="/images/product-page/product-image-1.webp" alt="Product Image 2">
-            <img src="/images/product-page/product-image-1.webp" alt="Product Image 3">
-            <img src="/images/product-page/product-image-1.webp" alt="Product Image 4">
-            <img src="/images/product-page/product-image-1.webp" alt="Product Image 5">
+            <span class="product-media-image-holder">
+              <img src="/images/product-page/R01/product-image-1.webp" alt="Product Image 1">
+            </span>
+            <span class="product-media-image-holder">
+              <img src="/images/product-page/R01/product-image-2.webp" alt="Product Image 2">
+            </span>
+            <span class="product-media-image-holder">
+              <img src="/images/product-page/R01/product-image-3.webp" alt="Product Image 3">
+            </span>
+            <span class="product-media-image-holder">
+              <img src="/images/product-page/R01/product-image-4.webp" alt="Product Image 4">
+            </span>
+            <span class="product-media-image-holder">
+              <img src="/images/product-page/R01/product-image-5.webp" alt="Product Image 5">
+            </span>
           </div>
-        </div>
+        </product-media>
         <div class="product-content">
           <h1 class="product-title">VILO Ring</h1>
           <h2 class="product-subtitle">Founder’s Pre-Order Edition</h2>
