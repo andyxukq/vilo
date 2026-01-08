@@ -45,13 +45,17 @@ product-media {
 
 .product-media-images-grid .product-media-image-holder {
   border-radius: var(--border-radius-6);
-  border: .09rem solid var(--border-color-primary);
+  border: .1rem solid var(--border-color-primary);
   overflow: hidden;
   aspect-ratio: 1.2 / 1;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+
+.product-media-images-grid .product-media-image-holder.selected {
+  border-color: var(--primary-color);
 }
 
 .product-mobile-image {
