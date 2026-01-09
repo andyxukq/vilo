@@ -14,6 +14,7 @@ class ProductMedia extends HTMLElement {
   }
 
   handleImageClick(event) {
+    if (window.innerWidth >= 1024) return;
     const holder = event.currentTarget;
     const img = holder.querySelector('img');
 

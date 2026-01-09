@@ -137,7 +137,7 @@ product-media {
 
 .swatch-list {
   display: grid;
-  gap: 1.2rem;
+  gap: .6rem;
   grid-template-columns: repeat(5, 1fr);
 }
 
@@ -149,9 +149,8 @@ product-media {
 }
 
 .swatch-visual {
-  display: block;
-  width: 6.8rem;
-  height: 6.8rem;
+  display: flex;
+  aspect-ratio: 1 / 1;
   border-radius: var(--border-radius-12);
   border: .08rem solid var(--text-color-disabled);
   overflow: hidden;
@@ -370,6 +369,11 @@ product-media {
   }
   .product-media-content {
     width: 50%;
+  }
+  .product-wrapper-pdp .product-content {
+    max-width: 38rem;
+    padding: 0;
+    margin: 0;
   }
   .swiper-ps-nav-holder {
     padding-top: 2.4rem;
