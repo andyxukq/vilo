@@ -13,24 +13,33 @@ class MobileMenu extends HTMLElement {
     }
   }
 
+  toggleBodyScroll() {
+    if (this.isOpen) {
+      document.body.style.overflow = "hidden";
+      // Optional: Add padding to prevent "jump" if scrollbar disappears
+      document.body.style.paddingRight = "var(--scrollbar-width, 0px)";
+    } else {
+      document.body.style.overflow = "";
+      document.body.style.paddingRight = "";
+    }
+  }
+
   toggleMenu() {
     this.isOpen = !this.isOpen;
     this.updateStyles();
+    this.toggleBodyScroll();
   }
 
   updateStyles() {
     const drawer = this.shadowRoot.querySelector(".drawer");
     const overlay = this.shadowRoot.querySelector(".overlay");
-    const btn = this.shadowRoot.querySelector(".menu-btn");
 
     if (this.isOpen) {
       drawer.classList.add("open");
       overlay.classList.add("active");
-      btn.classList.add("active");
     } else {
       drawer.classList.remove("open");
       overlay.classList.remove("active");
-      btn.classList.remove("active");
     }
   }
 
@@ -38,45 +47,59 @@ class MobileMenu extends HTMLElement {
     this.shadowRoot.innerHTML = `
                 <style>
                     .drawer {
-                        position: fixed;
-                        top: 0;
-                        left: -100%;
-                        width: 100%;
-                        height: 100%;
-                        max-width: 37.5rem;
-                        background: var(--white);
-                        color: var(--primary-color);
-                        transition: 0.3s;
-                        z-index: 100;
-                        padding-top: 2rem;
-                        box-shadow: -0.2rem 0 .5rem rgba(var(--black),0.5);
-                        background: var(--background-color);
+                      position: fixed;
+                      top: 0;
+                      left: -100%;
+                      width: 100%;
+                      height: 100dvh;
+                      max-width: 43rem;
+                      background: var(--white);
+                      transition: 0.3s;
+                      z-index: 100;
+                      box-shadow: -0.2rem 0 .5rem rgba(var(--black),0.5);
+                    }
+                    .drawer-content-wrapper {
+                      background: var(--background-color);
+                      color: var(--primary-color);
+                      height: 100%;
+                      padding-inline: 2.2rem;
+                      margin-top: 5.2rem;
+                      display: flex;
+                      flex-direction: column;
                     }
                     .drawer.open {
                       left: 0;
+                    }
+                    .drawer-announcement-bar {
+                      display: flex;
+                      justify-content: center;
+                      padding-block: 1.3rem 2.7rem;
                     }
                     .drawer-header {
                       display: flex;
                       justify-content: space-between;
                       align-items: center;
                     }
+                    .drawer-content {
+                      flex: 1;
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: space-between;
+                      max-height: calc(100% - 20rem);
+                    }
                     .close-btn {
                       background: transparent;
                       border: none;
-                      font-size: 2rem;
                       cursor: pointer;
-                      line-height: 1;
-                      padding: .5rem 1rem;
+                      padding: 0;
                     }
-
-                    /* Dark Overlay */
                     .overlay {
                         position: fixed;
                         top: 0;
                         left: 0;
                         width: 100%;
                         height: 100%;
-                        background: rgba(var(--black),0.5);
+                        background: rgba(0,0,0, .5);
                         visibility: hidden;
                         opacity: 0;
                         transition: 0.3s;
@@ -86,17 +109,53 @@ class MobileMenu extends HTMLElement {
                       visibility: visible;
                       opacity: 1;
                     }
-                    h2 { padding: 0 15px; }
                 </style>
 
                 <div class="overlay"></div>
 
                 <div class="drawer">
-                    <div class="drawer-header">
-                      <h2>${this.getAttribute('title') || 'Navigation'}</h2>
-                      <button class="close-btn" role="button" aria-label="Close menu">&times;</button>
+                  <div class="drawer-content-wrapper">
+                    <div class="drawer-announcement-bar">
+                      <div class="announcement-bar-content">
+                        <slot name="announcement-bar"></slot>
+                      </div>
                     </div>
-                    <slot></slot> </div>
+                    <div class="drawer-header">
+                      <svg width="68px" height="22px" viewBox="0 0 68 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                          <title>Vilo</title>
+                          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                              <g transform="translate(-120, -119)" fill="currentColor">
+                                  <g transform="translate(80, 95)">
+                                      <path d="M64.7897289,45.647692 L64.7897289,26.5938876 C64.7897289,25.280409 65.8545136,24.2156243 67.1679921,24.2156243 L68.6073903,24.2156243 L68.6073903,24.2156243 L68.6073903,43.2694288 C68.6073903,44.5829073 67.5426055,45.647692 66.229127,45.647692 L64.7897289,45.647692 L64.7897289,45.647692 Z M48.9679478,45.647692 L40,24.2156243 L42.5683517,24.2156243 C43.5471696,24.2156243 44.4260232,24.8153271 44.7829028,25.7267664 L50.6937385,40.8225202 L50.6937385,40.8225202 L56.5751707,25.730333 C56.9310901,24.8170176 57.810899,24.2156243 58.7911151,24.2156243 L61.2642061,24.2156243 L61.2642061,24.2156243 L52.9072753,44.1874519 C52.5371719,45.0719444 51.6721392,45.647692 50.713336,45.647692 L48.9679478,45.647692 L48.9679478,45.647692 Z M85.2637055,45.647692 L79.3936475,45.647692 C75.8573592,45.647692 72.9906311,42.780964 72.9906311,39.2446757 L72.9906311,24.2156243 L72.9906311,24.2156243 L74.7959159,24.2156243 C75.9073208,24.2156243 76.8082925,25.116596 76.8082925,26.2280009 L76.8082925,38.7006179 C76.8082925,40.7213541 78.4464228,42.3594844 80.467159,42.3594844 L85.2637055,42.3594844 L85.2637055,42.3594844 L85.2637055,45.647692 Z M95.9565376,24 C96.0677716,24 96.1694186,24.00398 96.2614786,24.0119399 C96.3624098,24.0172663 96.4375999,24.1053788 96.4296295,24.2061007 C96.427402,24.2342498 96.4186888,24.2615011 96.404172,24.2857209 C95.1806406,26.2707804 94.4456676,27.6247605 94.1986373,28.3472924 L94.1771421,28.4135756 C93.6384774,28.7392611 93.1370288,29.1553087 92.6727965,29.6617182 C91.3719637,31.0807364 90.7215473,32.8373831 90.7215473,34.9316582 C90.7215473,37.0259333 91.3719637,38.7825799 92.6727965,40.2015981 C93.9736293,41.6206163 95.5666781,42.3301254 97.451943,42.3301254 C99.3372079,42.3301254 100.930257,41.6206163 102.231089,40.2015981 C103.531922,38.7825799 104.182339,37.0259333 104.182339,34.9316582 C104.182339,32.8373831 103.531922,31.0807364 102.231089,29.6617182 C100.930257,28.2427001 99.3372079,27.533191 97.451943,27.533191 C96.990693,27.533191 96.5469347,27.5756613 96.1206682,27.660602 C96.7705951,26.5384299 98.7667982,25.1706274 99.1372199,24.9613765 C99.5076416,24.7521256 99.8553169,24.5398373 100.51124,24.4800949 C100.756538,24.4673448 101.026596,24.5053348 101.321413,24.594065 C102.640317,25.1345725 103.838715,25.9719906 104.917592,27.1074855 C106.972531,29.270265 108,31.8783225 108,34.9316582 C108,37.9849939 106.972531,40.5930514 104.917592,42.7558308 C102.862653,44.9186103 100.374104,46 97.451943,46 C94.5297824,46 92.0412328,44.9186103 89.986294,42.7558308 C87.9313553,40.5930514 86.9038859,37.9849939 86.9038859,34.9316582 C86.9038859,31.8783225 87.9313553,29.270265 89.986294,27.1074855 C91.5373922,25.4749876 93.3355382,24.4586064 95.3807321,24.0583421 C95.7050978,24.0168239 95.8819868,24 95.9565376,24 Z" fill-rule="nonzero"></path>
+                                  </g>
+                              </g>
+                          </g>
+                      </svg>
+                      <button class="close-btn" role="button" aria-label="Close menu">
+                        <svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                          <title>Close menu</title>
+                          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                              <g transform="translate(-350, -136)">
+                                  <g transform="translate(350, 136)">
+                                      <circle stroke="#514A44" stroke-width="0.8" fill="#D6DBDD" cx="21" cy="21" r="20.6"></circle>
+                                      <path d="M27.6183185,13.3249397 C27.9883505,12.9549077 28.5248804,12.8914972 28.8166916,13.1833084 C29.1085028,13.4751196 29.0450923,14.0116495 28.6750603,14.3816815 L22.057,21 L28.6750603,27.6183185 C29.0450923,27.9883505 29.1085028,28.5248804 28.8166916,28.8166916 C28.5248804,29.1085028 27.9883505,29.0450923 27.6183185,28.6750603 L21,22.057 L14.3816815,28.6750603 C14.0424855,29.0142563 13.5633851,29.095805 13.2611216,28.882272 L13.1833084,28.8166916 C12.8914972,28.5248804 12.9549077,27.9883505 13.3249397,27.6183185 L19.943,21 L13.3249397,14.3816815 C12.9549077,14.0116495 12.8914972,13.4751196 13.1833084,13.1833084 C13.4751196,12.8914972 14.0116495,12.9549077 14.3816815,13.3249397 L21,19.943 Z" fill="var(--text-color-secondary)" fill-rule="nonzero"></path>
+                                  </g>
+                              </g>
+                          </g>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="container drawer-content">
+                      <div class="main-slot">
+                        <slot></slot>
+                      </div>
+
+                      <div class="secondary-slot">
+                        <slot name="secondary"></slot>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 `;
     this.shadowRoot.querySelector('.close-btn').onclick = () => this.toggleMenu();
     this.shadowRoot.querySelector(".overlay").onclick = () => this.toggleMenu();

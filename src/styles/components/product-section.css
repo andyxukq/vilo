@@ -391,6 +391,7 @@ product-media {
   }
   .product-media-slider .swiper-slide img {
     aspect-ratio: 781/975;
+    border-radius: var(--border-radius-30);
   }
   .product-wrapper-homepage .product-content {
     padding: 0;
