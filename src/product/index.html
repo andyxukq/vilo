@@ -7,6 +7,37 @@
   <title>Vilo - Understand yourself, gently.</title>
   <link rel="icon" type="image/png" href="/images/favicon.png">
   <link rel="stylesheet" href="../styles/index.css">
+  <!-- preload product images -->
+  <link
+    rel="preload"
+    fetchpriority="high"
+    as="image"
+    href="/images/product-page/R01/product-image-1.webp"
+    type="image/webp">
+  <link
+    rel="preload"
+    fetchpriority="high"
+    as="image"
+    href="/images/product-page/R01/product-image-2.webp"
+    type="image/webp">
+  <link
+    rel="preload"
+    fetchpriority="high"
+    as="image"
+    href="/images/product-page/R01/product-image-3.webp"
+    type="image/webp">
+  <link
+    rel="preload"
+    fetchpriority="high"
+    as="image"
+    href="/images/product-page/R01/product-image-4.webp"
+    type="image/webp">
+  <link
+    rel="preload"
+    fetchpriority="high"
+    as="image"
+    href="/images/product-page/R01/product-image-5.webp"
+    type="image/webp">
 </head>
 
 <body>
@@ -74,23 +105,66 @@
       <div class="product-wrapper product-wrapper-pdp">
         <product-media>
           <div class="mobile-image-stage"></div>
-          <img class="product-mobile-image" src="/images/product-page/R01/product-image-1.webp" alt="Vilo Product Image">
-          <img class="product-desktop-image" src="/images/product-page/R01/product-image-1.webp" alt="Vilo Product Image">
+          <!-- !! in case of updating this images src, please update the 'href' for preload links in the head -->
+          <img
+            class="product-mobile-image"
+            src="/images/product-page/R01/product-image-1.webp"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+            alt="Vilo Product">
+          <img
+            class="product-desktop-image"
+            src="/images/product-page/R01/product-image-1.webp"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+            alt="Vilo Product">
           <div class="product-media-images-grid">
             <span class="product-media-image-holder">
-              <img src="/images/product-page/R01/product-image-1.webp" alt="Product Image 1">
+              <img
+                src="/images/product-page/R01/product-image-1.webp"
+                width="70"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
+                alt="Product 1">
             </span>
             <span class="product-media-image-holder">
-              <img src="/images/product-page/R01/product-image-2.webp" alt="Product Image 2">
+              <img
+                src="/images/product-page/R01/product-image-2.webp"
+                width="70"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
+                alt="Product 2">
             </span>
             <span class="product-media-image-holder">
-              <img src="/images/product-page/R01/product-image-3.webp" alt="Product Image 3">
+              <img
+                src="/images/product-page/R01/product-image-3.webp"
+                width="70"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
+                alt="Product 3">
             </span>
             <span class="product-media-image-holder">
-              <img src="/images/product-page/R01/product-image-4.webp" alt="Product Image 4">
+              <img
+                src="/images/product-page/R01/product-image-4.webp"
+                width="70"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
+                alt="Product 4">
             </span>
             <span class="product-media-image-holder">
-              <img src="/images/product-page/R01/product-image-5.webp" alt="Product Image 5">
+              <img
+                src="/images/product-page/R01/product-image-5.webp"
+                width="70"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
+                alt="Product 5">
             </span>
           </div>
         </product-media>
@@ -107,7 +181,12 @@
                 <label class="swatch-item">
                   <input type="radio" name="color-variant" value="value-1" checked>
                   <span class="swatch-visual">
-                    <img src="/images/product-page/product-swatch.webp" alt="variant 1">
+                    <img
+                      src="/images/product-page/product-swatch.webp"
+                      loading="lazy"
+                      fetchpriority="low"
+                      decoding="async"
+                      alt="variant 1">
                   </span>
                   <span class="sr-only">ring 1</span>
                 </label>
@@ -115,7 +194,12 @@
                 <label class="swatch-item">
                   <input type="radio" name="color-variant" value="value-2">
                   <span class="swatch-visual">
-                    <img src="/images/product-page/product-swatch.webp" alt="variant 2">
+                    <img
+                      src="/images/product-page/product-swatch.webp"
+                      loading="lazy"
+                      fetchpriority="low"
+                      decoding="async"
+                      alt="variant 2">
                   </span>
                   <span class="sr-only">ring 1</span>
                 </label>
@@ -123,7 +207,12 @@
                 <label class="swatch-item disabled">
                   <input type="radio" name="color-variant" value="value-3" disabled>
                   <span class="swatch-visual">
-                    <img src="/images/product-page/product-swatch.webp" alt="variant 3">
+                    <img
+                      src="/images/product-page/product-swatch.webp"
+                      loading="lazy"
+                      fetchpriority="low"
+                      decoding="async"
+                      alt="variant 3">
                   </span>
                   <span class="sr-only">ring 3</span>
                 </label>
@@ -131,7 +220,12 @@
                 <label class="swatch-item">
                   <input type="radio" name="color-variant" value="value-4">
                   <span class="swatch-visual">
-                    <img src="/images/product-page/product-swatch.webp" alt="variant 4">
+                    <img
+                      src="/images/product-page/product-swatch.webp"
+                      loading="lazy"
+                      fetchpriority="low"
+                      decoding="async"
+                      alt="variant 4">
                   </span>
                   <span class="sr-only">ring 4</span>
                 </label>
@@ -139,7 +233,12 @@
                 <label class="swatch-item">
                   <input type="radio" name="color-variant" value="value-5">
                   <span class="swatch-visual">
-                    <img src="/images/product-page/product-swatch.webp" alt="variant 5">
+                    <img
+                      src="/images/product-page/product-swatch.webp"
+                      loading="lazy"
+                      fetchpriority="low"
+                      decoding="async"
+                      alt="variant 5">
                   </span>
                   <span class="sr-only">ring 5</span>
                 </label>
@@ -181,12 +280,22 @@
         </div>
         <div class="alter-gallery-media-content">
           <div class="alter-gallery-main-image">
-            <img src="/images/product-page/vilo-gallery-main-image.webp" alt="Gallery 1">
+            <img
+              src="/images/product-page/vilo-gallery-main-image.webp"
+              loading="lazy"
+              fetchpriority="low"
+              decoding="async"
+              alt="Gallery 1">
           </div>
           <div class="swiper alter-gallery-slider">
             <div class="swiper-wrapper">
               <div class="swiper-slide alter-gallery-slide">
-                <img src="/images/home-page/product-image-1.webp" alt="Gallery 1">
+                <img
+                  src="/images/home-page/product-image-1.webp"
+                  loading="lazy"
+                  fetchpriority="low"
+                  decoding="async"
+                  alt="Gallery 1">
                 <div>
                   <h6>
                     Founder Access
@@ -195,7 +304,12 @@
                 </div>
               </div>
               <div class="swiper-slide alter-gallery-slide">
-                <img src="/images/home-page/product-image-2.webp" alt="Gallery 2">
+                <img
+                  src="/images/home-page/product-image-2.webp"
+                    loading="lazy"
+                    fetchpriority="low"
+                    decoding="async"
+                  alt="Gallery 2">
                 <div>
                   <h6>
                     Priority Experience
@@ -204,7 +318,12 @@
                 </div>
               </div>
               <div class="swiper-slide alter-gallery-slide">
-                <img src="/images/home-page/product-image-5.webp" alt="Gallery 3">
+                <img
+                  src="/images/home-page/product-image-5.webp"
+                  loading="lazy"
+                  fetchpriority="low"
+                  decoding="async"
+                  alt="Gallery 3">
                 <div>
                   <h6>
                     Built-In Peace of Mind
@@ -257,7 +376,12 @@
       <section class="image-with-copy-section">
         <div class="container image-with-copy-container">
           <div class="image-with-copy-image">
-            <img src="/images/home-page/image-1.webp" alt="Product 1 screenshot">
+            <img
+              src="/images/home-page/image-1.webp"
+              loading="lazy"
+              fetchpriority="low"
+              decoding="async"
+              alt="Product 1 screenshot">
           </div>
           <div class="image-with-copy-text">
             <h2 class="title">Made to fade into your life.</h2>
@@ -270,7 +394,12 @@
       <section class="image-with-copy-section">
         <div class="container image-with-copy-container desktop-row-reverse">
           <div class="image-with-copy-image">
-            <img src="/images/home-page/image-2.webp" alt="Product 1 screenshot">
+            <img
+              src="/images/home-page/image-2.webp"
+              loading="lazy"
+              fetchpriority="low"
+              decoding="async"
+              alt="Product 1 screenshot">
           </div>
           <div class="image-with-copy-text">
             <h2 class="title">Sleep, made easier to read.</h2>
@@ -283,7 +412,12 @@
       <section class="image-with-copy-section">
         <div class="container image-with-copy-container">
           <div class="image-with-copy-image">
-            <img src="/images/home-page/image-3.webp" alt="Product 1 screenshot">
+            <img
+              src="/images/home-page/image-3.webp"
+              loading="lazy"
+              fetchpriority="low"
+              decoding="async"
+              alt="Product 1 screenshot">
           </div>
           <div class="image-with-copy-text">
             <h2 class="title">Intelligence that stays calm.</h2>
@@ -296,7 +430,12 @@
       <section class="image-with-copy-section">
         <div class="container image-with-copy-container desktop-row-reverse">
           <div class="image-with-copy-image">
-            <img src="/images/home-page/image-4.webp" alt="Product 1 screenshot">
+            <img
+              src="/images/home-page/image-4.webp"
+              loading="lazy"
+              fetchpriority="low"
+              decoding="async"
+              alt="Product 1 screenshot">
           </div>
           <div class="image-with-copy-text">
             <h2 class="title">Energy, in a kinder frame.</h2>
@@ -309,7 +448,12 @@
       <section class="image-with-copy-section">
         <div class="container image-with-copy-container">
           <div class="image-with-copy-image">
-            <img src="/images/home-page/image-5.webp" alt="Product 1 screenshot">
+            <img
+              src="/images/home-page/image-5.webp"
+              loading="lazy"
+              fetchpriority="low"
+              decoding="async"
+              alt="Product 1 screenshot">
           </div>
           <div class="image-with-copy-text">
             <h2 class="title">Your cycle, as quiet context.</h2>
@@ -324,7 +468,12 @@
       <div class="container">
         <div class="tech-specifications-wrapper">
           <div class="tech-specifications-description">
-            <img src="/images/product-page/spec.webp" alt="spec thumbnail">
+            <img
+              src="/images/product-page/spec.webp"
+              loading="lazy"
+              fetchpriority="low"
+              decoding="async"
+              alt="spec thumbnail">
             <div class="tech-specifications-description-content">
               <h2 class="title">What’s Included + Specs Vilo Ring (Founder’s Edition)</h2>
               <p class="subtitle">Vilo “Dark Planet” portable charger</p>

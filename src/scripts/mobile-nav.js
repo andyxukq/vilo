@@ -16,7 +16,6 @@ class MobileMenu extends HTMLElement {
   toggleBodyScroll() {
     if (this.isOpen) {
       document.body.style.overflow = "hidden";
-      // Optional: Add padding to prevent "jump" if scrollbar disappears
       document.body.style.paddingRight = "var(--scrollbar-width, 0px)";
     } else {
       document.body.style.overflow = "";
