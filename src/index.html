@@ -7,6 +7,18 @@
   <title>Vilo - Understand yourself, gently.</title>
   <link rel="icon" type="image/png" href="/images/favicon.png">
   <link rel="stylesheet" href="./styles/index.css">
+  <link
+    rel="preload"
+    fetchpriority="high"
+    as="image"
+    href="/images/home-page/hero-background-mobile.webp"
+    type="image/webp">
+  <link
+    rel="preload"
+    fetchpriority="high"
+    as="image"
+    href="/images/home-page/vilo-hero-image-main.webp"
+    type="image/webp">
 </head>
 
 <body>
@@ -82,11 +94,32 @@
             </div>
           </div>
           <div class="hero-image-holder gsap-hero-image-holder">
-            <img class="hero-main-image-mobile" src="/images/home-page/hero-background-mobile.webp" alt="">
-            <img class="hero-main-image-desktop" src="/images/home-page/vilo-hero-image-main.webp" alt="">
+            <!-- !! in case of updating this images src, please update the 'href' for preload links in the head -->
+            <img
+              class="hero-main-image-mobile"
+              src="/images/home-page/hero-background-mobile.webp"
+              width="414"
+              height="682"
+              fetchpriority="high"
+              loading="eager"
+              decoding="async"
+              alt="">
+            <img
+              class="hero-main-image-desktop"
+              src="/images/home-page/vilo-hero-image-main.webp"
+              fetchpriority="high"
+              loading="eager"
+              decoding="async"
+              alt="">
           </div>
           <div class="hero-secondary-image-holder">
-            <img class="hero-secondary-image gsap-hero-secondary-image" src="/images/home-page/vilo-hero-image-secondary.webp" alt="">
+            <img
+              class="hero-secondary-image gsap-hero-secondary-image"
+              src="/images/home-page/vilo-hero-image-secondary.webp"
+              fetchpriority="high"
+              loading="eager"
+              decoding="async"
+              alt="">
           </div>
         </div>
       </div>
@@ -105,31 +138,71 @@
       <div class="container">
         <div class="gallery-grid">
           <figure class="gallery-item aspect-square order-1">
-            <img src="/images/home-page/product-image-1.webp" alt="Gallery 1">
+            <img
+              src="/images/home-page/product-image-1.webp"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+              alt="Gallery 1">
           </figure>
           <figure class="gallery-item aspect-rect order-3">
-            <img src="/images/home-page/product-image-3.webp" alt="Gallery 3">
+            <img
+              src="/images/home-page/product-image-3.webp"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+              alt="Gallery 3">
           </figure>
           <figure class="gallery-item aspect-rect order-2">
-            <img src="/images/home-page/product-image-2.webp" alt="Gallery 2">
+            <img
+              src="/images/home-page/product-image-2.webp"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+              alt="Gallery 2">
           </figure>
           <figure class="gallery-item aspect-square order-4">
-            <img src="/images/home-page/product-image-4.webp" alt="Gallery 4">
+            <img
+              src="/images/home-page/product-image-4.webp"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+              alt="Gallery 4">
           </figure>
         </div>
         <div class="swiper gallery-slider">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <img src="/images/home-page/product-image-1.webp" alt="Gallery 1">
+              <img
+                src="/images/home-page/product-image-1.webp"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
+                alt="Gallery 1">
             </div>
             <div class="swiper-slide">
-              <img src="/images/home-page/product-image-2.webp" alt="Gallery 2">
+              <img
+                src="/images/home-page/product-image-2.webp"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
+                alt="Gallery 2">
             </div>
             <div class="swiper-slide">
-              <img src="/images/home-page/product-image-5.webp" alt="Gallery 3">
+              <img
+                src="/images/home-page/product-image-5.webp"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
+                alt="Gallery 3">
             </div>
             <div class="swiper-slide">
-              <img src="/images/home-page/product-image-4.webp" alt="Gallery 4">
+              <img
+                src="/images/home-page/product-image-4.webp"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
+                alt="Gallery 4">
             </div>
           </div>
         </div>
@@ -188,7 +261,12 @@
       <section class="image-with-copy-section">
         <div class="container image-with-copy-container">
           <div class="image-with-copy-image">
-            <img src="/images/home-page/image-1.webp" alt="Product 1 screenshot">
+            <img
+              src="/images/home-page/image-1.webp"
+              loading="lazy"
+              fetchpriority="low"
+              decoding="async"
+              alt="Product 1 screenshot">
           </div>
           <div class="image-with-copy-text">
             <h2 class="title">Made to fade into your life.</h2>
@@ -201,7 +279,12 @@
       <section class="image-with-copy-section">
         <div class="container image-with-copy-container desktop-row-reverse">
           <div class="image-with-copy-image">
-            <img src="/images/home-page/image-2.webp" alt="Product 1 screenshot">
+            <img
+              src="/images/home-page/image-2.webp"
+              loading="lazy"
+              fetchpriority="low"
+              decoding="async"
+              alt="Product 1 screenshot">
           </div>
           <div class="image-with-copy-text">
             <h2 class="title">Sleep, made easier to read.</h2>
@@ -214,7 +297,12 @@
       <section class="image-with-copy-section">
         <div class="container image-with-copy-container">
           <div class="image-with-copy-image">
-            <img src="/images/home-page/image-3.webp" alt="Product 1 screenshot">
+            <img
+              src="/images/home-page/image-3.webp"
+              loading="lazy"
+              fetchpriority="low"
+              decoding="async"
+              alt="Product 1 screenshot">
           </div>
           <div class="image-with-copy-text">
             <h2 class="title">Intelligence that stays calm.</h2>
@@ -227,7 +315,12 @@
       <section class="image-with-copy-section">
         <div class="container image-with-copy-container desktop-row-reverse">
           <div class="image-with-copy-image">
-            <img src="/images/home-page/image-4.webp" alt="Product 1 screenshot">
+            <img
+              src="/images/home-page/image-4.webp"
+              loading="lazy"
+              fetchpriority="low"
+              decoding="async"
+              alt="Product 1 screenshot">
           </div>
           <div class="image-with-copy-text">
             <h2 class="title">Energy, in a kinder frame.</h2>
@@ -240,7 +333,12 @@
       <section class="image-with-copy-section">
         <div class="container image-with-copy-container">
           <div class="image-with-copy-image">
-            <img src="/images/home-page/image-5.webp" alt="Product 1 screenshot">
+            <img
+              src="/images/home-page/image-5.webp"
+              loading="lazy"
+              fetchpriority="low"
+              decoding="async"
+              alt="Product 1 screenshot">
           </div>
           <div class="image-with-copy-text">
             <h2 class="title">Your cycle, as quiet context.</h2>
@@ -294,13 +392,28 @@
       </div>
       <div class="parallax-images-wrapper gsap-parallax-images-animation">
         <div class="parallax-image-holder pos-top-left">
-          <img src="/images/home-page/parallax-image-1.1.webp" alt="">
+          <img
+            src="/images/home-page/parallax-image-1.1.webp"
+            loading="lazy"
+            fetchpriority="low"
+            decoding="async"
+            alt="">
         </div>
         <div class="parallax-image-holder pos-center-right">
-          <img src="/images/home-page/parallax-image-2.2.webp" alt="">
+          <img
+            src="/images/home-page/parallax-image-2.2.webp"
+            loading="lazy"
+            fetchpriority="low"
+            decoding="async"
+            alt="">
         </div>
         <div class="parallax-image-holder pos-bottom-left">
-          <img src="/images/home-page/parallax-image-3.3.webp" alt="">
+          <img
+            src="/images/home-page/parallax-image-3.3.webp"
+            loading="lazy"
+            fetchpriority="low"
+            decoding="async"
+            alt="">
         </div>
       </div>
     </section>
@@ -313,10 +426,30 @@
 
     <section class="free-scroll-products-section">
       <div class="container free-scroll-products-container">
-        <img src="/images/home-page/swiper-img-1.webp" alt="">
-        <img src="/images/home-page/swiper-img-2.webp" alt="">
-        <img src="/images/home-page/swiper-img-3.webp" alt="">
-        <img src="/images/home-page/swiper-img-4.webp" alt="">
+        <img
+          src="/images/home-page/swiper-img-1.webp"
+          loading="lazy"
+          fetchpriority="low"
+          decoding="async"
+          alt="">
+        <img
+          src="/images/home-page/swiper-img-2.webp"
+          loading="lazy"
+          fetchpriority="low"
+          decoding="async"
+          alt="">
+        <img
+          src="/images/home-page/swiper-img-3.webp"
+          loading="lazy"
+          fetchpriority="low"
+          decoding="async"
+          alt="">
+        <img
+          src="/images/home-page/swiper-img-4.webp"
+          loading="lazy"
+          fetchpriority="low"
+          decoding="async"
+          alt="">
         <div class="additional-space"></div>
       </div>
     </section>
@@ -327,19 +460,44 @@
           <div class="swiper product-media-slider">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <img src="/images/product-page/R01/product-image-1.webp" alt="Product Image 1">
+                  <img
+                    src="/images/product-page/R01/product-image-1.webp"
+                    loading="lazy"
+                    fetchpriority="low"
+                    decoding="async"
+                    alt="Vilo ring 1">
                 </div>
                 <div class="swiper-slide">
-                  <img src="/images/product-page/R01/product-image-2.webp" alt="Product Image 2">
+                  <img
+                    src="/images/product-page/R01/product-image-2.webp"
+                    loading="lazy"
+                    fetchpriority="low"
+                    decoding="async"
+                    alt="Vilo ring 2">
                 </div>
                 <div class="swiper-slide">
-                  <img src="/images/product-page/R01/product-image-3.webp" alt="Product Image 3">
+                  <img
+                    src="/images/product-page/R01/product-image-3.webp"
+                    loading="lazy"
+                    fetchpriority="low"
+                    decoding="async"
+                    alt="Vilo ring 3">
                 </div>
                 <div class="swiper-slide">
-                  <img src="/images/product-page/R01/product-image-4.webp" alt="Product Image 4">
+                  <img
+                    src="/images/product-page/R01/product-image-4.webp"
+                    loading="lazy"
+                    fetchpriority="low"
+                    decoding="async"
+                    alt="Vilo ring 4">
                 </div>
                 <div class="swiper-slide">
-                  <img src="/images/product-page/R01/product-image-5.webp" alt="Product Image 5">
+                  <img
+                    src="/images/product-page/R01/product-image-5.webp"
+                    loading="lazy"
+                    fetchpriority="low"
+                    decoding="async"
+                    alt="Vilo ring 5">
                 </div>
             </div>
           </div>
@@ -391,7 +549,12 @@
                 <label class="swatch-item">
                   <input type="radio" name="color-variant" value="value-1" checked>
                   <span class="swatch-visual">
-                    <img src="/images/product-page/product-swatch.webp" alt="variant 1">
+                    <img
+                      src="/images/product-page/product-swatch.webp"
+                      loading="lazy"
+                      fetchpriority="low"
+                      decoding="async"
+                      alt="variant 1">
                   </span>
                   <span class="sr-only">ring 1</span>
                 </label>
@@ -399,7 +562,12 @@
                 <label class="swatch-item">
                   <input type="radio" name="color-variant" value="value-2">
                   <span class="swatch-visual">
-                    <img src="/images/product-page/product-swatch.webp" alt="variant 2">
+                    <img
+                      src="/images/product-page/product-swatch.webp"
+                      loading="lazy"
+                      fetchpriority="low"
+                      decoding="async"
+                      alt="variant 2">
                   </span>
                   <span class="sr-only">ring 1</span>
                 </label>
@@ -407,7 +575,12 @@
                 <label class="swatch-item disabled">
                   <input type="radio" name="color-variant" value="value-3" disabled>
                   <span class="swatch-visual">
-                    <img src="/images/product-page/product-swatch.webp" alt="variant 3">
+                    <img
+                      src="/images/product-page/product-swatch.webp"
+                      loading="lazy"
+                      fetchpriority="low"
+                      decoding="async"
+                      alt="variant 3">
                   </span>
                   <span class="sr-only">ring 3</span>
                 </label>
@@ -415,7 +588,12 @@
                 <label class="swatch-item">
                   <input type="radio" name="color-variant" value="value-4">
                   <span class="swatch-visual">
-                    <img src="/images/product-page/product-swatch.webp" alt="variant 4">
+                    <img
+                      src="/images/product-page/product-swatch.webp"
+                      loading="lazy"
+                      fetchpriority="low"
+                      decoding="async"
+                      alt="variant 4">
                   </span>
                   <span class="sr-only">ring 4</span>
                 </label>
@@ -423,7 +601,12 @@
                 <label class="swatch-item">
                   <input type="radio" name="color-variant" value="value-5">
                   <span class="swatch-visual">
-                    <img src="/images/product-page/product-swatch.webp" alt="variant 5">
+                    <img
+                      src="/images/product-page/product-swatch.webp"
+                      loading="lazy"
+                      fetchpriority="low"
+                      decoding="async"
+                      alt="variant 5">
                   </span>
                   <span class="sr-only">ring 5</span>
                 </label>
