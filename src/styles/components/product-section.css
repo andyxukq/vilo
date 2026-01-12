@@ -141,6 +141,7 @@ product-media {
   grid-template-columns: repeat(5, 1fr);
 }
 
+.size-item input,
 .swatch-item input {
   position: absolute;
   opacity: 0;
@@ -148,6 +149,7 @@ product-media {
   height: 0;
 }
 
+.size-visual,
 .swatch-visual {
   display: flex;
   aspect-ratio: 1 / 1;
@@ -156,6 +158,15 @@ product-media {
   overflow: hidden;
   cursor: pointer;
   background-color: var(--border-color-primary);
+}
+
+.size-visual {
+  aspect-ratio: 57 / 42;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: var(--text-color-tertiary);
 }
 
 .swatch-visual img {
@@ -169,6 +180,7 @@ product-media {
   border-color: #999;
 }
 
+.size-item input:checked + .size-visual,
 .swatch-item input:checked + .swatch-visual {
   border-color: var(--primary-color);
   border-width: .1rem;
@@ -178,6 +190,7 @@ product-media {
   opacity: 1;
 }
 
+.size-item input:focus-visible + .size-visual,
 .swatch-item input:focus-visible + .swatch-visual {
   outline: 1px solid var(--focus-color);
   outline-offset: 1px;
@@ -196,6 +209,32 @@ product-media {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+}
+
+.size-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem .5rem;
+  width: 100%;
+}
+
+.size-item.kit-option {
+  grid-column: span 6;
+}
+.size-item.kit-option .size-visual {
+  aspect-ratio: auto;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  height: 6rem;
+  padding-inline: 1.8rem;
+}
+
+.size-item {
+  position: relative;
+  cursor: pointer;
+  text-align: center;
 }
 
 .product-promo-info,
@@ -329,7 +368,7 @@ product-media {
 }
 
 .product-media-slider .swiper-slide img {
-  aspect-ratio: 312/391;
+  aspect-ratio: auto;
 }
 
 .product-wrapper-homepage .product-content {
@@ -390,7 +429,6 @@ product-media {
     line-height: 4rem;
   }
   .product-media-slider .swiper-slide img {
-    aspect-ratio: 781/975;
     border-radius: var(--border-radius-30);
   }
   .product-wrapper-homepage .product-content {
