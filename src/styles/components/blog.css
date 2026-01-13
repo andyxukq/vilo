@@ -176,6 +176,14 @@
     font-size: 1.8rem;
     font-weight: 600;
     font-family: var(--primary-bold-font);
+    overflow: hidden;
+}
+
+.author-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .author-details {
