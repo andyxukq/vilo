@@ -84,18 +84,6 @@
     text-decoration: underline;
 }
 
-/* Article Header */
-.article-header {
-    background-color: var(--white);
-    border-bottom: 1px solid var(--border-color-primary);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.article-header .announcement-bar {
-    display: none;
-}
 
 /* Article Main Layout */
 .article-main {
