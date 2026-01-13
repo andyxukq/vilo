@@ -219,6 +219,13 @@
     border-radius: var(--border-radius-12);
 }
 
+.article-image-caption {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: #616161;
+    margin-top: -2rem !important;
+}
+
 .article-body h2 {
     font-size: 3.2rem;
     line-height: 4rem;
