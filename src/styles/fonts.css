@@ -7,6 +7,22 @@
 }
 
 @font-face {
+  font-family: 'GeographWeb-Regular';
+  src: url('../assets/fonts/geographeditwebmedium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GeographWeb-Regular';
+  src: url('../assets/fonts/geographeditwebbold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'GeographWeb-Medium';
   src: url('../assets/fonts/geographeditwebmedium.ttf') format('truetype');
   font-weight: 500;
