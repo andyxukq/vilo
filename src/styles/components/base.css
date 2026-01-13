@@ -27,6 +27,7 @@ button {
     font-family: var(--primary-font), sans-serif;
 }
 
+a[variant="outlined"],
 button[variant="outlined"] {
     background: transparent;
     border: 1px solid var(--primary-color);
@@ -34,6 +35,7 @@ button[variant="outlined"] {
     padding: 1rem 1.5rem;
     border-radius: var(--border-radius-full);
     font-size: 1.2rem;
+    line-height: normal;
     cursor: pointer;
 }
 
