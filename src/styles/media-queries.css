@@ -1,16 +1,4 @@
 @media (min-width: 768px) {
-    header .announcement-bar {
-        font-size: 1.6rem;
-        line-height: 1.4rem;
-        padding-block: .9rem .6rem;
-        height: 6rem;
-        flex-direction: row;
-        gap: .4rem;
-    }
-    header .announcement-bar a {
-        display: inline;
-    }
-
     .heading-section-with-cta,
     .heading-section {
         padding-block: 9.6rem 10rem;
@@ -84,30 +72,6 @@
 }
 
 @media (min-width: 1024px) {
-    .header-content-wrapper {
-        height: 7rem;
-        padding-inline: 4rem;
-        width: calc(100% - 16rem);
-        top: calc(100% + 3.5rem);
-    }
-    header .nav-links a {
-        display: inline-block;
-    }
-    .container {
-        padding-inline: 8rem;
-    }
-    header button[variant="outlined"] {
-        border: 1px solid var(--primary-color);
-        color: var(--primary-color);
-    }
-    header .logo {
-        width: 6.8rem;
-        color: var(--primary-color);
-    }
-    header .mobile-menu-btn {
-        display: none;
-    }
-
     .features-sections-wrapper {
         gap: 14rem
     }
@@ -147,11 +111,5 @@
         width: fit-content;
         display: block;
         margin-top: 11rem;
-    }
-}
-
-@media (min-width: 1875px) {
-    .header-content-wrapper {
-        width: calc(1875px - 16rem);
     }
 }
