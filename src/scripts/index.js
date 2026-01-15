@@ -7,4 +7,4 @@ import './mobile-nav.js';
 import './home-page-product-swiper.js';
 import './parallax.js';
 import './ProductMedia.js';
-import './buy-button.js';
+import './ProductForm.js';
