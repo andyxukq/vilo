@@ -173,153 +173,168 @@
           <h2 class="product-subtitle">Founder’s Pre-Order Edition</h2>
           <p class="product-price">$399.00</p>
           <p class="product-description">Vilo isn’t here to quantify you. It’s here to help you listen—to your body, your rhythms, your quiet shifts over time.</p>
-          <div class="product-variant-picker">
-            <fieldset class="swatch-container">
-              <legend class="swatch-container-label">Select Your Style</legend>
+          <product-form>
+            <div class="product-variant-picker">
+              <fieldset class="swatch-container">
+                <legend class="swatch-container-label">Select Your Style</legend>
 
-              <div class="swatch-list">
-                <label class="swatch-item">
-                  <input type="radio" name="color-variant" value="value-1" checked>
-                  <span class="swatch-visual">
-                    <img
-                      src="/images/product-page/product-swatch-1.webp"
-                      loading="lazy"
-                      fetchpriority="low"
-                      decoding="async"
-                      alt="variant 1">
-                  </span>
-                  <span class="sr-only">ring 1</span>
-                </label>
+                <div class="swatch-list">
+                  <label class="swatch-item">
+                    <input type="radio" name="color-variant" value="Style 1" checked>
+                    <span class="swatch-visual">
+                      <img
+                        src="/images/product-page/product-swatch-1.webp"
+                        loading="lazy"
+                        fetchpriority="low"
+                        decoding="async"
+                        alt="variant 1">
+                    </span>
+                    <span class="sr-only">ring 1</span>
+                  </label>
 
-                <label class="swatch-item">
-                  <input type="radio" name="color-variant" value="value-2">
-                  <span class="swatch-visual">
-                    <img
-                      src="/images/product-page/product-swatch-2.webp"
-                      loading="lazy"
-                      fetchpriority="low"
-                      decoding="async"
-                      alt="variant 2">
-                  </span>
-                  <span class="sr-only">ring 1</span>
-                </label>
+                  <label class="swatch-item">
+                    <input type="radio" name="color-variant" value="Style 2">
+                    <span class="swatch-visual">
+                      <img
+                        src="/images/product-page/product-swatch-2.webp"
+                        loading="lazy"
+                        fetchpriority="low"
+                        decoding="async"
+                        alt="variant 2">
+                    </span>
+                    <span class="sr-only">ring 1</span>
+                  </label>
 
-                <label class="swatch-item">
-                  <input type="radio" name="color-variant" value="value-3">
-                  <span class="swatch-visual">
-                    <img
-                      src="/images/product-page/product-swatch-3.webp"
-                      loading="lazy"
-                      fetchpriority="low"
-                      decoding="async"
-                      alt="variant 3">
-                  </span>
-                  <span class="sr-only">ring 3</span>
-                </label>
+                  <label class="swatch-item">
+                    <input type="radio" name="color-variant" value="Style 3">
+                    <span class="swatch-visual">
+                      <img
+                        src="/images/product-page/product-swatch-3.webp"
+                        loading="lazy"
+                        fetchpriority="low"
+                        decoding="async"
+                        alt="variant 3">
+                    </span>
+                    <span class="sr-only">ring 3</span>
+                  </label>
 
-                <label class="swatch-item">
-                  <input type="radio" name="color-variant" value="value-4">
-                  <span class="swatch-visual">
-                    <img
-                      src="/images/product-page/product-swatch-4.webp"
-                      loading="lazy"
-                      fetchpriority="low"
-                      decoding="async"
-                      alt="variant 4">
-                  </span>
-                  <span class="sr-only">ring 4</span>
-                </label>
+                  <label class="swatch-item">
+                    <input type="radio" name="color-variant" value="Style 4">
+                    <span class="swatch-visual">
+                      <img
+                        src="/images/product-page/product-swatch-4.webp"
+                        loading="lazy"
+                        fetchpriority="low"
+                        decoding="async"
+                        alt="variant 4">
+                    </span>
+                    <span class="sr-only">ring 4</span>
+                  </label>
 
-                <label class="swatch-item">
-                  <input type="radio" name="color-variant" value="value-5">
-                  <span class="swatch-visual">
-                    <img
-                      src="/images/product-page/product-swatch-5.webp"
-                      loading="lazy"
-                      fetchpriority="low"
-                      decoding="async"
-                      alt="variant 5">
-                  </span>
-                  <span class="sr-only">ring 5</span>
-                </label>
+                  <label class="swatch-item">
+                    <input type="radio" name="color-variant" value="Style 5">
+                    <span class="swatch-visual">
+                      <img
+                        src="/images/product-page/product-swatch-5.webp"
+                        loading="lazy"
+                        fetchpriority="low"
+                        decoding="async"
+                        alt="variant 5">
+                    </span>
+                    <span class="sr-only">ring 5</span>
+                  </label>
+                </div>
+              </fieldset>
+              <div class="product-info-ctas">
+                <a href="#">Find Your Fit</a>
+                <a href="#">Size Guide</a>
               </div>
-            </fieldset>
-                        <div class="product-info-ctas">
-              <a href="#">Find Your Fit</a>
-              <a href="#">Size Guide</a>
+              <fieldset class="swatch-container size-selection">
+                <div class="size-grid">
+                  <label class="size-item kit-option">
+                    <input type="radio" name="product-size" value="Free Sizing Kit" checked>
+                    <span class="size-visual">Free Sizing Kit</span>
+                  </label>
+
+                  <label class="size-item">
+                    <input type="radio" name="product-size" value="Size 4">
+                    <span class="size-visual">4</span>
+                  </label>
+                  <label class="size-item">
+                    <input type="radio" name="product-size" value="Size 5">
+                    <span class="size-visual">5</span>
+                  </label>
+                  <label class="size-item">
+                    <input type="radio" name="product-size" value="Size 6">
+                    <span class="size-visual">6</span>
+                  </label>
+                  <label class="size-item">
+                    <input type="radio" name="product-size" value="Size 7">
+                    <span class="size-visual">7</span>
+                  </label>
+                  <label class="size-item">
+                    <input type="radio" name="product-size" value="Size 8">
+                    <span class="size-visual">8</span>
+                  </label>
+                  <label class="size-item">
+                    <input type="radio" name="product-size" value="Size 9">
+                    <span class="size-visual">9</span>
+                  </label>
+                  <label class="size-item">
+                    <input type="radio" name="product-size" value="Size 10">
+                    <span class="size-visual">10</span>
+                  </label>
+                  <label class="size-item">
+                    <input type="radio" name="product-size" value="Size 11">
+                    <span class="size-visual">11</span>
+                  </label>
+                  <label class="size-item">
+                    <input type="radio" name="product-size" value="Size 12">
+                    <span class="size-visual">12</span>
+                  </label>
+                  <label class="size-item">
+                    <input type="radio" name="product-size" value="Size 13">
+                    <span class="size-visual">13</span>
+                  </label>
+                  <label class="size-item">
+                    <input type="radio" name="product-size" value="Size 14">
+                    <span class="size-visual">14</span>
+                  </label>
+                  <label class="size-item">
+                    <input type="radio" name="product-size" value="Size 15">
+                    <span class="size-visual">15</span>
+                  </label>
+                </div>
+              </fieldset>
+              <h4 class="product-promo-offer-title">Choose Your Pre-Order Offer</h4>
+              <fieldset class="swatch-container payment-plan-picker">
+                <label class="buy-option-item">
+                  <input type="radio" name="payment-plan" value="Deposit" checked>
+                  <div class="product-promo-info buy-option-visual">
+                    <h5>$100 Deposit — Become a Founder</h5>
+                    <p>Reserve your Ring with a $100 deposit. <strong>Cancel anytime</strong>.</p>
+                    <p>Includes <strong>1-year extended warranty, 30-day returns</strong>, and <strong>12 months of membership</strong> — a $100 value — our thank-you for believing early.</p>
+                  </div>
+                </label>
+                <label class="buy-option-item">
+                  <input type="radio" name="payment-plan" value="Full Payment">
+                  <div class="product-promo-info-secondary buy-option-visual">
+                    <h5>Full Payment — Walk the Full Journey</h5>
+                    <p>Confirm your Ring today. Fully refundable. Cancel anytime.</p>
+                    <p>Includes <strong>2-year extended warranty, 30-day returns</strong>, and <strong>24 months of membership</strong> — a $200 value — our deepest thanks for your trust.</p>
+                  </div>
+                </label>
+              </fieldset>
             </div>
-            <fieldset class="swatch-container size-selection">
-              <div class="size-grid">
-                <label class="size-item kit-option">
-                  <input type="radio" name="product-size" value="sizing-kit" checked>
-                  <span class="size-visual">Free Sizing Kit</span>
-                </label>
-
-                <label class="size-item">
-                  <input type="radio" name="product-size" value="4">
-                  <span class="size-visual">4</span>
-                </label>
-                <label class="size-item">
-                  <input type="radio" name="product-size" value="5">
-                  <span class="size-visual">5</span>
-                </label>
-                <label class="size-item">
-                  <input type="radio" name="product-size" value="6">
-                  <span class="size-visual">6</span>
-                </label>
-                <label class="size-item">
-                  <input type="radio" name="product-size" value="7">
-                  <span class="size-visual">7</span>
-                </label>
-                <label class="size-item">
-                  <input type="radio" name="product-size" value="8">
-                  <span class="size-visual">8</span>
-                </label>
-                <label class="size-item">
-                  <input type="radio" name="product-size" value="9">
-                  <span class="size-visual">9</span>
-                </label>
-                <label class="size-item">
-                  <input type="radio" name="product-size" value="10">
-                  <span class="size-visual">10</span>
-                </label>
-                <label class="size-item">
-                  <input type="radio" name="product-size" value="11">
-                  <span class="size-visual">11</span>
-                </label>
-                <label class="size-item">
-                  <input type="radio" name="product-size" value="12">
-                  <span class="size-visual">12</span>
-                </label>
-                <label class="size-item">
-                  <input type="radio" name="product-size" value="13">
-                  <span class="size-visual">13</span>
-                </label>
-                <label class="size-item">
-                  <input type="radio" name="product-size" value="14">
-                  <span class="size-visual">14</span>
-                </label>
-                <label class="size-item">
-                  <input type="radio" name="product-size" value="15">
-                  <span class="size-visual">15</span>
-                </label>
-              </div>
-            </fieldset>
-          </div>
-          <h4 class="product-promo-offer-title">Choose Your Pre-Order Offer</h4>
-          <div class="product-promo-info">
-            <h5>$100 Deposit — Become a Founder</h5>
-            <p>Reserve your Ring with a $100 deposit. <strong>Cancel anytime</strong>.</p>
-            <p>Includes <strong>1-year extended warranty, 30-day returns</strong>, and <strong>12 months of membership</strong> — a $100 value — our thank-you for believing early.</p>
-          </div>
-          <div class="product-promo-info-secondary">
-            <h5>Full Payment — Walk the Full Journey</h5>
-            <p>Confirm your Ring today. Fully refundable. Cancel anytime.</p>
-            <p>Includes <strong>2-year extended warranty, 30-day returns</strong>, and <strong>24 months of membership</strong> — a $200 value — our deepest thanks for your trust.</p>
-          </div>
-          <button class="preorder-button">Pre-Order Now</button>
+            <button class="preorder-button">Pre-Order Now</button>
+          </product-form>
         </div>
       </div>
+      <script
+        id="shopify-sdk-script"
+        src="https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js"
+        onload="globalThis.dispatchEvent(new CustomEvent('shopify-sdk-loaded'))"
+        async></script>
     </section>
 
     <section class="alter-gallery-section" >
