@@ -1,8 +1,9 @@
 import { defineConfig } from "vite";
 import fs from "fs";
 import path from "path";
+import injectHTML from "vite-plugin-html-inject";
 
-const IGNORED_DIRS = new Set(['node_modules', '.git', 'dist', 'target', '.vscode']);
+const IGNORED_DIRS = new Set(['node_modules', '.git', 'dist', 'target', '.vscode','_page-components']);
 
 function getHtmlEntries(dir, baseDir, entries = {}, depth = 0) {
   if (depth > 5 || !fs.existsSync(dir)) return entries;
@@ -46,6 +47,7 @@ export default defineConfig({
     },
   },
   plugins: [
+    injectHTML(),
     {
       name: "vite-directory-slash-redirect",
       configureServer(server) {
