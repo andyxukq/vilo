@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vilo - Understand yourself, gently.</title>
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="stylesheet" href="/styles/index.css">
+  <link
+    rel="preload"
+    fetchpriority="high"
+    as="image"
+    href="/images/pages/ai-and-personalization/page-ai-and-personalization-hero-mobile.webp"
+    media="(max-width: 767px)"
+    type="image/webp">
+  <link
+    rel="preload"
+    fetchpriority="high"
+    as="image"
+    href="/images/pages/ai-and-personalization/page-ai-and-personalization-main.webp"
+    media="(min-width: 768px)"
+    type="image/webp">
+  <link
+    rel="preload"
+    fetchpriority="high"
+    as="image"
+    href="/images/pages/ai-and-personalization/page-ai-and-personalization-secondary-image.webp"
+    media="(min-width: 768px)"
+    type="image/webp">
+</head>
+
+<body>
+  <load ="/_page-components/mobile-menu.html" />
+  <header>
+    <load ="/_page-components/announcement-bar.html" />
+    <load ="/_page-components/header-content.html" />
+  </header>
+
+  <main class="main-content">
+
+    <section class="page-hero-section">
+      <div class="page-hero-section-wrapper rose-gradient">
+        <div class="container h-full">
+          <div class="page-hero-image-holder gsap-hero-image-holder">
+            <!-- !! in case of updating this images src, please update the 'href' for preload links in the head -->
+            <img
+              class="page-hero-main-image-mobile"
+              src="/images/pages/ai-and-personalization/page-ai-and-personalization-hero-mobile.webp"
+              fetchpriority="high"
+              loading="eager"
+              decoding="async"
+              alt="">
+            <img
+              class="page-hero-main-image-desktop"
+              src="/images/pages/ai-and-personalization/page-ai-and-personalization-main.webp"
+              fetchpriority="high"
+              loading="eager"
+              decoding="async"
+              alt="">
+              <img
+                class="page-hero-secondary-image"
+                src="/images/pages/ai-and-personalization/page-ai-and-personalization-secondary-image.webp"
+                fetchpriority="high"
+                loading="eager"
+                decoding="async"
+                alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="heading-section">
+      <div class="container flex justify-center">
+        <div class="heading-section-content-holder">
+          <h2 class="section-title">Inside Out, In Style.</h2>
+          <p class="section-subhead">On your hand: cool, with taste. In your day: a gentle AI guide—personalized to your rhythm, not anyone else’s rules.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <load ="/_page-components/footer.html" />
+  <script type="module" src="/scripts/index.js"></script>
+</body>
+
+</html>

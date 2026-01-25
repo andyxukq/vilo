@@ -6,6 +6,7 @@
 /* components */
 @import './components/base.css';
 @import './components/header.css';
+@import './components/footer.css';
 @import './components/hero.css';
 @import './components/heading-section.css';
 @import './components/gallery-grid.css';
@@ -18,6 +19,7 @@
 @import './components/alter-gallery.css';
 @import './components/product-section.css';
 @import './components/blog.css';
+@import './components/page-hero.css';
 
 
 @import './media-queries.css';
