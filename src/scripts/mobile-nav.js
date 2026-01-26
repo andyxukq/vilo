@@ -62,7 +62,6 @@ class MobileMenu extends HTMLElement {
                       color: var(--primary-color);
                       height: 100%;
                       padding-inline: 2.2rem;
-                      margin-top: 5.2rem;
                       display: flex;
                       flex-direction: column;
                     }
@@ -72,7 +71,7 @@ class MobileMenu extends HTMLElement {
                     .drawer-announcement-bar {
                       display: flex;
                       justify-content: center;
-                      padding-block: 1.3rem 2.7rem;
+                      padding-block: 2.7rem;
                     }
                     .drawer-header {
                       display: flex;
