@@ -197,8 +197,6 @@ footer .language-selector {
     justify-content: space-between;
     align-items: center;
   }
-  footer .language-selector {
-  }
 }
 
 @media (min-width: 1024px) {
