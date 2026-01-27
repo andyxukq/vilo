@@ -1,0 +1,211 @@
+.page-content-section {
+  color: var(--text-color-tertiary);
+}
+.container-medium {
+  max-width: 76rem;
+}
+.page-content-wrapper {
+  padding-top: 6rem;
+  padding-inline: 1.2rem;
+  width: 100%;
+}
+
+.page-hero-section-wrapper > .container {
+    padding: 0;
+}
+
+.page-hero-image-holder {
+  position: relative;
+}
+
+.page-hero-secondary-image {
+  border-radius: var(--border-radius-20);
+  display: block;
+  position: absolute;
+  bottom: 3rem;
+  right: 2rem;
+  width: 42%;
+  height: auto;
+  max-width: 54rem;
+}
+
+.page-hero-main-image-desktop {
+  position: relative;
+  bottom: 0;
+  right: 2rem;
+  height: auto;
+  width: 58%;
+  display: none;
+}
+
+.page-hero-section-wrapper.rose-gradient {
+  background-image: linear-gradient(35deg,
+     rgba(211, 177, 192, 0.77) 0%,
+     rgba(254, 240, 235, 0.77) 95%);
+}
+
+.page-hero-section-wrapper.cold-gradient {
+  background-image: linear-gradient(207deg,
+     rgba(179,203,218,0.77) 6%,
+     rgba(104,142,176,0.77) 94%);
+}
+
+.bg-white {
+  background-color: rgba(255,255,255, 0.3);
+}
+.bg-rose {
+  background-color: var(--rose);
+}
+.bg-cold {
+  background-color: var(--cold);
+}
+.bg-light-rose {
+  background-color: var(--light-rose);
+}
+.bg-light-cold {
+  background-color: var(--light-cold);
+}
+
+.page-heading-section {
+  padding: 3.4rem 4.7rem;
+  text-align: center;
+}
+.page-heading-section p {
+  font-size: 2rem;
+  line-height: 3rem;
+  max-width: 37rem;
+  padding-top: 2.1rem;
+}
+.page-heading-section h1 {
+  font-size: 3rem;
+  line-height: 3.8rem;
+  max-width: 30rem;
+}
+.page-content-section h2,
+.page-content-section p {
+  color: var(--text-color-tertiary)
+}
+.page-content-section h2 {
+  font-size: 3rem;
+  line-height: 3.7rem;
+}
+.page-content-section p,
+.page-content-section .page-content-list-item {
+  font-size: 2rem;
+  line-height: 3rem;
+}
+.page-content-section p,
+.page-content-section .page-content-list {
+  padding-top: 2.4rem;
+}
+.page-content-section .page-content-list-item::before {
+  content: '•';
+  display: inline-block;
+  width: 1.2rem;
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+}
+.page-content-section .page-content-list {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+.page-media-holder{
+  margin-top: 4.2rem;
+  display: flex;
+  justify-content: center;
+  border-radius: var(--border-radius-12);
+  overflow: hidden;
+}
+.page-media-holder .width-full {
+  width: 100%;
+}
+.page-media-holder .width-half {
+  width: 50%;
+  padding-block: 1rem;
+}
+.page-media-holder .width-one-third {
+  width: 30%;
+  padding-block: 1rem;
+}
+
+.page-content-section:last-child {
+  padding-bottom: 10rem;
+}
+
+@media (min-width: 768px) {
+    .page-content-wrapper {
+      padding-top: 8rem;
+      padding-inline: 0;
+    }
+    .page-hero-image-holder {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .page-hero-main-image-mobile {
+        display: none;
+    }
+    .page-hero-main-image-desktop {
+        display: block;
+    }
+    .page-hero-secondary-image {
+        bottom: 1.7rem;
+        right: 50%;
+        width: 25%;
+        max-width: 54rem;
+    }
+    .page-hero-section-wrapper {
+        padding-block: 10rem 3rem;
+    }
+    .page-hero-section-wrapper > .container {
+        padding-inline: 8rem;
+    }
+    .page-media-holder {
+      border-radius: 0;
+    }
+    .page-heading-section {
+      padding: 9rem 0;
+    }
+    .page-heading-section h1,
+    .page-content-section h2 {
+      font-size: 4.8rem;
+      line-height: 6.2rem;
+    }
+    .page-content-section p {
+      line-height: 2.8rem;
+      padding-top: 2rem;
+    }
+    .page-content-section .page-content-list {
+      padding-top: 2rem;
+      gap: 2.5rem;
+    }
+    .page-content-section .page-content-list-item {
+      line-height: 2.4rem;
+    }
+    .page-heading-section p ,
+    .page-heading-section h1 {
+      max-width: 70rem;
+    }
+}
+
+@media (min-width: 1024px) {
+  .page-hero-section-wrapper {
+    padding-block: 14rem 8rem;
+  }
+  .page-hero-secondary-image {
+    border-radius: 0;
+    bottom: 5.7rem;
+  }
+  .page-heading-section p ,
+  .page-heading-section h1 {
+    max-width: 81rem;
+  }
+}
+
+@media (min-width: 1600px) {
+    .page-hero-secondary-image {
+      width: 45%;
+  }
+}
