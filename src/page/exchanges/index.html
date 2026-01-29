@@ -1,1 +1,131 @@
 
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vilo - Understand yourself, gently.</title>
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="stylesheet" href="/styles/index.css">
+  <link
+    rel="preload"
+    fetchpriority="high"
+    as="image"
+    href="/images/pages/care-guide/care-guide-mobile.webp"
+    media="(max-width: 767px)"
+    type="image/webp">
+  <link
+    rel="preload"
+    fetchpriority="high"
+    as="image"
+    href="/images/pages/care-guide/care-guide-web.webp"
+    media="(min-width: 768px)"
+    type="image/webp">
+  
+</head>
+
+<body>
+  <load ="/_page-components/mobile-menu.html" />
+  <header>
+    <load ="/_page-components/announcement-bar.html" />
+    <load ="/_page-components/header-content.html" />
+  </header>
+
+  <main class="bg-light-cold">
+  
+    <section class="page-hero-section">
+      <div class="page-hero-section-wrapper cold-gradient">
+        <div class="container h-full">
+          <div class="page-hero-image-holder gsap-hero-image-holder">
+            <!-- !! in case of updating this images src, please update the 'href' for preload links in the head -->
+            <img
+              class="page-hero-main-image-mobile"
+              src="/images/pages/care-guide/care-guide-mobile.webp"
+              fetchpriority="high"
+              loading="eager"
+              decoding="async"
+              alt="">
+            <img
+              class="page-hero-main-image-desktop"
+              src="/images/pages/care-guide/care-guide-web.webp"
+              fetchpriority="high"
+              loading="eager"
+              decoding="async"
+              alt="">
+           
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    </section>
+    <section class="page-content-section">
+      <div class="container-medium page-content-wrapper flex column justify-center">
+        <h2>No direct exchanges (for now).</h2>
+         <p>We currently don’t offer direct exchanges—including size exchanges.</p>
+     
+       
+      </div>
+    </section>
+    <section class="page-content-section">
+      <div class="container-medium page-content-wrapper flex column justify-center">
+        <h2>If you need a different size</h2>
+        
+         <ul class="page-content-list">
+          <li class="page-content-list-item">
+          Return your original order (within the trial window)
+          </li>
+          <li class="page-content-list-item">
+          Place a new order for the correct size
+          </li>
+          <p>We do this to keep fulfillment fast, inventory clean, and timelines predictable.</p>
+         
+        </ul>
+       <div class="page-media-holder bg-cold">
+          <img
+            class="width-full"
+            src="/images/pages/returns/exchange-1.webp"
+            loading="lazy"
+            fetchpriority="low"
+            decoding="async"
+            alt="To be eligible for a return">
+        </div>
+      </div>
+
+        
+    </section>
+    <section class="page-content-section">
+      <div class="container-medium page-content-wrapper flex column justify-center">
+        <h2>Want to avoid a second order?</h2>
+      <p> Use the Sizing Guide (and sizer set) and wear your sizer for 24 hours, including sleep. If you’re between sizes, contact us before ordering—we’ll help you choose.</p>
+   <div class="page-media-holder bg-cold">
+          <img
+            class="width-full"
+            src="/images/pages/returns/exchange-1.webp"
+            loading="lazy"
+            fetchpriority="low"
+            decoding="async"
+            alt="How to return">
+        </div>
+      </div>
+       
+    </section>
+
+     
+      
+   
+      
+      
+  
+          
+
+  </main>
+  <load ="/_page-components/footer.html" />
+  <script type="module" src="/scripts/index.js"></script>
+</body>
+
+</html>
