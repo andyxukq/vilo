@@ -8,3 +8,5 @@ import './home-page-product-swiper.js';
 import './parallax.js';
 import './ProductMedia.js';
 import './ProductForm.js';
+import './ModalDialog.js';
+import './SubscriptionDialog.js';

@@ -21,6 +21,8 @@
 @import './components/blog.css';
 @import './components/page.css';
 
+@import './components/modal-dialog.css';
 
+@import './components/email-subscription-dialog.css';
 
 @import './media-queries.css';
