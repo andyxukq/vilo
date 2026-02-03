@@ -6,6 +6,7 @@
 /* components */
 @import './components/base.css';
 @import './components/header.css';
+@import './components/announcement-bar.css';
 @import './components/footer.css';
 @import './components/hero.css';
 @import './components/heading-section.css';

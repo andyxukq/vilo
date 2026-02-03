@@ -10,3 +10,4 @@ import './ProductMedia.js';
 import './ProductForm.js';
 import './ModalDialog.js';
 import './SubscriptionDialog.js';
+import './AnnouncementBar.js';
