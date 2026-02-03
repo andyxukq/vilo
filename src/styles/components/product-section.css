@@ -263,16 +263,16 @@ product-media {
 .product-promo-info p,
 .product-promo-info-secondary p {
   font-size: 1.3rem;
-  line-height: 1.8rem;
+  line-height: 2.2rem;
   color: var(--text-color-tertiary)
 }
 
 .product-promo-info li,
 .product-promo-info-secondary li {
   font-size: 1.3rem;
-  line-height: 1.8rem;
+  line-height: 2.2rem;
   color: var(--text-color-tertiary);
- margin-left: 1.3rem;
+ margin-left: 1.6rem;
 }
 
 .product-promo-info strong,
