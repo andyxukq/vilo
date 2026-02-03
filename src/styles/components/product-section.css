@@ -267,6 +267,13 @@ product-media {
   color: var(--text-color-tertiary)
 }
 
+.product-promo-info li,
+.product-promo-info-secondary li {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  color: var(--text-color-tertiary)
+}
+
 .product-promo-info strong,
 .product-promo-info-secondary strong {
   font-family: var(--primary-bold-font);
