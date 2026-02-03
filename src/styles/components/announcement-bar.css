@@ -1,0 +1,32 @@
+announcement-bar {
+    width: 100%;
+    height: 4.5rem;
+    text-align: center;
+    font-size: 1rem;
+    color: var(--secondary-color-inverse);
+    background-color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+announcement-bar a {
+    color: var(--secondary-color-inverse);
+    text-decoration: underline;
+    display: block;
+}
+
+@media (min-width: 768px) {
+    announcement-bar {
+        font-size: 1.6rem;
+        line-height: 1.4rem;
+        padding-block: .9rem .6rem;
+        height: var(--announcement-bar-height-desktop);
+        flex-direction: row;
+        gap: .4rem;
+    }
+    announcement-bar a {
+        display: inline;
+    }
+}
