@@ -29,4 +29,14 @@ announcement-bar a {
     announcement-bar a {
         display: inline;
     }
+    announcement-bar a,
+    announcement-bar span {
+        transition: color 0.3s ease;
+    }
+    .dm-open announcement-bar a,
+    .dm-open announcement-bar span {
+        position: relative;
+        color: var(--primary-color);
+        z-index: 101;
+    }
 }

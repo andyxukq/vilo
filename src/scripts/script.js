@@ -1,25 +1,4 @@
-// Simple JavaScript for basic functionality
-document.addEventListener("DOMContentLoaded", function () {
-  // Add smooth scroll behavior for any future navigation
-  const links = document.querySelectorAll('a[href^="#"]');
-
-  links.forEach((link) => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
-      const targetId = this.getAttribute("href");
-      const targetElement = document.querySelector(targetId);
-
-      if (targetElement) {
-        targetElement.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-      }
-    });
-  });
-});
-
-// Add a generic image loading effect 
+// Add a generic image loading effect
 // Fade-in images when they enter the viewport
 document.addEventListener("DOMContentLoaded", function () {
   const SELECTOR = "img";
@@ -111,3 +90,12 @@ document.addEventListener("DOMContentLoaded", function () {
   };
   observeAll();
 });
+
+const initStickyState = () => {
+  const bar = document.querySelector('announcement-bar');
+  if (!bar) {
+    document.body.classList.add('header-is-sticky');
+  }
+};
+
+window.addEventListener('DOMContentLoaded', initStickyState);
