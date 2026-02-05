@@ -54,7 +54,7 @@ class MobileMenu extends HTMLElement {
                       max-width: 43rem;
                       background: var(--white);
                       transition: 0.3s;
-                      z-index: 100;
+                      z-index: 120;
                       box-shadow: -0.2rem 0 .5rem rgba(var(--black),0.5);
                     }
                     .drawer-content-wrapper {
@@ -101,7 +101,7 @@ class MobileMenu extends HTMLElement {
                         visibility: hidden;
                         opacity: 0;
                         transition: 0.3s;
-                        z-index: 90;
+                        z-index: 110;
                     }
                     .overlay.active {
                       visibility: visible;

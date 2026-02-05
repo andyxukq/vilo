@@ -11,7 +11,7 @@ class AnnouncementBar extends HTMLElement {
 
   disconnectedCallback() {
     this.observer.disconnect();
-    document.body.classList.remove('header-is-sticky');
+    document.body.classList.add('header-is-sticky');
   }
 }
 

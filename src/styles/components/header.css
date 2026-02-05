@@ -35,6 +35,11 @@ header .container {
     z-index: 100;
 }
 
+.dm-open .header-content-wrapper  {
+    background: transparent;
+    backdrop-filter: unset;
+}
+
 header .nav-links {
     display: flex;
     gap: 3.4rem;
@@ -79,32 +84,9 @@ header .mobile-menu-btn {
     padding-right: 4px;
 }
 
-desktop-menu {
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows 0.3s ease-out;
-
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 11;
-    background-color: var(--background-color);
-    border-radius: 0 0 var(--border-radius-30) var(--border-radius-30);
-}
-
-.desktop-menu-wrapper {
-    min-height: 0;
-}
-
-.dm-open desktop-menu {
-    grid-template-rows: 1fr;
-}
-
 @media (min-width: 1024px) {
     .header-content-wrapper {
-        height: 7rem;
+        height: var(--header-height-desktop);
         padding-inline: 4rem;
         width: calc(100% - 16rem);
         top: calc(100% + 3.5rem);
