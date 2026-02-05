@@ -73,7 +73,8 @@
 
 @media (min-width: 1024px) {
     .features-sections-wrapper {
-        gap: 14rem
+        gap: 14rem;
+        padding-top:10rem;
     }
     .image-with-copy-container {
         flex-direction: row;
