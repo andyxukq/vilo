@@ -1,7 +1,7 @@
 @media (min-width: 768px) {
     .heading-section-with-cta,
     .heading-section {
-        padding-block: 9.6rem 10rem;
+        padding-block: 9.6rem 0rem;
         text-align: center;
     }
     .heading-section .heading-section-content-holder {
