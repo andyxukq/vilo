@@ -1,7 +1,7 @@
 desktop-menu {
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: grid-template-rows 0.55s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
   position: absolute;
   top: calc(var(--announcement-bar-height-desktop, 6rem) * -1);
@@ -23,12 +23,11 @@ desktop-menu {
 }
 
 .desktop-menu-container {
-  min-height: 27rem;
+  min-height: 26rem;
   width: 100%;
   max-width: 1875px;
-  padding: 3.5rem 8rem;
+  padding: 2.8rem 8rem;
   display: flex;
-  align-content: center;
 }
 
 .header-is-sticky desktop-menu {
@@ -44,7 +43,7 @@ desktop-menu {
 }
 
 .desktop-menu-row {
-  gap: 6.5rem;
+  gap: 2.4rem;
   justify-content: center;
   max-height: 17rem;
   width: 100%;
@@ -62,13 +61,11 @@ desktop-menu {
 
 .desktop-menu-col {
   display: flex;
-  flex: 0 1 calc((100% - 13rem) / 3);
 }
 
 .desktop-menu-image {
-  width: 100%;
   border-radius: var(--border-radius-20);
-  min-width: 37rem;
+  width: 37rem;
 }
 
 .menu-list {
@@ -109,4 +106,16 @@ desktop-menu:not(:defined) {
 
 desktop-menu:defined {
   display: grid;
+}
+
+@media (min-width: 1200px) {
+ .desktop-menu-row {
+    gap: 4.4rem;
+  }
+}
+
+@media (min-width: 1440px) {
+ .desktop-menu-row {
+    gap: 6.4rem;
+  }
 }
