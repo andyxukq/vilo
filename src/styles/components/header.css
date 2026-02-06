@@ -11,6 +11,15 @@ header {
 .header-is-sticky header {
     position: fixed;
     top: 0;
+    transition: top 0.3s ease-in-out;
+}
+
+body.dm-open .header-is-sticky header {
+    top: 0;
+}
+
+body:not(.dm-open).header-is-sticky header.header--hidden {
+    top: -200px;
 }
 
 header .container {
@@ -28,6 +37,7 @@ header .container {
     backdrop-filter: blur(.5rem) saturate(103%) brightness(92%);
     -webkit-backdrop-filter: blur(.5rem) saturate(103%) brightness(92%);
     background: rgba(255, 255, 255, 0.05);
+    transition: background-color 0.4s ease-in-out, backdrop-filter 0.4s ease-in-out;
     position: absolute;
     top: calc(100% + 1.5rem);
     left: 50%;
@@ -94,6 +104,39 @@ header .mobile-menu-btn {
     header .nav-links a {
         display: inline-block;
     }
+
+    [data-dropdown-id] {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+
+    [data-dropdown-id]::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        height: 2px;
+        width: 100%;
+        opacity: .5;
+        background-color: currentColor;
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
+        will-change: transform;
+        pointer-events: none;
+    }
+
+    [data-dropdown-id].is-active::after {
+        transform: scaleX(1);
+    }
+
     .container {
         padding-inline: 8rem;
     }

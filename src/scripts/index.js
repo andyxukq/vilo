@@ -1,4 +1,5 @@
 import './script.js';
+import './header-logic.js'
 
 import './gallery-swiper.js';
 import './alter-gallery-swiper.js';
