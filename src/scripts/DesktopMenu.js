@@ -10,20 +10,21 @@ class DesktopMenu extends HTMLElement {
 
     this._initiateClose = this._initiateClose.bind(this)
     this._forceClose = this._forceClose.bind(this)
+    this.header = null
   }
 
   connectedCallback() {
-    const header = document.querySelector('header')
-    this.menuLinks = Array.from(header.querySelectorAll('[data-dropdown-id]'))
+    this.header = document.querySelector('header')
+    this.menuLinks = Array.from(this.header.querySelectorAll('[data-dropdown-id]'))
     this.menuRows = Array.from(this.querySelectorAll('[data-menu-id]'))
 
     this.activeZone = [
       document.querySelector('announcement-bar'),
-      header.querySelector('.header-content-wrapper'),
+      this.header.querySelector('.header-content-wrapper'),
       this
     ].filter(el => el !== null);
 
-    const simpleLinks = header.querySelectorAll('.nav-links a:not([data-dropdown-id])')
+    const simpleLinks = this.header.querySelectorAll('.nav-links a:not([data-dropdown-id])')
 
     this.menuLinks.forEach(link => {
       link.addEventListener('mouseenter', () => {
@@ -51,6 +52,7 @@ class DesktopMenu extends HTMLElement {
     this.closeTimer = setTimeout(() => {
       const stillInZone = this.activeZone.some((el) => el.matches(':hover'))
       if (!stillInZone) {
+        this._resetHeaderClass()
         this._toggleDesktopMenuShow(false)
         this._setActiveMenuLink(null)
         this._removeActiveClass()
@@ -59,10 +61,15 @@ class DesktopMenu extends HTMLElement {
   }
 
   _forceClose() {
-    clearTimeout(this.closeTimer);
-    this._toggleDesktopMenuShow(false);
-    this._setActiveMenuLink(null);
+    clearTimeout(this.closeTimer)
+    this._resetHeaderClass()
+    this._toggleDesktopMenuShow(false)
+    this._setActiveMenuLink(null)
     this._removeActiveClass()
+  }
+
+  _resetHeaderClass() {
+    this.header.classList.remove('header--hidden')
   }
 
   _removeActiveClass() {

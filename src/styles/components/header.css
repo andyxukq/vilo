@@ -11,6 +11,15 @@ header {
 .header-is-sticky header {
     position: fixed;
     top: 0;
+    transition: top 0.3s ease-in-out;
+}
+
+body.dm-open .header-is-sticky header {
+    top: 0;
+}
+
+body:not(.dm-open).header-is-sticky header.header--hidden {
+    top: -200px;
 }
 
 header .container {
