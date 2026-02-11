@@ -12,19 +12,37 @@
     rel="preload"
     fetchpriority="high"
     as="image"
-    href="/images/product-page/R01/product-image-1.webp"
+    href="/images/product-page/PV01/glass-jade-1.webp"
     type="image/webp">
   <link
     rel="preload"
     fetchpriority="high"
     as="image"
-    href="/images/product-page/R01/product-image-2.webp"
+    href="/images/product-page/PV01/glass-jade-2.webp"
     type="image/webp">
   <link
     rel="preload"
     fetchpriority="high"
     as="image"
-    href="/images/product-page/R01/product-image-3.webp"
+    href="/images/product-page/PV01/glass-jade-3.webp"
+    type="image/webp">
+  <link
+    rel="preload"
+    fetchpriority="high"
+    as="image"
+    href="/images/product-page/PV01/glass-jade-4.webp"
+    type="image/webp">
+  <link
+    rel="preload"
+    fetchpriority="high"
+    as="image"
+    href="/images/product-page/PV01/glass-jade-5.webp"
+    type="image/webp">
+  <link
+    rel="preload"
+    fetchpriority="high"
+    as="image"
+    href="/images/product-page/PV01/glass-jade-6.webp"
     type="image/webp">
   <load ="/_page-components/tags-and-pixels-head.html" />
 </head>
@@ -38,73 +56,72 @@
     <load ="/_page-components/header-content.html" />
   </header>
 
+  <style>
+    .product-main-swiper {
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+
+
+
+  </style>
   <main>
 
     <section class="product-section">
       <div class="product-wrapper product-wrapper-pdp">
         <product-media>
-          <div class="mobile-image-stage"></div>
           <!-- !! in case of updating this images src, please update the 'href' for preload links in the head -->
-          <img
-            class="product-mobile-image"
-            src="/images/product-page/R01/product-image-1.webp"
-            loading="eager"
-            fetchpriority="high"
-            decoding="async"
-            alt="Vilo Product">
-          <img
-            class="product-desktop-image"
-            src="/images/product-page/R01/product-image-1.webp"
-            loading="eager"
-            fetchpriority="high"
-            decoding="async"
-            alt="Vilo Product">
+          <div class="swiper product-main-swiper">
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="/images/product-page/PV01/glass-jade-1.webp"
+                      alt="Vilo Ring Glass Jade - Front View"
+                      fetchpriority="high"
+                      loading="eager"
+                      decoding="sync">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="/images/product-page/PV01/glass-jade-2.webp" alt="2">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="/images/product-page/PV01/glass-jade-3.webp" alt="3">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="/images/product-page/PV01/glass-jade-4.webp" alt="4">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="/images/product-page/PV01/glass-jade-5.webp" alt="5">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="/images/product-page/PV01/glass-jade-6.webp" alt="6">
+                  </div>
+              </div>
+          </div>
           <div class="product-media-images-grid">
-            <span class="product-media-image-holder">
-              <img
-                src="/images/product-page/R01/product-image-1.webp"
-                width="70"
-                loading="eager"
-                fetchpriority="high"
-                decoding="async"
-                alt="Product 1">
-            </span>
-            <span class="product-media-image-holder">
-              <img
-                src="/images/product-page/R01/product-image-2.webp"
-                width="70"
-                loading="eager"
-                fetchpriority="high"
-                decoding="async"
-                alt="Product 2">
-            </span>
-            <span class="product-media-image-holder">
-              <img
-                src="/images/product-page/R01/product-image-3.webp"
-                width="70"
-                loading="eager"
-                fetchpriority="high"
-                decoding="async"
-                alt="Product 3">
-            </span>
-         <span class="product-media-image-holder">
-              <img
-                src="/images/product-page/R01/product-image-4.webp"
-                width="70"
-                loading="eager"
-                fetchpriority="high"
-                decoding="async"
-                alt="Product 4">
-            </span>
-            <span class="product-media-image-holder">
-              <img
-                src="/images/product-page/R01/product-image-5.webp"
-                width="70"
-                loading="eager"
-                fetchpriority="high"
-                decoding="async"
-                alt="Product 5">
-            </span>
+            <div class="swiper product-thumb-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="/images/product-page/PV01/glass-jade-1.webp" loading="eager" decoding="async">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="/images/product-page/PV01/glass-jade-2.webp" loading="eager" decoding="async">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="/images/product-page/PV01/glass-jade-3.webp" loading="eager" decoding="async">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="/images/product-page/PV01/glass-jade-4.webp" loading="eager" decoding="async">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="/images/product-page/PV01/glass-jade-5.webp" loading="eager" decoding="async">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="/images/product-page/PV01/glass-jade-6.webp" loading="eager" decoding="async">
+                    </div>
+                </div>
+            </div>
           </div>
         </product-media>
         <div class="product-content">
