@@ -1,7 +1,7 @@
 // Add a generic image loading effect
 // Fade-in images when they enter the viewport
 document.addEventListener("DOMContentLoaded", function () {
-  const SELECTOR = "img";
+  const SELECTOR = "img:not(.swiper-slide img)";
   const BASE_OPACITY = 0;
   const IN_OPACITY = 1;
 
@@ -33,9 +33,10 @@ document.addEventListener("DOMContentLoaded", function () {
   document.head.appendChild(style);
 
   const mark = (img) => {
+    if (img.closest('.swiper-slide')) return;
     if (img.dataset.fadeinInitialized) return;
     img.dataset.fadeinInitialized = "1";
-    img.setAttribute("data-fadein", "1");
+    img.dataset.fadein = "1";
   };
 
   // Mark current images

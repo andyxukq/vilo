@@ -35,23 +35,8 @@
     .heading-section-with-cta .icon-holder svg{
         width: 2.5rem;
     }
-    .gallery-grid {
-        column-count: 2;
-        column-gap: 1.9rem;
-        display: block;
-    }
-    .gallery-grid .gallery-item {
-        break-inside: avoid;
-        margin-bottom: 1.6rem;
-    }
-    .gallery-grid .gallery-item img {
-        border-radius: var(--border-radius-30);
-    }
-    .gallery-grid .aspect-rect {
-        aspect-ratio: 2 / 1;
-    }
-    .gallery-slider,
-    .swiper-nav-holder {
+
+    .alter-gallery-section .swiper-nav-holder {
         display: none !important;
     }
 
