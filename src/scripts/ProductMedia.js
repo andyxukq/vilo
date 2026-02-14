@@ -6,19 +6,31 @@ import 'swiper/css/thumbs';
 import 'swiper/css/effect-fade';
 
 class ProductMedia extends HTMLElement {
-  constructor() {
-    super();
-  }
-
   connectedCallback() {
     this.initSwipers()
+
+    this._variantListener = async (event) => {
+      const variantName = event.detail.variant;
+      if (variantName) {
+        await this.updateImages(variantName);
+      }
+    };
+
+    window.addEventListener('variant:changed', this._variantListener);
+
+    import('./media-utils.js').then(({ preloadAllVariants }) => {
+      preloadAllVariants();
+    });
   }
 
   disconnectedCallback() {
+    window.removeEventListener('variant:changed', this._variantListener);
+    this.mainSwiper?.destroy()
+    this.thumbSwiper?.destroy()
   }
 
   initSwipers() {
-   const productThumbSwiperInstance = new Swiper(document.querySelector('.product-thumb-swiper'), {
+   const productThumbSwiperInstance = new Swiper(this.querySelector('.product-thumb-swiper'), {
     modules: [FreeMode, Thumbs],
      slidesPerView: 6,
     spaceBetween: 8,
@@ -26,7 +38,7 @@ class ProductMedia extends HTMLElement {
     watchSlidesProgress: true,
   });
 
-  const productMainSwiperInstance = new Swiper(document.querySelector('.product-main-swiper'), {
+  const productMainSwiperInstance = new Swiper(this.querySelector('.product-main-swiper'), {
     modules: [Thumbs, EffectFade],
     effect: 'fade',
     fadeEffect: {
@@ -41,6 +53,20 @@ class ProductMedia extends HTMLElement {
 
   this.mainSwiper = productMainSwiperInstance;
   this.thumbSwiper = productThumbSwiperInstance;
+  }
+
+  async updateImages(variantName) {
+    const { IMAGES_URLS } = await import('./media-utils.js');
+    const newImages = IMAGES_URLS[variantName];
+    if (!newImages) return;
+
+    const mainImages = this.querySelectorAll('.product-main-swiper img');
+    const thumbImages = this.querySelectorAll('.product-thumb-swiper img');
+
+    newImages.forEach((url, index) => {
+      if (mainImages[index]) mainImages[index].src = url;
+      if (thumbImages[index]) thumbImages[index].src = url;
+    });
   }
 }
 
