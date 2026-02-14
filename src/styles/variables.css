@@ -6,7 +6,6 @@
     --tertiary-color: #D3DAE2;
     --tertiary-color-inverse: #FFFFFF;
     --text-color: #000000;
-    --text-color-form: #3F4142;
     --text-color-secondary: #212121;
     --text-color-tertiary: #3F4142;
     --text-color-disabled: #B9B9B9;
@@ -37,4 +36,6 @@
 
     --announcement-bar-height-desktop: 6rem;
     --header-height-desktop: 7rem;
+    --green-badge: #457152;
+    --orange-badge: #CB9578;
 }

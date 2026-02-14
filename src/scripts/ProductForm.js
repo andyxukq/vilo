@@ -62,7 +62,6 @@ class ProductForm extends HTMLElement {
 
   handleColorChange(e) {
     const selectedColor = e.target.value;
-    console.log({selectedColor})
     if (selectedColor) {
       window.dispatchEvent(new CustomEvent('variant:changed', {
         detail: { variant: selectedColor },

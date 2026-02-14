@@ -44,7 +44,7 @@
   font-size: 1.4rem;
 }
 .contact-us-form form input::placeholder {
-  color: var(--text-color-form)
+  color: var(--text-color-tertiary)
 }
 
 .contact-us-form form textarea {
@@ -70,7 +70,7 @@
 .contact-us-content p {
   font-size: 1.5rem;
   line-height: 2.1rem;
-  color: var(--text-color-form)
+  color: var(--text-color-tertiary)
 }
 
 .contact-us-section-alt {
