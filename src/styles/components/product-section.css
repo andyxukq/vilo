@@ -44,7 +44,7 @@ product-media {
 }
 
 .product-content {
-  padding: 3.4rem 2rem 0;
+  padding: 4rem 2rem 0;
   border-radius: var(--border-radius-18);
   margin-top: -2.5rem;
   position: relative;
@@ -56,7 +56,7 @@ product-media {
   font-size: 2.4rem;
   line-height: 2.9rem;
   color: var(--text-color-secondary);
-  padding-bottom: .5rem;
+  padding-bottom: .6rem;
 }
 
 .product-subtitle{
@@ -64,45 +64,48 @@ product-media {
   line-height: 2rem;
   color: var(--primary-color);
   font-family: var(--primary-media-font);
-  padding-bottom: 1.3rem;
+  padding-bottom: 1.8rem;
 }
 
 .product-price {
   font-size: 2.4rem;
   line-height: 2.9rem;
-  color: var(--text-color-secondary);
+  color: var(--primary-color);
   padding-bottom: 1.4rem;
+}
+
+.compare-at-price {
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  text-decoration: line-through;
+  color: var(--text-color-tertiary);
+}
+
+.light-text {
+  opacity: .6;
 }
 
 .product-description {
   font-size: 1.4rem;
   line-height: 1.8rem;
   color: var(--text-color-tertiary);
-  padding-bottom: 1.4rem;
-}
-
-.product-info-ctas {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 1rem;
-  font-size: 1.4rem;
-  line-height: 1.7rem;
-}
-
-.product-info-ctas a {
-  cursor: pointer;
-  text-decoration: none;
-  color: var(--black)
+  padding-bottom: 3rem;
 }
 
 .swatch-container {
   border: none;
-  padding-block: .7rem 1.2rem;
+  padding-block: 0rem 2rem;
+}
+
+.swatch-container:last-child {
+  padding-block: 0rem 1.2rem;
 }
 
 .swatch-container-label {
   font-size: 1.4rem;
   line-height: 1.7rem;
+  font-family: var(--primary-media-font);
+  padding-bottom: 1.5rem;
 }
 
 .swatch-list {
@@ -198,14 +201,16 @@ product-media {
 .size-item.kit-option {
   grid-column: span 6;
 }
+
 .size-item.kit-option .size-visual {
   aspect-ratio: auto;
   align-items: center;
   justify-content: flex-start;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   line-height: 1.8rem;
   height: 6rem;
   padding-inline: 1.8rem;
+  font-family: var(--primary-media-font);
 }
 
 .size-item {
@@ -214,15 +219,18 @@ product-media {
   text-align: center;
 }
 
-.product-promo-info,
-.product-promo-info-secondary {
-  padding: 2rem 1.8rem;
-  border-radius: var(--border-radius-12);
-  margin-top: 1rem;
+.payment-plan-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
 }
 
-.product-promo-info h5,
-.product-promo-info-secondary h5 {
+.buy-option-visual {
+  padding: 2rem 1.8rem;
+  border-radius: var(--border-radius-12);
+}
+
+.buy-option-visual h5 {
   font-size: 1.6rem;
   line-height: 2rem;
   color: var(--primary-color);
@@ -230,30 +238,35 @@ product-media {
   font-family: var(--primary-media-font);
 }
 
-.product-promo-info p,
-.product-promo-info-secondary p {
+.buy-option-visual p {
   font-size: 1.3rem;
   line-height: 2.2rem;
   color: var(--text-color-tertiary)
 }
 
-.product-promo-info li,
-.product-promo-info-secondary li {
+.buy-option-visual hr {
+  margin-block: 1.6rem;
+  background-color: #D8D8D8;
+  color: #D8D8D8;
+}
+
+.buy-option-visual ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  font-family: var(--primary-media-font);
+  padding-bottom: 1.2rem;
+}
+
+.buy-option-visual li {
   font-size: 1.3rem;
   line-height: 2.2rem;
   color: var(--text-color-tertiary);
  margin-left: 1.6rem;
 }
 
-.product-promo-info strong,
-.product-promo-info-secondary strong {
+.buy-option-visual strong {
   font-family: var(--primary-bold-font);
-}
-
-.product-promo-offer-title {
-  font-size: 1.4rem;
-  line-height: 1.7rem;
-  color: var(--text-color-secondary)
 }
 
 .preorder-button {
@@ -304,6 +317,28 @@ product-media .product-section-promo {
   font-size: 1.1rem;
   line-height: 1.6rem;
   color: var(--text-color-tertiary);
+}
+
+.product-badges {
+  display: flex;
+  gap: .6rem;
+  padding-bottom: .6rem;
+}
+
+.product-badge {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  text-transform: uppercase;
+  color: var(--primary-color-inverse);
+  border-radius:calc(var(--border-radius-12) / 2);
+  padding: .1rem .7rem;
+}
+
+.green-badge {
+  background-color: var(--green-badge);
+}
+.orange-badge {
+  background-color: var(--orange-badge);
 }
 
 @media (min-width: 1024px) {
