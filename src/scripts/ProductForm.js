@@ -9,12 +9,15 @@ class ProductForm extends HTMLElement {
       utmMedium: 'preorder-button',
       utmCampaign: 'vilo-launch-2026'
     };
+    this.abortController = null;
     this.currentVariantId = null;
     this.updateVariant = this.updateVariant.bind(this);
     this.handleCheckout = this.handleCheckout.bind(this);
+    this.handleColorChange = this.handleColorChange.bind(this);
   }
 
   connectedCallback() {
+
     this.customBuyBtn = this.querySelector('.preorder-button');
     this.toggleUIState(false);
     if (globalThis.ShopifyBuy?.UI) {
@@ -25,19 +28,21 @@ class ProductForm extends HTMLElement {
   }
 
   disconnectedCallback() {
-    this.removeEventListeners();
+    this.abortController?.abort();
   }
 
   addEventListeners() {
-    this.customBuyBtn?.addEventListener('click', this.handleCheckout);
-    const fieldsets = this.querySelectorAll('fieldset');
-    fieldsets.forEach(fs => fs.addEventListener('change', this.updateVariant));
-  }
+    this.abortController = new AbortController();
+    const { signal } = this.abortController;
 
-  removeEventListeners() {
+    this.customBuyBtn?.addEventListener('click', this.handleCheckout, { signal });
     const fieldsets = this.querySelectorAll('fieldset');
-    fieldsets.forEach(fs => fs.removeEventListener('change', this.updateVariant));
-    this.customBuyBtn?.removeEventListener('click', this.handleCheckout);
+    fieldsets.forEach(fs => {
+      fs.addEventListener('change', this.updateVariant, { signal })
+      if (fs.dataset.optionName === 'color') {
+        fs.addEventListener('change', this.handleColorChange, { signal });
+      }
+    });
   }
 
   async initShopify() {
@@ -52,6 +57,18 @@ class ProductForm extends HTMLElement {
       this.updateVariant();
     } catch (error) {
       console.error("Shopify Initialization Failed:", error);
+    }
+  }
+
+  handleColorChange(e) {
+    const selectedColor = e.target.value;
+    console.log({selectedColor})
+    if (selectedColor) {
+      window.dispatchEvent(new CustomEvent('variant:changed', {
+        detail: { variant: selectedColor },
+        bubbles: true,
+        composed: true
+      }));
     }
   }
 
