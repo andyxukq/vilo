@@ -10,7 +10,8 @@
 
 product-media {
   width: 100%;
-  position: relative;
+  position: sticky;
+  top: 0;
 }
 
 .product-main-swiper {
@@ -45,7 +46,7 @@ product-media {
 
 .product-content {
   padding: 4rem 2rem 0;
-  border-radius: var(--border-radius-18);
+  border-radius: var(--border-radius-18) var(--border-radius-18) 0 0;
   margin-top: -2.5rem;
   position: relative;
   z-index: 20;
@@ -359,7 +360,12 @@ product-media .product-section-promo {
     padding-block: 13rem;
   }
 
+  .product-content {
+    border-radius: 0;
+  }
+
   product-media {
+    position: relative;
     width: calc(66% - 2rem);
     height: auto;
   }
@@ -428,6 +434,13 @@ product-media .product-section-promo {
   }
   product-media .product-section-promo-block-description {
     text-align: center;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 1024px) {
+  product-media {
+    max-height: 90dvh;
+    overflow: hidden;
   }
 }
 
