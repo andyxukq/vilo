@@ -23,6 +23,7 @@
 
 .contact-us-form {
   width: 100%;
+  position: relative;
 }
 
 .contact-us-form form{
@@ -59,6 +60,23 @@
   width: 23rem;
   align-self: center;
   margin-top: 1rem;
+}
+
+.contact-us-form .error-tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--danger);
+  display: none;
+}
+
+.contact-us-form .emailError .error-tooltip {
+  display: block;
+}
+
+.contact-us-form .emailError input[name="email"] {
+  border-color:  var(--danger);
 }
 
 .contact-us-content .title {

@@ -13,3 +13,4 @@ import './ModalDialog.js';
 import './SubscriptionDialog.js';
 import './AnnouncementBar.js';
 import './DesktopMenu.js';
+import './Subscription.js';

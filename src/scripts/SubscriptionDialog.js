@@ -1,10 +1,11 @@
+import { EMAIL_API } from "./utils"
+
 class SubscriptionDialog extends HTMLElement {
   constructor() {
     super()
     this._handleNextStepClick = this._handleNextStepClick.bind(this)
     this._handleFormSubmit = this._handleFormSubmit.bind(this)
     this._handleInputChange = this._handleInputChange.bind(this)
-    this.EMAIL_API = 'https://api.vesta-home.com/service/vilo-email-signup?list_id=YvyRty'
     this.abortController = null
   }
 
@@ -54,7 +55,7 @@ class SubscriptionDialog extends HTMLElement {
       button.disabled = true;
       button.textContent = 'Sending...';
 
-      const response = await fetch(this.EMAIL_API, {
+      const response = await fetch(EMAIL_API, {
         method: 'POST',
         body: JSON.stringify({ email: this.emailInput.value }),
         headers: { 'Content-Type': 'application/json' },
