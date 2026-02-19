@@ -9,3 +9,7 @@ export const getCookie = (name) => {
   if (parts.length === 2) return decodeURIComponent(parts.pop().split(';').shift());
   return null;
 };
+
+// consts
+
+export const EMAIL_API = 'https://api.vesta-home.com/service/vilo-email-signup?list_id=YvyRty'
