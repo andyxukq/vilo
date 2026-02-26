@@ -149,6 +149,23 @@ faq-tabs {
   color: var(--text-color-tertiary);
 }
 
+.faq-content-inner ul {
+  list-style: none;
+}
+
+.faq-content-inner li {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  line-height: 3rem;
+}
+
+.faq-content-inner li::before {
+  content: "•";
+  margin-right: 5px;
+  color: var(--text-color-tertiary);
+}
+
 @media (min-width: 768px) {
   .faq-wrapper {
     align-items: center;
@@ -186,8 +203,11 @@ faq-tabs {
     max-width: calc(100% - 7rem);
   }
   .faq-content-inner {
-    padding-top: 1.5rem;
     font-size: 2rem;
     line-height: 2.8rem;
+  }
+  .faq-content-inner li {
+    font-size: 2rem;
+    line-height: 4rem;
   }
 }
