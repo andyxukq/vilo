@@ -105,7 +105,7 @@ header .mobile-menu-btn {
         display: inline-block;
     }
 
-    [data-dropdown-id] {
+    .nav-links a:not([variant="outlined"]) {
         position: relative;
         display: inline-flex;
         align-items: center;
@@ -114,7 +114,7 @@ header .mobile-menu-btn {
         transition: color 0.3s ease;
     }
 
-    [data-dropdown-id]::after {
+    .nav-links a:not([variant="outlined"])::after {
         content: '';
         position: absolute;
         bottom: -5px;
@@ -132,8 +132,7 @@ header .mobile-menu-btn {
         will-change: transform;
         pointer-events: none;
     }
-
-    [data-dropdown-id].is-active::after {
+    .nav-links a:not([variant="outlined"]):hover::after {
         transform: scaleX(1);
     }
 
