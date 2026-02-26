@@ -14,3 +14,4 @@ import './SubscriptionDialog.js';
 import './AnnouncementBar.js';
 import './DesktopMenu.js';
 import './Subscription.js';
+import './Faq.js';
