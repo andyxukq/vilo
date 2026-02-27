@@ -16,6 +16,10 @@
 .image-with-copy-image img {
     object-fit: contain;
     max-height: 35rem;
+    border-radius: 2rem;
+    width: auto;
+    height: auto;
+    margin: auto;
 }
 
 .image-with-copy-text .title {
