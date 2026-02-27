@@ -135,6 +135,64 @@
   padding-bottom: 10rem;
 }
 
+.page-signup-section .container {
+  padding-block: 4rem;
+}
+
+.page-signup-wrapper {
+  position: relative;
+  padding-inline: 1.5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.8rem;
+}
+
+.page-signup-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.8;
+  background-image: linear-gradient(180deg, #FFFFFF 30%, rgba(255,255,255,0.00) 100%);
+  box-shadow: inset 0.5px 1px 0 -0.5px #FFFFFF, inset -0.5px -1px 0 -0.5px #FFFFFF, inset 0 0.5px 0.5px -1px #FFFFFF, inset -1px -0.5px 0.5px -1px #FFFFFF, inset 0 0 20px 0 rgba(255,255,255,0.50), 0 0 2px 0 rgba(0,0,0,0.10), 0 1px 8px 0 rgba(0,0,0,0.12);
+  border-radius: var(--border-radius-12);
+  z-index: 0;
+}
+
+.page-signup-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+}
+
+.page-signup-content .title {
+  font-size: 2.8rem;
+  line-height: 3.4rem;
+  text-align: center;
+}
+
+.page-signup-content .description {
+  font-size: 1.5rem;
+  line-height: 2.1rem;
+  padding-inline: 1rem;
+  color: var(--text-color-tertiary)
+}
+
+.page-signup-section .contact-us-form form input,
+.page-signup-section .contact-us-form form textarea {
+  background-color: transparent;
+  border-color: var(--border-color-tertiary)
+}
+
+.page-signup-section .contact-us-form button[type="submit"] {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+}
+
+
 @media (min-width: 768px) {
     .page-content-wrapper {
       padding-top: 8rem;
@@ -187,6 +245,18 @@
     .page-heading-section p ,
     .page-heading-section h1 {
       max-width: 70rem;
+    }
+    .page-signup-wrapper {
+      gap: 2.4rem;
+      padding: 6rem 0rem;
+    }
+    .page-signup-content {
+      gap: 3.2rem;
+    }
+    .page-signup-content .title {
+      font-size: 5.4rem;
+      line-height: 6.2rem;
+      text-align: center;
     }
 }
 

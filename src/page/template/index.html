@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vilo - templates.</title>
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="stylesheet" href="/styles/index.css">
+</head>
+
+<body>
+  <load ="/_page-components/mobile-menu.html" />
+  <load ="/_page-components/announcement-bar.html" />
+  <header>
+    <load ="/_page-components/desktop-menu.html" />
+    <load ="/_page-components/header-content.html" />
+  </header>
+
+  <main class="bg-light-rose">
+
+    <section class="page-hero-section">
+      <div class="page-hero-section-wrapper rose-gradient">
+        <div class="container h-full">
+          <div class="page-hero-image-holder gsap-hero-image-holder">
+            <img
+              class="page-hero-main-image-mobile"
+              src="/images/pages/advanced-sensing/page-advanced-sensing-mobile-main.webp"
+              fetchpriority="high"
+              loading="eager"
+              decoding="async"
+              alt="">
+            <img
+              class="page-hero-main-image-desktop"
+              src="/images/pages/advanced-sensing/page-advanced-sensing-main.webp"
+              fetchpriority="high"
+              loading="eager"
+              decoding="async"
+              alt="">
+            <img
+              class="page-hero-secondary-image"
+              src="/images/pages/advanced-sensing/page-advanced-sensing-secondary-image.webp"
+              fetchpriority="high"
+              loading="eager"
+              decoding="async"
+              alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-heading-section bg-white">
+      <div class="flex column justify-center">
+          <h1>Advanced Sensing</h1>
+      </div>
+    </section>
+    <section class="page-content-section">
+      <div class="container-medium page-content-wrapper flex column justify-center">
+        <h2>Precision, made quiet.</h2>
+        <p>
+          Vilo is built to read the body with steadiness—not drama. We prioritize signal quality and long-term consistency, so what you see feels grounded, not jittery.
+        </p>
+        <div class="page-media-holder bg-rose">
+          <img
+            class="width-full"
+            src="/images/pages/advanced-sensing/page-advanced-sensing-precision.webp"
+            loading="lazy"
+            fetchpriority="low"
+            decoding="async"
+            alt="Precision, made quiet.">
+        </div>
+      </div>
+    </section>
+
+    <section class="page-signup-section">
+      <div class="container">
+        <div class="page-signup-wrapper">
+          <div class="page-signup-content">
+            <h2 class="title">Got you.</h2>
+            <p class="description">
+             Send the details and we’ll take it from there—no stress, no noise.
+            </p>
+          </div>
+          <div class="contact-us-form">
+            <form method="post">
+              <div class="error-tooltip" aria-live="polite">
+                Please enter a valid email address
+              </div>
+              <input type="email" id="email" autocomplete="email" name="email" required="" placeholder="Enter your email address">
+              <textarea id="message" autocomplete="on" name="message" rows="6" placeholder="For order help, include your order number"></textarea>
+              <button type="submit" class="btn btn-primary" variant="primary">Sign up</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <load ="/_page-components/footer.html" />
+  <script type="module" src="/scripts/index.js"></script>
+</body>
+
+</html>
