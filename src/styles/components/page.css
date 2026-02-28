@@ -192,6 +192,15 @@
   line-height: 2.2rem;
 }
 
+/* Heading Styles */
+.page-heading-section.heading-section {
+  padding-block: 3.5rem;
+}
+main > .page-heading-section.heading-section:first-child {
+  padding-top: 20rem;
+}
+/* Heading Styles End */
+
 
 @media (min-width: 768px) {
     .page-content-wrapper {
@@ -258,6 +267,14 @@
       line-height: 6.2rem;
       text-align: center;
     }
+    /* Heading Styles */
+    .page-heading-section.heading-section {
+      padding-block: 8rem;
+    }
+    main > .page-heading-section.heading-section:first-child {
+      padding-top: 22.5rem;
+    }
+    /* Heading Styles End */
 }
 
 @media (min-width: 1024px) {
