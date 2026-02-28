@@ -226,6 +226,9 @@ main > .page-heading-section.heading-section:first-child {
     .page-hero-section-wrapper {
         padding-block: 10rem 3rem;
     }
+    .page-signup-wrapper::before {
+      border-radius: var(--border-radius-30);
+    }
     .page-hero-section-wrapper > .container {
         padding-inline: 8rem;
     }
