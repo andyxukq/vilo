@@ -56,8 +56,6 @@
             <input type="radio" name="product-size" value="Free Sizing Kit" checked>
             <span class="size-visual">Free Sizing Kit</span>
           </label>
-
-          
           <label class="size-item">
             <input type="radio" name="product-size" value="Size 5">
             <span class="size-visual">5</span>
@@ -90,10 +88,9 @@
             <input type="radio" name="product-size" value="Size 12">
             <span class="size-visual">12</span>
           </label>
-          
         </div>
       </fieldset>
-      <fieldset class="swatch-container payment-plan-picker">
+      <fieldset class="swatch-container payment-plan-picker" data-option-name="payment-plan">
         <legend class="swatch-container-label">Lock in founder perks. <span class="light-text"> Best terms, while
             available.</span></legend>
         <label class="buy-option-item">
@@ -152,5 +149,21 @@
         </label>
       </fieldset>
     </div>
+    <product-payment-variant-marquee>
+      <div class="marquee-track">
+        <div class="marquee-content is-active" data-variant="Full Payment">
+          <span>Cancel Anytime</span>
+          <span>Ships by Oct ’26</span>
+          <span>2-Year Warranty</span>
+          <span>60-Day Free Trial</span>
+        </div>
+        <div class="marquee-content" data-variant="Deposit">
+          <span>Flexible Deposit</span>
+          <span>Ships by Oct ’26</span>
+          <span>1-Year Warranty</span>
+          <span>No Interest</span>
+        </div>
+      </div>
+    </product-payment-variant-marquee>
     <button class="preorder-button">Pre-Order Now</button>
   </product-form>

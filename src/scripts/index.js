@@ -16,3 +16,4 @@ import './DesktopMenu.js';
 import './Subscription.js';
 import './Faq.js';
 import './free-scroll-swiper.js';
+import './ProductPaymentVariantMarquee.js';
