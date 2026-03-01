@@ -42,6 +42,9 @@ class ProductForm extends HTMLElement {
       if (fs.dataset.optionName === 'color') {
         fs.addEventListener('change', this.handleColorChange, { signal });
       }
+      if (fs.dataset.optionName === 'payment-plan') {
+        fs.addEventListener('change', this.handlePaymentPlanChange, { signal });
+      }
     });
   }
 
@@ -65,6 +68,17 @@ class ProductForm extends HTMLElement {
     if (selectedColor) {
       window.dispatchEvent(new CustomEvent('variant:changed', {
         detail: { variant: selectedColor },
+        bubbles: true,
+        composed: true
+      }));
+    }
+  }
+
+  handlePaymentPlanChange(e) {
+    const selectedPlan = e.target.value;
+    if (selectedPlan) {
+      window.dispatchEvent(new CustomEvent('payment-plan:changed', {
+        detail: { plan: selectedPlan },
         bubbles: true,
         composed: true
       }));
