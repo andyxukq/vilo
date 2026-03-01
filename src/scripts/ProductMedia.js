@@ -1,9 +1,10 @@
 import Swiper from 'swiper';
-import { FreeMode, Thumbs, EffectFade } from 'swiper/modules';
+import { FreeMode, Thumbs, EffectFade, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/thumbs';
 import 'swiper/css/effect-fade';
+import 'swiper/css/navigation';
 
 class ProductMedia extends HTMLElement {
   connectedCallback() {
@@ -30,29 +31,42 @@ class ProductMedia extends HTMLElement {
   }
 
   initSwipers() {
-   const productThumbSwiperInstance = new Swiper(this.querySelector('.product-thumb-swiper'), {
-    modules: [FreeMode, Thumbs],
-     slidesPerView: 6,
-    spaceBetween: 8,
-    freeMode: true,
-    watchSlidesProgress: true,
-  });
+    const nextBtn = this.querySelector('.product-main-swiper-button-next');
+    const prevBtn = this.querySelector('.product-main-swiper-button-prev');
 
-  const productMainSwiperInstance = new Swiper(this.querySelector('.product-main-swiper'), {
-    modules: [Thumbs, EffectFade],
-    effect: 'fade',
-    fadeEffect: {
-      crossFade: true
-    },
-    slidesPerView: 1,
-    grabCursor: true,
-    thumbs: {
-      swiper: productThumbSwiperInstance,
-    },
-  });
+    const productThumbSwiperInstance = new Swiper(
+      this.querySelector('.product-thumb-swiper'),
+      {
+        modules: [FreeMode, Thumbs],
+        slidesPerView: 6,
+        spaceBetween: 8,
+        freeMode: true,
+        watchSlidesProgress: true,
+      },
+    );
 
-  this.mainSwiper = productMainSwiperInstance;
-  this.thumbSwiper = productThumbSwiperInstance;
+    const productMainSwiperInstance = new Swiper(
+      this.querySelector('.product-main-swiper'),
+      {
+        modules: [Thumbs, EffectFade, Navigation],
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true,
+        },
+        slidesPerView: 1,
+        grabCursor: true,
+        navigation: {
+          nextEl: nextBtn,
+          prevEl: prevBtn,
+        },
+        thumbs: {
+          swiper: productThumbSwiperInstance,
+        },
+      },
+    );
+
+    this.mainSwiper = productMainSwiperInstance;
+    this.thumbSwiper = productThumbSwiperInstance;
   }
 
   async updateImages(variantName) {
