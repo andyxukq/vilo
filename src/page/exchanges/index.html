@@ -37,87 +37,234 @@
 
   <main class="bg-light-cold">
 
-    <section class="page-hero-section">
-      <div class="page-hero-section-wrapper cold-gradient">
-        <div class="container h-full">
-          <div class="page-hero-image-holder gsap-hero-image-holder">
-            <!-- !! in case of updating this images src, please update the 'href' for preload links in the head -->
-            <img
-              class="page-hero-main-image-mobile"
-              src="/images/pages/care-guide/care-guide-mobile.webp"
-              fetchpriority="high"
-              loading="eager"
-              decoding="async"
-              alt="">
-            <img
-              class="page-hero-main-image-desktop"
-              src="/images/pages/care-guide/care-guide-web.webp"
-              fetchpriority="high"
-              loading="eager"
-              decoding="async"
-              alt="">
+<section class="page-heading-section heading-section">
+      <div class="container flex justify-center">
+        <div class="heading-section-content-holder">
+          <h2 class="section-title">No direct exchanges (for now).</h2>
+          <p class="section-subhead">We currently don’t offer direct exchanges—including size exchanges.</p>
+        </div>
+      </div>
+    </section>
 
+
+
+
+    <section class="gallery-section" >
+      <div class="container">
+        <div class="gallery-grid">
+          <figure class="gallery-item aspect-square order-1">
+            <img
+              src="/images/pages/exchanges/product-image-1.webp"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+              alt="Gallery 1">
+          </figure>
+          <figure class="gallery-item aspect-rect order-3">
+            <img
+              src="/images/pages/exchanges/product-image-2.webp"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+              alt="Gallery 3">
+          </figure>
+          <figure class="gallery-item aspect-rect order-2">
+            <img
+              src="/images/pages/exchanges/product-image-3.webp"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+              alt="Gallery 2">
+          </figure>
+          <figure class="gallery-item aspect-square order-4">
+            <img
+              src="/images/pages/exchanges/product-image-4.webp"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+              alt="Gallery 4">
+          </figure>
+        </div>
+        <div class="swiper gallery-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="/images/pages/exchanges/product-image-1.webp"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
+                alt="Gallery 1">
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/images/pages/exchanges/product-image-5.webp"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
+                alt="Gallery 2">
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/images/pages/exchanges/product-image-6.webp"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
+                alt="Gallery 3">
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/images/pages/exchanges/product-image-4.webp"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
+                alt="Gallery 4">
+            </div>
+          </div>
+        </div>
+        <div class="swiper-nav-holder">
+          <div class="swiper-pagination"></div>
+          <div class="swiper-nav-btns">
+            <div class="swiper-button-prev">
+                <svg width="49px" height="26px" viewBox="0 0 49 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g transform="translate(-853, -12138)" fill="currentColor">
+                            <g transform="translate(235, 12125)">
+                                <path d="M654.941906,39.0925067 L644.691151,49.1213083 C643.493633,50.2928972 641.553654,50.2928972 640.356136,49.1213083 L630.057481,39.0456432 C629.98084,38.9706615 629.98084,38.8535026 630.057481,38.7785209 L631.954349,36.922724 C632.030991,36.8477423 632.150742,36.8477423 632.227384,36.922724 L640.64354,45.1566512 C640.763292,45.2738101 640.969265,45.1894557 640.969265,45.0254332 L640.969265,2.18745421 C640.969265,2.08435437 641.055487,2 641.160868,2 L643.843309,2 C643.94869,2 644.034911,2.08435441 644.034911,2.18745421 L644.034911,45.0722968 C644.034911,45.2410056 644.240885,45.3206737 644.360636,45.2035148 L652.776793,36.9695875 C652.853434,36.8946058 652.973186,36.8946058 653.049827,36.9695875 L654.946696,38.8253845 C655.018547,38.9003661 655.018547,39.017525 654.941906,39.0925067 Z" transform="translate(642.5, 26) scale(-1, 1) rotate(-90) translate(-642.5, -26)"></path>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <div class="swiper-button-next">
+                <svg width="49px" height="26px" viewBox="0 0 49 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g transform="translate(-959, -12138)" fill="currentColor">
+                            <g transform="translate(235, 12125)">
+                                <path d="M760.941906,39.0925067 L750.691151,49.1213083 C749.493633,50.2928972 747.553654,50.2928972 746.356136,49.1213083 L736.057481,39.0456432 C735.98084,38.9706615 735.98084,38.8535026 736.057481,38.7785209 L737.954349,36.922724 C738.030991,36.8477423 738.150742,36.8477423 738.227384,36.922724 L746.64354,45.1566512 C746.763292,45.2738101 746.969265,45.1894557 746.969265,45.0254332 L746.969265,2.18745421 C746.969265,2.08435437 747.055487,2 747.160868,2 L749.843309,2 C749.94869,2 750.034911,2.08435441 750.034911,2.18745421 L750.034911,45.0722968 C750.034911,45.2410056 750.240885,45.3206737 750.360636,45.2035148 L758.776793,36.9695875 C758.853434,36.8946058 758.973186,36.8946058 759.049827,36.9695875 L760.946696,38.8253845 C761.018547,38.9003661 761.018547,39.017525 760.941906,39.0925067 Z" transform="translate(748.5, 26) rotate(-90) translate(-748.5, -26)"></path>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+      <section class="alter-gallery-section" >
+      <div class="container">
+        <div class="alter-gallery-headings">
+          <h2 class="title">
+          If you need a different size 
+          </h2>
+          <p class="subtitle">
+           We don’t offer direct size exchanges right now. Instead:
+          </p>
+        </div>
+        <div class="alter-gallery-media-content">
+          <div class="alter-gallery-main-image">
+            <img
+              src="/images/pages/exchanges/size-exchanges.webp"
+              loading="lazy"
+              fetchpriority="low"
+              decoding="async"
+              alt="Gallery 1">
+          </div>
+          <div class="swiper alter-gallery-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide alter-gallery-slide">
+                <img
+                  src="/images/pages/exchanges/Return-your-order.webp"
+                  loading="lazy"
+                  fetchpriority="low"
+                  decoding="async"
+                  alt="Gallery 1">
+                <div>
+                  <h6>
+                    Return your original order
+                  </h6>
+                  <p>within your trial window (30 or 60 days, depending on your order).</p>
+                </div>
+              </div>
+              <div class="swiper-slide alter-gallery-slide">
+                <img
+                  src="/images/pages/exchanges/Place-a-new-order.webp"
+                    loading="lazy"
+                    fetchpriority="low"
+                    decoding="async"
+                  alt="Gallery 2">
+                <div>
+                  <h6>
+                    Place a new order
+                  </h6>
+                  <p>for the size you want.</p>
+                </div>
+              </div>
+              <div class="swiper-slide alter-gallery-slide">
+                <img
+                  src="/images/pages/exchanges/early-batches.webp"
+                  loading="lazy"
+                  fetchpriority="low"
+                  decoding="async"
+                  alt="Gallery 3">
+                <div>
 
-
-    </section>
-    <section class="page-content-section">
-      <div class="container-medium page-content-wrapper flex column justify-center">
-        <h2>No direct exchanges (for now).</h2>
-         <p>We currently don’t offer direct exchanges—including size exchanges.</p>
-
-
-      </div>
-    </section>
-    <section class="page-content-section">
-      <div class="container-medium page-content-wrapper flex column justify-center">
-        <h2>If you need a different size</h2>
-
-         <ul class="page-content-list">
-          <li class="page-content-list-item">
-          Return your original order (within the trial window)
-          </li>
-          <li class="page-content-list-item">
-          Place a new order for the correct size
-          </li>
-          <p>We do this to keep fulfillment fast, inventory clean, and timelines predictable.</p>
-
-        </ul>
-       <div class="page-media-holder bg-cold">
-          <img
-            class="width-full"
-            src="/images/pages/exchanges/exchange-2.webp"
-            loading="lazy"
-            fetchpriority="low"
-            decoding="async"
-            alt="you need a different size">
+                  <p>- This keeps fulfillment fast, inventory accurate, and delivery timelines predictable—especially during early batches.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-nav-holder">
+          <div class="swiper-pagination"></div>
+          <div class="swiper-nav-btns">
+            <div class="swiper-button-prev">
+                <svg width="49px" height="26px" viewBox="0 0 49 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g transform="translate(-853, -12138)" fill="currentColor">
+                            <g transform="translate(235, 12125)">
+                                <path d="M654.941906,39.0925067 L644.691151,49.1213083 C643.493633,50.2928972 641.553654,50.2928972 640.356136,49.1213083 L630.057481,39.0456432 C629.98084,38.9706615 629.98084,38.8535026 630.057481,38.7785209 L631.954349,36.922724 C632.030991,36.8477423 632.150742,36.8477423 632.227384,36.922724 L640.64354,45.1566512 C640.763292,45.2738101 640.969265,45.1894557 640.969265,45.0254332 L640.969265,2.18745421 C640.969265,2.08435437 641.055487,2 641.160868,2 L643.843309,2 C643.94869,2 644.034911,2.08435441 644.034911,2.18745421 L644.034911,45.0722968 C644.034911,45.2410056 644.240885,45.3206737 644.360636,45.2035148 L652.776793,36.9695875 C652.853434,36.8946058 652.973186,36.8946058 653.049827,36.9695875 L654.946696,38.8253845 C655.018547,38.9003661 655.018547,39.017525 654.941906,39.0925067 Z" transform="translate(642.5, 26) scale(-1, 1) rotate(-90) translate(-642.5, -26)"></path>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <div class="swiper-button-next">
+                <svg width="49px" height="26px" viewBox="0 0 49 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g transform="translate(-959, -12138)" fill="currentColor">
+                            <g transform="translate(235, 12125)">
+                                <path d="M760.941906,39.0925067 L750.691151,49.1213083 C749.493633,50.2928972 747.553654,50.2928972 746.356136,49.1213083 L736.057481,39.0456432 C735.98084,38.9706615 735.98084,38.8535026 736.057481,38.7785209 L737.954349,36.922724 C738.030991,36.8477423 738.150742,36.8477423 738.227384,36.922724 L746.64354,45.1566512 C746.763292,45.2738101 746.969265,45.1894557 746.969265,45.0254332 L746.969265,2.18745421 C746.969265,2.08435437 747.055487,2 747.160868,2 L749.843309,2 C749.94869,2 750.034911,2.08435441 750.034911,2.18745421 L750.034911,45.0722968 C750.034911,45.2410056 750.240885,45.3206737 750.360636,45.2035148 L758.776793,36.9695875 C758.853434,36.8946058 758.973186,36.8946058 759.049827,36.9695875 L760.946696,38.8253845 C761.018547,38.9003661 761.018547,39.017525 760.941906,39.0925067 Z" transform="translate(748.5, 26) rotate(-90) translate(-748.5, -26)"></path>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+          </div>
         </div>
       </div>
+      </section>
 
-
-    </section>
     <section class="page-content-section">
       <div class="container-medium page-content-wrapper flex column justify-center">
         <h2>Want to avoid a second order?</h2>
-      <p> Use the Sizing Guide (and sizer set) and wear your sizer for 24 hours, including sleep. If you’re between sizes, contact us before ordering—we’ll help you choose.</p>
-   <div class="page-media-holder bg-cold">
+        <p>
+          Start with the <strong>Sizing Guide</strong> and the <strong>Vilo Sizer Set</strong>. Wear your chosen sizer for <strong>24 hours</strong>, including sleep, so you know it’s secure and comfortable when your hands swell or relax.
+        </p>
+         <p>
+          If you’re between sizes, reach out before ordering. Tell us your <strong>finger</strong>, the <strong>two sizes</strong>, and how you like your fit (snug vs easy-off)—we’ll help you pick the one that disappears on you, in the best way.
+        </p>
+        <div class="page-media-holder bg-rose">
           <img
             class="width-full"
-            src="/images/pages/exchanges/exchange-1.webp"
+            src="/images/pages/exchanges/second-order.webp"
             loading="lazy"
             fetchpriority="low"
             decoding="async"
-            alt="wear your sizer for sleep">
+            alt="Science that gets “seen.”">
         </div>
       </div>
-
     </section>
-
-
 
 
 
