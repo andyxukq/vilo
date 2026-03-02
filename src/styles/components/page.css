@@ -12,6 +12,7 @@
 
 .page-hero-section-wrapper > .container {
     padding: 0;
+    position: relative;
 }
 
 .page-hero-image-holder {
@@ -20,7 +21,7 @@
 
 .page-hero-secondary-image {
   border-radius: var(--border-radius-20);
-  display: block;
+  display: none;
   position: absolute;
   bottom: 3rem;
   right: 2rem;
@@ -64,6 +65,30 @@
 }
 .bg-light-cold {
   background-color: var(--light-cold);
+}
+
+.page-hero-content-holder {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: 12rem;
+  color: var(--primary-color-inverse);
+  z-index: 10;
+  max-width: 100%;
+  padding-inline: 1.5rem;
+  text-align: center;
+}
+
+.page-hero-content-holder h1 {
+  font-size: 4.2rem;
+  line-height: 4rem;
+  padding-bottom: 1.6rem;
+}
+
+.page-hero-content-holder p {
+  font-size: 1.6rem;
+  line-height: 1.9rem;
 }
 
 .page-heading-section {
@@ -222,6 +247,24 @@ main > .page-heading-section.heading-section:first-child {
         right: 50%;
         width: 25%;
         max-width: 54rem;
+        display: block;
+    }
+    .page-hero-content-holder {
+      bottom: 30%;
+      padding: 0;
+      text-align: left;
+      align-items: start;
+    }
+    .page-hero-content-holder h1 {
+      max-width: 71rem;
+      font-size: 8rem;
+      line-height: 10rem;
+      padding-bottom: 2.6rem;
+    }
+    .page-hero-content-holder p {
+      font-size: 2.2rem;
+      line-height: 2.8rem;
+      max-width: 45.5rem;
     }
     .page-hero-section-wrapper {
         padding-block: 10rem 3rem;
@@ -294,8 +337,19 @@ main > .page-heading-section.heading-section:first-child {
   }
 }
 
+@media (min-width: 1200px) {
+  .page-hero-content-holder {
+    bottom: 40%;
+  }
+  .page-hero-content-holder h1 {
+    max-width: 91rem;
+    font-size: 10rem;
+    line-height: 12.4rem;
+  }
+}
+
 @media (min-width: 1600px) {
-    .page-hero-secondary-image {
-      width: 45%;
+  .page-hero-secondary-image {
+    width: 45%;
   }
 }
