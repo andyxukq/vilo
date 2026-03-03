@@ -87,3 +87,7 @@ body:has(dialog[open]) {
 body.modal-open {
   overflow: hidden;
 }
+
+.rastano-font {
+    font-family: var(--rastano-font);
+}
