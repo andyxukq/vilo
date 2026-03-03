@@ -91,9 +91,3 @@
     max-width: initial;
   }
 }
-@media (min-width: 1440px) {
-  .alter-gallery-media-content,
-  .alter-gallery-headings {
-    padding-left: 15.5rem;
-  }
-}
