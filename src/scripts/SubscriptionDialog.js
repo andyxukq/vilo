@@ -69,7 +69,7 @@ class SubscriptionDialog extends HTMLElement {
 
       setTimeout(() => {
         if (!this.abortController.signal.aborted) {
-          window.dispatchEvent(new CustomEvent(`dialog:close:${id}`));
+          globalThis.dispatchEvent(new CustomEvent(`dialog:close:${id}`));
         }
       }, 2000);
 

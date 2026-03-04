@@ -13,3 +13,11 @@ export const getCookie = (name) => {
 // consts
 
 export const EMAIL_API = 'https://api.vesta-home.com/service/vilo-email-signup?list_id=YvyRty'
+
+export const formatPrice = (amount, currency = 'USD') => {
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency,
+    minimumFractionDigits: 2,
+  }).format(amount);
+}

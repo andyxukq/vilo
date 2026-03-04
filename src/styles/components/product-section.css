@@ -160,6 +160,20 @@ product-media {
   padding-bottom: 1.5rem;
 }
 
+.swatch-container-label .light-text {
+  font-family: var(--primary-font);
+  font-size: 1.2rem;
+  color: var(--text-color-tertiary);
+}
+
+.swatch-container-label .small-text {
+  font-size: 1.2rem;
+}
+
+.swatch-container-label.alter {
+  padding-top: 1.8rem;
+}
+
 .swatch-list {
   display: grid;
   gap: .6rem;
@@ -187,7 +201,7 @@ product-media {
 }
 
 .size-visual {
-  aspect-ratio: 57 / 42;
+  aspect-ratio: 90 / 42;
   align-items: center;
   justify-content: center;
   font-size: 1.6rem;
@@ -245,13 +259,13 @@ product-media {
 
 .size-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem .5rem;
   width: 100%;
 }
 
 .size-item.kit-option {
-  grid-column: span 6;
+  grid-column: span 4;
 }
 
 .size-item.kit-option .size-visual {
@@ -260,7 +274,7 @@ product-media {
   justify-content: flex-start;
   font-size: 1.6rem;
   line-height: 1.8rem;
-  height: 6rem;
+  height: 5rem;
   padding-inline: 1.8rem;
   font-family: var(--primary-media-font);
 }

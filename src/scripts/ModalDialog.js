@@ -18,11 +18,11 @@ class ModalDialog extends HTMLElement {
     this.dialog = this.shadowRoot.querySelector('[data-element="main-dialog"]');
     this.autoOpenTime = this.dataset.autoOpenDelay;
     if (!this._isCookieModalClosedExist() && this.autoOpenTime) {
-      window.addEventListener('scroll', this._onFirstScroll, { once: true });
+      globalThis.addEventListener('scroll', this._onFirstScroll, { once: true });
     }
     if (id) {
-      window.addEventListener(`dialog:open:${id}`, () => this._handleOpen());
-      window.addEventListener(`dialog:close:${id}`, () => this._handleClose());
+      globalThis.addEventListener(`dialog:open:${id}`, () => this._handleOpen());
+      globalThis.addEventListener(`dialog:close:${id}`, () => this._handleClose());
     }
 
     this.dialog.addEventListener('click', this._onComponentClick);
@@ -31,10 +31,10 @@ class ModalDialog extends HTMLElement {
 
   disconnectedCallback() {
     const id = this.getAttribute('id');
-    window.removeEventListener('scroll', this._onFirstScroll);
+    globalThis.removeEventListener('scroll', this._onFirstScroll);
     if (id) {
-      window.removeEventListener(`dialog:open:${id}`, this._onOpenTrigger);
-      window.removeEventListener(`dialog:close:${id}`, this._handleClose);
+      globalThis.removeEventListener(`dialog:open:${id}`, this._onOpenTrigger);
+      globalThis.removeEventListener(`dialog:close:${id}`, this._handleClose);
     }
     this.dialog.removeEventListener('close', this._onNativeClose);
     this.dialog.removeEventListener('click', this._onComponentClick);

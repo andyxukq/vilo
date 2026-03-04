@@ -31,4 +31,4 @@ function initProductHomePageSwiper() {
   }
 }
 
-window.addEventListener('DOMContentLoaded', initProductHomePageSwiper);
+globalThis.addEventListener('DOMContentLoaded', initProductHomePageSwiper);
