@@ -229,7 +229,7 @@ main > .page-heading-section.heading-section:first-child {
 
 @media (min-width: 768px) {
     .page-content-wrapper {
-      padding-top: 8rem;
+      padding-top: 2rem;
       padding-inline: 0;
     }
     .page-hero-image-holder {
