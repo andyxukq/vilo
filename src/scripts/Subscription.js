@@ -4,7 +4,7 @@ export class Subscription {
   constructor() {
     this.url = EMAIL_API
     this.callback = () => {
-      window.location.href = "/product"
+      globalThis.location.href = "/product"
     }
   }
 

@@ -35,10 +35,10 @@ export const preloadAllVariants = () => {
     });
   };
 
-  if ('requestIdleCallback' in window) {
+  if ('requestIdleCallback' in globalThis) {
     requestIdleCallback(task);
   } else {
-    window.addEventListener('load', () => {
+    globalThis.addEventListener('load', () => {
       setTimeout(task, 2000);
     });
   }

@@ -17,7 +17,7 @@ class ProductMedia extends HTMLElement {
       }
     };
 
-    window.addEventListener('variant:changed', this._variantListener);
+    globalThis.addEventListener('variant:changed', this._variantListener);
 
     import('./media-utils.js').then(({ preloadAllVariants }) => {
       preloadAllVariants();
@@ -25,7 +25,7 @@ class ProductMedia extends HTMLElement {
   }
 
   disconnectedCallback() {
-    window.removeEventListener('variant:changed', this._variantListener);
+    globalThis.removeEventListener('variant:changed', this._variantListener);
     this.mainSwiper?.destroy()
     this.thumbSwiper?.destroy()
   }

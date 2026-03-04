@@ -24,9 +24,9 @@ if (headerNode) {
   headerNode.addEventListener('focusin', () => {
     headerNode.classList.remove('header--hidden');
   });
-  window.addEventListener('scroll', () => {
+  globalThis.addEventListener('scroll', () => {
     if (!ticking) {
-      window.requestAnimationFrame(updateHeader)
+      globalThis.requestAnimationFrame(updateHeader)
       ticking = true
     }
   })

@@ -36,4 +36,4 @@ function initAlterSwiper() {
   }
 }
 
-window.addEventListener('DOMContentLoaded', initAlterSwiper);
+globalThis.addEventListener('DOMContentLoaded', initAlterSwiper);

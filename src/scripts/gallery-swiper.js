@@ -32,10 +32,10 @@ function initSwiper() {
   }
 }
 
-window.addEventListener('DOMContentLoaded', initSwiper);
+globalThis.addEventListener('DOMContentLoaded', initSwiper);
 
 let resizeTimer;
-window.addEventListener('resize', () => {
+globalThis.addEventListener('resize', () => {
   clearTimeout(resizeTimer);
   resizeTimer = setTimeout(initSwiper, 150);
 });
