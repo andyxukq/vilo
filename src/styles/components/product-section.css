@@ -338,16 +338,16 @@ product-payment-variant-marquee {
   --product-payment-variant-marquee-speed: 15s;
   display: block;
   width: 100%;
+  max-width: calc(100vw - 4rem);
   overflow: hidden;
   padding-bottom: 1.1rem;
 }
 
 .marquee-track {
   display: flex;
-  width: max-content;
+  width: 100%;
   gap: var(--product-payment-variant-marquee-gap);
-  margin-left: auto;
-  margin-right: auto;
+  justify-content: center;
 }
 
 .marquee-content span {
@@ -362,6 +362,7 @@ product-payment-variant-marquee {
   display: none;
   gap: var(--product-payment-variant-marquee-gap);
   align-items: center;
+  white-space: nowrap;
 }
 
 .marquee-content.is-active {

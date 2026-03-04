@@ -40,7 +40,7 @@ class ProductPaymentVariantMarquee extends HTMLElement {
       const activeContent = this.querySelector('.marquee-content.is-active');
 
       if (!activeContent) return;
-      
+
       if (activeContent.scrollWidth > this.offsetWidth) {
         this.initMarquee(activeContent);
       }
