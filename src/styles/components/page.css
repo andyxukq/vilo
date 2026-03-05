@@ -51,22 +51,6 @@
      rgba(104,142,176,0.77) 94%);
 }
 
-.bg-white {
-  background-color: rgba(255,255,255, 0.3);
-}
-.bg-rose {
-  background-color: var(--rose);
-}
-.bg-cold {
-  background-color: var(--cold);
-}
-.bg-light-rose {
-  background-color: var(--light-rose);
-}
-.bg-light-cold {
-  background-color: var(--light-cold);
-}
-
 .page-hero-content-holder {
   position: absolute;
   display: flex;

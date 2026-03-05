@@ -91,3 +91,65 @@ body.modal-open {
 .rastano-font {
     font-family: var(--rastano-font);
 }
+
+/* Background Colors and Gradients */
+.bg-white {
+  background-color: rgba(255,255,255, 0.3);
+}
+.bg-rose {
+  background-color: var(--rose);
+}
+.bg-cold {
+  background-color: var(--cold);
+}
+.bg-light-rose {
+  background-color: var(--light-rose);
+}
+.bg-light-cold {
+  background-color: var(--light-cold);
+}
+.bg-light-petal {
+  background-color: var(--light-petal);
+}
+.bg-light-bone {
+  background-color: var(--light-bone);
+}
+.bg-light-mint {
+  background-color: var(--light-mint);
+}
+.bg-light-cream {
+  background-color: var(--light-cream);
+}
+.bg-light-sage {
+  background-color: var(--light-sage);
+}
+.bg-light-sand {
+  background-color: var(--light-sand);
+}
+.bg-light-linen {
+  background-color: var(--light-linen);
+}
+
+.bg-mint-gradient {
+  background-image: linear-gradient(28deg,
+     rgba(167, 204, 187, 0.77) 7%,
+     rgba(183, 233, 225, 0.77) 93%);
+}
+
+.bg-sand-gradient {
+  background-image: linear-gradient(25deg,
+     rgba(171, 114, 37, 0.77) 8%,
+     rgba(235, 225, 196, 0.77) 100%);
+}
+
+.bg-linen-gradient {
+  background-image: linear-gradient(28deg,
+     rgba(211, 196, 161, 0.77) 7%,
+     rgba(247, 241, 224, 0.77) 93%);
+}
+
+.bg-cold-gradient {
+  background-image: linear-gradient(207deg,
+     rgba(179, 203, 218, 0.77) 6%,
+     rgba(104, 142, 176, 0.77) 94%);
+}
