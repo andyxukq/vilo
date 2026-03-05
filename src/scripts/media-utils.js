@@ -23,6 +23,22 @@ export const IMAGES_URLS = {
     "/images/product-page/PV03/silver-twist-5.webp",
     "/images/product-page/PV03/silver-twist-6.webp",
   ],
+  "Color Pop 1": [
+    "/images/product-page/PV04/color-pop1-1.webp",
+    "/images/product-page/PV04/color-pop1-2.webp",
+    "/images/product-page/PV04/color-pop1-3.webp",
+    "/images/product-page/PV04/color-pop1-4.webp",
+    "/images/product-page/PV04/color-pop1-5.webp",
+    "/images/product-page/PV04/color-pop1-6.webp",
+  ],
+  "Color Pop 2": [
+    "/images/product-page/PV05/color-pop2-1.webp",
+    "/images/product-page/PV05/color-pop2-2.webp",
+    "/images/product-page/PV05/color-pop2-3.webp",
+    "/images/product-page/PV05/color-pop2-4.webp",
+    "/images/product-page/PV05/color-pop2-5.webp",
+    "/images/product-page/PV05/color-pop2-6.webp",
+  ],
 };
 
 export const preloadAllVariants = () => {
