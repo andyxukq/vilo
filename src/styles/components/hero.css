@@ -68,9 +68,22 @@
 }
 
 .hero-section-eyebrow {
-    font-size: 2rem;
-    line-height: 2.4rem;
     margin-bottom: 1rem;
+}
+
+.hero-section-eyebrow .content {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    padding: .5rem 1.3rem;
+    font-family: var(--primary-media-font);
+    border: 0.9px solid var(--primary-color-inverse);
+    border-radius: var(--border-radius-full);
+}
+
+.hero-section-eyebrow .content .logo {
+    height: 1.4rem;
 }
 
 .hero-section-title {
@@ -103,6 +116,14 @@
         font-size: 3rem;
         line-height: 3.6rem;
         margin-bottom: 1.6rem;
+    }
+    .hero-section-eyebrow .content {
+        font-size: 2rem;
+        line-height: 3.4rem;
+        padding: .6rem 1.8rem;
+    }
+    .hero-section-eyebrow .content .logo {
+        height: 2rem;
     }
     .hero-image-holder {
         width: 100%;
