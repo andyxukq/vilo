@@ -489,7 +489,7 @@ product-media .product-section-promo {
 
   product-media {
     position: relative;
-    width: calc(66% - 2rem);
+    width: calc(55% - 2rem);
     height: auto;
   }
 
