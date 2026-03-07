@@ -153,3 +153,56 @@ body.modal-open {
      rgba(179, 203, 218, 0.77) 6%,
      rgba(104, 142, 176, 0.77) 94%);
 }
+
+
+.btn-with-animation {
+    appearance: none;
+    outline: none;
+    font-family: inherit;
+    background: var(--primary-color);
+    border: 1px solid var(--border-color-btn-alternative);
+    color: var(--primary-color-inverse);
+    padding: 1.8rem 3.5rem;
+    border-radius: var(--border-radius-full);
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease-out, padding-right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15), inset 1px 4px 12px 0 #42577C;
+}
+.btn-with-animation:hover {
+    padding-right: 5.5rem;
+    padding-left: 2.3rem;
+    background: var(--white);
+    color: var(--primary-color);
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15);
+    border-color: var(--border-color-animated-btn-inverse)
+}
+
+.btn-with-animation .animation-icon {
+    position: absolute;
+    right: 1.4rem;
+    width: 3rem;
+    height: 3rem;
+    background: var(--primary-color);
+    color: var(--primary-color-inverse);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateX(100%) scale(0);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+}
+
+.btn-with-animation:hover .animation-icon {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+}
