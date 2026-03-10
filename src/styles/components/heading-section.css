@@ -29,8 +29,8 @@
     line-height: 2.6rem;
     color: var(--text-color-secondary);
 }
-.heading-section-with-cta .btn-primary {
-    display: inline-block;
+.heading-section-with-cta .btn-with-animation {
+    display: inline-flex;
     margin-top: 3rem;
 }
 .heading-section-with-cta .icon-holder {
@@ -40,4 +40,43 @@
 }
 .heading-section-with-cta .icon-holder svg{
     width: 1.3rem;
+}
+
+@media (min-width: 768px) {
+    .heading-section-with-cta,
+    .heading-section {
+        padding-block: 9.6rem 0rem;
+        text-align: center;
+    }
+    .heading-section .heading-section-content-holder {
+        max-width: 118rem;
+    }
+    .heading-section .section-title {
+        font-size: 4.8rem;
+        line-height: 6.2rem;
+        padding-bottom: 2.3rem;
+    }
+    .heading-section .section-subhead {
+        font-size: 1.8rem;
+    }
+    .heading-section-with-cta .heading-section-content-holder {
+        max-width: 82rem;
+    }
+    .heading-section-with-cta .section-title {
+        font-size: 4.8rem;
+        line-height: 6.2rem;
+        padding-bottom: 2.3rem;
+    }
+    .heading-section-with-cta .section-subhead {
+        font-size: 1.8rem;
+    }
+    .heading-section-with-cta .btn-with-animation {
+        margin-top: 6rem;
+    }
+    .heading-section-with-cta .icon-holder{
+        padding-top: 2.4rem;
+    }
+    .heading-section-with-cta .icon-holder svg{
+        width: 2.5rem;
+    }
 }
