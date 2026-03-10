@@ -1,0 +1,61 @@
+.cards-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  padding-block: 12rem;
+}
+
+.cards-section .swiper-slide img {
+  border-radius: var(--border-radius-12);
+}
+
+.cards-section .title {
+  font-size: 2.8rem;
+  line-height: 3rem;
+  text-align: center;
+  color: var(--text-color-secondary);
+  max-width: 27rem;
+  margin: 0 auto;
+}
+.cards-section .card-subtitle {
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+  color: var(--primary-color);
+  padding-top: 1.6rem;
+}
+.cards-section .card-title {
+  font-size: 3.4rem;
+  line-height: 2.6rem;
+  color: var(--text-color);
+  padding-top: .3rem;
+}
+
+.cards-swiper {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .cards-section {
+    padding-block: 16rem;
+  }
+  .cards-section .title {
+    font-size: 4.8rem;
+    line-height: 6.2rem;
+    text-align: left;
+    max-width: none;
+    margin: 0;
+  }
+  .cards-section .card-subtitle {
+    font-size: 2rem;
+    padding-top: 2.4rem;
+  }
+  .cards-section .card-title {
+    font-size: 4.8rem;
+    line-height: normal;
+    padding-top: 0;
+  }
+  .cards-section .swiper-slide img {
+    border-radius: var(--border-radius-30);
+  }
+}
