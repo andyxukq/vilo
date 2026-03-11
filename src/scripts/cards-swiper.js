@@ -7,6 +7,8 @@ import 'swiper/css/navigation';
 
 const initCardsScroll = () => {
   const el = document.querySelector('.cards-swiper');
+  const cardModal = document.querySelector('card-modal');
+
   if (!el) return;
   new Swiper(el, {
     modules: [FreeMode, Navigation],
@@ -37,6 +39,23 @@ const initCardsScroll = () => {
         spaceBetween: 30,
         slidesOffsetBefore: 80,
         slidesOffsetAfter: 80,
+      }
+    },
+    on: {
+      click: (s) => {
+        console.log('Clicked slide:', s.clickedSlide);
+        if (!cardModal || !s.clickedSlide) return;
+
+        console.log('Opening modal for:', s.clickedSlide.dataset.name);
+
+        const slide = s.clickedSlide;
+
+        cardModal.open({
+          name: slide.dataset.name,
+          role: slide.dataset.role,
+          bio: slide.dataset.bio,
+          imageUrl: slide.dataset.imageUrl,
+        });
       }
     }
   });
