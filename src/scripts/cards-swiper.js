@@ -43,17 +43,12 @@ const initCardsScroll = () => {
     },
     on: {
       click: (s) => {
-        console.log('Clicked slide:', s.clickedSlide);
         if (!cardModal || !s.clickedSlide) return;
-
-        console.log('Opening modal for:', s.clickedSlide.dataset.name);
-
         const slide = s.clickedSlide;
-
         cardModal.open({
           name: slide.dataset.name,
           role: slide.dataset.role,
-          bio: slide.dataset.bio,
+          description: slide.dataset.description,
           imageUrl: slide.dataset.imageUrl,
         });
       }

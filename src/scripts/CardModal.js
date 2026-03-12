@@ -93,7 +93,7 @@ class CardModal extends HTMLElement {
     const shadow = this.shadowRoot
     shadow.querySelector('.js-modal-card-name').textContent = data.name || ''
     shadow.querySelector('.js-modal-card-role').textContent = data.role || ''
-    shadow.querySelector('.js-modal-card-bio').textContent = data.bio || ''
+    shadow.querySelector('.js-modal-card-description').innerHTML = data.description || ''
     shadow.querySelector('.js-modal-card-image').src = data.imageUrl || ''
     shadow.querySelector('.js-modal-card-image').alt = data.name || ''
   }
