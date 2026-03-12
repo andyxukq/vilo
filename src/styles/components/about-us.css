@@ -1,9 +1,54 @@
+.about-us-top {
+ padding: 11.5rem 0 2.5rem;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ color: var(--text-color-secondary);
+}
+
+.about-us-top h1 {
+  padding-bottom: 2.5rem;
+  font-size: 3.4rem;
+  line-height: 4.2rem;
+}
+
+.about-us-top-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding-left: 16.25%;
+  max-width: calc(16.25% + 76rem);
+}
+
+.images-with-text-content * ,
+.about-us-top-content-wrapper * {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
+
+.images-with-text-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem .8rem;
+}
+
+.images-with-text-wrapper img {
+  aspect-ratio: 1/1;
+}
+
+.images-with-text-content {
+  grid-column: span 2;
+  padding-inline: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
 .cards-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2.5rem;
-  padding-block: 12rem;
+  padding-block: 3rem;
 }
 
 .cards-section .swiper-slide img {
@@ -17,16 +62,19 @@
   color: var(--text-color-secondary);
   max-width: 27rem;
   margin: 0 auto;
+  padding-bottom: 4rem;
 }
+
 .cards-section .card-subtitle {
   font-size: 1.6rem;
   line-height: 3.2rem;
   color: var(--primary-color);
-  padding-top: 1.6rem;
+  padding-top: 1.1rem;
 }
+
 .cards-section .card-title {
   font-size: 3.4rem;
-  line-height: 2.6rem;
+  line-height: 4rem;
   color: var(--text-color);
   padding-top: .3rem;
 }
@@ -36,8 +84,37 @@
 }
 
 @media (min-width: 768px) {
+  .about-us-top{
+     padding: 22rem 0 6rem;
+  }
+  .about-us-top h1 {
+    padding-left: 19.5%;
+    font-size: 8rem;
+    line-height: 6.2rem;
+    color: var(--black);
+    padding-bottom: 8rem;
+  }
+  .about-us-top-content-wrapper {
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    padding-left: 30%;
+    max-width: calc(30% + 76rem);
+  }
+  .images-with-text-wrapper {
+    padding-left: 13%;
+    gap: 6rem 3rem;
+  }
+  .images-with-text-content {
+    grid-column: initial;
+    padding: 0 4rem 0 0;
+    gap: 2.2rem;
+  }
+  .images-with-text-content * {
+    font-size: 1.8rem;
+    line-height: 3rem;
+  }
   .cards-section {
-    padding-block: 16rem;
+    padding-block: 15rem 18rem;
   }
   .cards-section .title {
     font-size: 4.8rem;

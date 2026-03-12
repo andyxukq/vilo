@@ -1,0 +1,300 @@
+<card-modal id="staffModal">
+  <template shadowrootmode="open">
+    <style>
+      :host {
+        display: block;
+        position: relative;
+        z-index: 9999;
+        --backdrop-alpha: 0.8;
+        --backdrop-blur: 5px;
+      }
+
+      .overlay {
+        position: fixed;
+        inset: 0;
+        background-color: rgba(168, 176, 183, 0);
+        backdrop-filter: blur(0px);
+        -webkit-backdrop-filter: blur(0px);
+        z-index: 9998;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s;
+        pointer-events: none;
+      }
+
+      :host([open]) .overlay {
+        visibility: visible;
+        background-color: rgba(168, 176, 183, var(--backdrop-alpha));
+        backdrop-filter: blur(var(--backdrop-blur));
+        -webkit-backdrop-filter: blur(var(--backdrop-blur));
+        pointer-events: auto;
+      }
+
+      .body {
+        padding-inline: 1.8rem;
+        flex: 1;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .modal {
+        position: fixed;
+        background: #D3DAE2;
+        z-index: 9999;
+        will-change: transform;
+        box-shadow: 0 0 3rem rgba(0, 0, 0, 0.15);
+        pointer-events: auto;
+        transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1);
+        display: flex;
+        flex-direction: column;
+      }
+
+      .close-icon {
+        display: none;
+        cursor: pointer;
+        color: var(--text-color-secondary);
+        background-color: transparent;
+        border: none;
+        height: 1.9rem;
+        width: 1.9rem;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .header {
+        height: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        touch-action: none;
+      }
+
+      .modal-card-image-wrapper {
+        width: 100%;
+        flex-shrink: 0;
+        aspect-ratio: 38 / 30;
+        border-radius: 3rem;
+        overflow: hidden;
+      }
+
+      .modal-card-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+      }
+
+      .modal-card-content-wrapper {
+        padding-block: 3rem;
+        gap: 3rem;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        overflow: hidden;
+      }
+
+      .modal-card-name {
+        font-size: 3rem;
+        line-height: 3.2rem;
+        color: var(--primary-color);
+        margin: 0;
+      }
+
+      .modal-card-content-row-1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .modal-card-content-row-2 {
+        display: flex;
+        flex: 1;
+        overflow: hidden;
+      }
+
+      .modal-card-social-links {
+        color: var(--text-color-secondary);
+        display: flex;
+        gap: 1rem;
+      }
+
+      .modal-card-social-link {
+        color: var(--text-color-secondary);
+        border: 1px solid;
+        display: flex;
+        padding: .4rem;
+        border-radius: .25rem;
+      }
+
+      .modal-card-social-link svg {
+        size: 1.4rem;
+      }
+
+      .modal-card-role {
+        flex: 0 0 10rem;
+        margin: 0;
+        color: var(--primary-color);
+        font-size: 2rem;
+        line-height: 3.2rem;
+      }
+
+      .modal-card-description {
+        flex-grow: 1;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        color: var(--text-color-secondary);
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-right: 0.5rem;
+        overscroll-behavior: contain;
+      }
+
+      .modal-card-description p {
+        margin: 0;
+      }
+
+      @media (max-width: 767px) {
+        .modal {
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 80svh;
+          border-radius: 3rem 3rem 0 0;
+          transform: translateY(100%);
+        }
+
+        :host([open]) .modal {
+          transform: translateY(0);
+        }
+      }
+
+      @media (min-width: 768px) {
+        .modal {
+          top: 0;
+          right: 0;
+          width: 60rem;
+          height: 100dvh;
+          transform: translateX(100%);
+        }
+
+        :host([open]) .modal {
+          transform: translateX(0);
+        }
+
+        .header {
+          height: 8rem;
+          justify-content: end;
+          padding-inline: 4rem;
+        }
+
+        .handle {
+          display: none;
+        }
+
+        .close-icon {
+          display: flex;
+        }
+
+        .modal-card-image-wrapper {
+          aspect-ratio: 1 / 1;
+        }
+
+        .modal-card-image {
+          object-position: center;
+        }
+
+        .body {
+          padding-inline: 5rem;
+        }
+
+        .modal-card-social-link {
+          padding: .65rem;
+        }
+
+        .modal-card-name {
+          font-size: 4.8rem;
+        }
+
+        .modal-card-social-link svg {
+          size: 1.7rem;
+        }
+
+        .modal-card-description {
+          font-size: 1.8rem;
+          line-height: 2.6rem;
+        }
+      }
+
+      .handle {
+        width: 6rem;
+        height: .6rem;
+        background: #F1FAFE;
+        border-radius: .6rem;
+      }
+    </style>
+    <div class="overlay"></div>
+    <div class="modal">
+      <div class="header">
+        <div class="handle"></div>
+        <button type="button" class="close-icon js-close-modal-dialog" aria-label="Close modal">
+          <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>Close</title>
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g transform="translate(-376, -426)" fill="currentColor" fill-rule="nonzero">
+                <path
+                  d="M390.618319,426.32494 C390.98835,425.954908 391.52488,425.891497 391.816692,426.183308 C392.108503,426.47512 392.045092,427.01165 391.67506,427.381681 L385.057,434 L391.67506,440.618319 C392.045092,440.98835 392.108503,441.52488 391.816692,441.816692 C391.52488,442.108503 390.98835,442.045092 390.618319,441.67506 L384,435.057 L377.381681,441.67506 C377.042486,442.014256 376.563385,442.095805 376.261122,441.882272 L376.183308,441.816692 C375.891497,441.52488 375.954908,440.98835 376.32494,440.618319 L382.943,434 L376.32494,427.381681 C375.954908,427.01165 375.891497,426.47512 376.183308,426.183308 C376.47512,425.891497 377.01165,425.954908 377.381681,426.32494 L384,432.943 Z">
+                </path>
+              </g>
+            </g>
+          </svg>
+        </button>
+      </div>
+      <div class="body">
+        <div class="modal-card-image-wrapper">
+          <img class="modal-card-image js-modal-card-image" src="" alt="">
+        </div>
+        <div class="modal-card-content-wrapper">
+          <div class="modal-card-content-row-1">
+            <p class="modal-card-name js-modal-card-name"></p>
+            <div class="modal-card-social-links">
+              <a href="#" class="modal-card-social-link" target="_blank">
+                <svg width="17px" height="17px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g transform="translate(-1756.5376, -636)" fill="currentColor" fill-rule="nonzero">
+                      <path
+                        d="M1760.70355,642.5 L1758.06755,642.5 C1757.88176,643.150398 1757.78785,643.823586 1757.78855,644.5 C1757.78855,645.194 1757.88555,645.865 1758.06855,646.5 L1760.70455,646.5 C1760.59455,645.86 1760.53855,645.193 1760.53855,644.5 C1760.53855,643.807 1760.59455,643.14 1760.70455,642.5 L1760.70355,642.5 Z M1761.72055,642.5 C1761.59632,643.159362 1761.53505,643.829041 1761.53755,644.5 C1761.53755,645.198 1761.59755,645.865 1761.72055,646.5 L1764.53755,646.5 L1764.53755,642.5 L1761.72055,642.5 Z M1763.18555,651.511 C1762.11898,650.376726 1761.34408,649.000219 1760.92755,647.5 L1758.43555,647.5 C1759.33819,649.480974 1761.08137,650.952952 1763.18555,651.511 L1763.18555,651.511 Z M1764.53755,651.441 L1764.53755,647.5 L1761.97055,647.5 C1762.44055,649.006 1763.29555,650.317 1764.53755,651.442 L1764.53755,651.441 Z M1763.18555,637.49 C1761.08157,638.047829 1759.33843,639.519408 1758.43555,641.5 L1760.92755,641.5 C1761.34379,639.999877 1762.11835,638.62338 1763.18455,637.489 L1763.18555,637.49 Z M1764.53755,637.56 C1763.29555,638.682 1762.44155,639.993 1761.97055,641.5 L1764.53755,641.5 L1764.53755,637.558 L1764.53755,637.56 Z M1769.37155,642.5 C1769.48155,643.14 1769.53755,643.807 1769.53755,644.5 C1769.53755,645.193 1769.48155,645.86 1769.37155,646.5 L1772.00855,646.5 C1772.19055,645.865 1772.28755,645.194 1772.28755,644.5 C1772.28755,643.806 1772.19055,643.135 1772.00755,642.5 L1769.37155,642.5 Z M1768.35455,642.5 L1765.53755,642.5 L1765.53755,646.5 L1768.35455,646.5 C1768.47655,645.865 1768.53755,645.198 1768.53755,644.5 C1768.53755,643.802 1768.47755,643.135 1768.35455,642.5 L1768.35455,642.5 Z M1766.88955,651.511 C1768.99374,650.952952 1770.73692,649.480974 1771.63955,647.5 L1769.14755,647.5 C1768.73132,649.000123 1767.95676,650.37662 1766.89055,651.511 L1766.88955,651.511 Z M1765.53755,651.441 C1766.77955,650.317 1767.63355,649.006 1768.10455,647.5 L1765.53755,647.5 L1765.53755,651.442 L1765.53755,651.441 Z M1766.88955,637.49 C1767.95598,638.623989 1768.73088,640.000137 1769.14755,641.5 L1771.64055,641.5 C1770.73792,639.519026 1768.99474,638.047048 1766.89055,637.489 L1766.88955,637.49 Z M1765.53755,637.56 L1765.53755,641.5 L1768.10455,641.5 C1767.63455,639.994 1766.77955,638.683 1765.53755,637.558 L1765.53755,637.56 Z M1765.03755,653 C1760.34313,653 1756.53755,649.19442 1756.53755,644.5 C1756.53755,639.80558 1760.34313,636 1765.03755,636 C1769.73197,636 1773.53755,639.80558 1773.53755,644.5 C1773.53755,649.19442 1769.73197,653 1765.03755,653 Z">
+                      </path>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+              <a href="#" class="modal-card-social-link" target="_blank">
+                <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g transform="translate(-1803, -636)" fill="currentColor" fill-rule="nonzero">
+                      <path
+                        d="M1803.05331,640.568889 L1806.48277,640.568889 L1806.48277,651.973333 L1803.05331,651.973333 L1803.05331,640.568889 Z M1804.77692,636 C1803.79556,636 1803,636.795938 1803,637.777778 C1803.05194,638.721237 1803.83249,639.459208 1804.77692,639.45778 C1805.72136,639.459208 1806.5019,638.721237 1806.55385,637.777778 C1806.55385,636.795938 1805.75829,636 1804.77692,636 L1804.77692,636 Z M1817.88173,642.08 C1817.1769,641.266842 1816.12923,640.835047 1815.05642,640.915556 C1813.66312,640.883155 1812.36526,641.62124 1811.68027,642.835556 L1811.62696,642.835556 L1811.62696,640.568889 L1808.74835,640.568889 C1808.80165,641.733333 1808.74835,651.973333 1808.74835,651.973333 L1812.17781,651.973333 L1812.17781,644.888889 C1812.34047,644.083271 1813.07268,643.521519 1813.89254,643.573333 C1815.00312,643.573333 1815.55396,644.382222 1815.55396,645.946667 L1815.55396,652 L1818.99231,652 L1818.99231,645.511111 C1819.06121,644.269062 1818.66529,643.045859 1817.88173,642.08 Z">
+                      </path>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="modal-card-content-row-2">
+            <p class="modal-card-role js-modal-card-role"></p>
+            <div class="modal-card-description js-modal-card-description"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+</card-modal>

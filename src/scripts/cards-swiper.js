@@ -1,7 +1,8 @@
 import Swiper from 'swiper';
-import { FreeMode, Navigation } from 'swiper/modules';
+import { FreeMode, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/free-mode';
+import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 
@@ -11,7 +12,7 @@ const initCardsScroll = () => {
 
   if (!el) return;
   new Swiper(el, {
-    modules: [FreeMode, Navigation],
+    modules: [FreeMode, Navigation, Pagination],
     slidesPerView: 'auto',
     spaceBetween: 16,
     freeMode: {
@@ -23,6 +24,14 @@ const initCardsScroll = () => {
     watchSlidesProgress: true,
     slidesOffsetBefore: 15,
     slidesOffsetAfter: 15,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'fraction',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
     breakpoints: {
       320: {
         slidesPerView: 1.25,

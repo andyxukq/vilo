@@ -4,6 +4,13 @@ class CardModal extends HTMLElement {
     this.isDragging = false
     this.startY = 0
     this.currentY = 0
+    this.isTouchingScrollable = false
+    this.resizeTimer = null
+    this._ticking = false
+
+    this.DELAY_MS = 100
+    this.PIXELS_SCROLLED_FOR_CLOSE = 200
+
     this._mediaQuery = globalThis.matchMedia('(max-width: 768px)')
     this._mobileState = this._mediaQuery.matches
 
@@ -13,17 +20,21 @@ class CardModal extends HTMLElement {
     this._onComponentClick = this._onComponentClick.bind(this)
 
     this._onBreakpointChange = (e) => {
-      this._mobileState = e.matches
-      if (this.hasAttribute('open')) {
-        this.modal.style.transition = 'none'
-        this.modal.style.transform = this._mobileState ? 'translateY(0)' : 'translateX(0)'
-      }
-    }
+      clearTimeout(this.resizeTimer);
+      this.resizeTimer = setTimeout(() => {
+        this._mobileState = e.matches;
+        if (this.hasAttribute('open')) {
+          this.modal.style.transition = 'none';
+          this.modal.style.transform = this._mobileState ? 'translateY(0)' : 'translateX(0)';
+        }
+      }, this.DELAY_MS);
+    };
   }
 
   connectedCallback() {
     this.overlay = this.shadowRoot.querySelector('.overlay')
     this.modal = this.shadowRoot.querySelector('.modal')
+    this.descriptionEl = this.shadowRoot.querySelector('.js-modal-card-description')
 
     this.shadowRoot.addEventListener('click', this._onComponentClick)
 
@@ -36,6 +47,7 @@ class CardModal extends HTMLElement {
   }
 
   disconnectedCallback() {
+    clearTimeout(this.resizeTimer)
     this.shadowRoot.removeEventListener('click', this._onComponentClick)
     this._mediaQuery.removeEventListener('change', this._onBreakpointChange)
     globalThis.removeEventListener('touchmove', this._handleTouchMove)
@@ -45,8 +57,12 @@ class CardModal extends HTMLElement {
   _handleTouchStart(e) {
     if (!this._mobileState) return
 
+    const touchPath = e.composedPath()
+    this.isTouchingScrollable = touchPath.includes(this.descriptionEl)
+
     this.isDragging = true
     this.startY = e.touches[0].pageY
+    this.currentY = 0
     this.modal.style.transition = 'none'
   }
 
@@ -64,8 +80,30 @@ class CardModal extends HTMLElement {
   _handleTouchMove(e) {
     if (!this.isDragging || !this._mobileState) return
     this.currentY = e.touches[0].pageY - this.startY
+
+    if (this.isTouchingScrollable) {
+      if (this.currentY < 0 || this.descriptionEl.scrollTop > 0) {
+        this.currentY = 0
+        return
+      }
+    }
+
+    if (e.cancelable) e.preventDefault()
+    if (!this._ticking) {
+      this._ticking = true
+      requestAnimationFrame(() => {
+        if (this.isDragging) {
+          this._updateModalTransform()
+        }
+        this._ticking = false
+      })
+    }
+  }
+
+  _updateModalTransform() {
     const dragY = this.currentY < 0 ? this.currentY * 0.2 : this.currentY
     this.modal.style.transform = `translateY(${dragY}px)`
+
     const newAlpha = Math.max(0, 0.8 - (dragY / 400))
     this.style.setProperty('--backdrop-alpha', newAlpha)
 
@@ -77,7 +115,10 @@ class CardModal extends HTMLElement {
   _handleTouchEnd() {
     if (!this.isDragging) return
     this.isDragging = false
-    if (this.currentY > 100) {
+    this.isTouchingScrollable = false
+    this._ticking = false
+
+    if (this.currentY > this.PIXELS_SCROLLED_FOR_CLOSE) {
       this._close()
     } else {
       this.modal.style.transition = 'transform 0.4s cubic-bezier(0.2, 0, 0, 1)'
@@ -93,9 +134,11 @@ class CardModal extends HTMLElement {
     const shadow = this.shadowRoot
     shadow.querySelector('.js-modal-card-name').textContent = data.name || ''
     shadow.querySelector('.js-modal-card-role').textContent = data.role || ''
-    shadow.querySelector('.js-modal-card-description').innerHTML = data.description || ''
-    shadow.querySelector('.js-modal-card-image').src = data.imageUrl || ''
-    shadow.querySelector('.js-modal-card-image').alt = data.name || ''
+    this.descriptionEl.innerHTML = data.description || ''
+    this.descriptionEl.scrollTop = 0
+    const img = shadow.querySelector('.js-modal-card-image')
+    img.src = data.imageUrl || ''
+    img.alt = data.name || ''
   }
 
   open(data) {
@@ -130,7 +173,7 @@ class CardModal extends HTMLElement {
       this.style.setProperty('--backdrop-alpha', '0.8')
       this.style.setProperty('--backdrop-blur', '5px')
       this.overlay.style.backdropFilter = ''
-    }, 100)
+    }, this.DELAY_MS)
 
     this.currentY = 0
   }
