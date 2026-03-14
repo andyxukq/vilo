@@ -72,6 +72,7 @@
   margin-top: 1rem;
 }
 
+.get-notify-form .error-tooltip,
 .contact-us-form .error-tooltip {
   position: absolute;
   bottom: 100%;
@@ -81,10 +82,12 @@
   display: none;
 }
 
+.get-notify-form .emailError .error-tooltip,
 .contact-us-form .emailError .error-tooltip {
   display: block;
 }
 
+.get-notify-form .emailError input[name="email"],
 .contact-us-form .emailError input[name="email"] {
   border-color:  var(--danger);
 }
@@ -104,6 +107,42 @@
 .contact-us-section-alt {
   margin-top: 4.5rem;
   scroll-margin-top: calc(var(--announcement-bar-height-desktop) + 2rem);
+}
+
+.get-notify-form {
+  padding-top: 1.3rem;
+}
+
+.get-notify-form form{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.get-notify-form .form-input-elements {
+  display: flex;
+  position: relative;
+  flex: 1;
+}
+
+.get-notify-form .form-input-elements input,
+.get-notify-form .error-tooltip {
+  width: 100%;
+}
+
+.get-notify-form .form-input-elements input {
+  height: 5rem;
+  border-radius: var(--border-radius-12);
+  border: 1px solid var(--text-color-disabled);
+  padding: 1.5rem;
+  color: var(--text-color-tertiary);
+}
+
+.get-notify-form button[type="submit"] {
+  border-radius: var(--border-radius-12);
+  background-color: var(--green-badge);
+  border: none;
 }
 
 @media (min-width: 768px) {
