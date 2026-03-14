@@ -9,7 +9,7 @@ export class Subscription {
   }
 
   initListener() {
-    const forms = document.querySelectorAll(`.contact-us-form form`)
+    const forms = document.querySelectorAll(`.js-contact-us-form form`)
     if (forms.length === 0) {
       console.log("Subscription: No forms found.")
       return
@@ -62,6 +62,7 @@ export class Subscription {
     const form = e.target
     const btn = form.querySelector("button[type='submit']");
     const data = this._getFormData(form)
+    const isRedirectRequired = !form.hasAttribute("data-no-redirect")
 
     if (!this._emailInputValidation(data.email)) {
       this._toggleEmailError(form, true)
@@ -74,13 +75,28 @@ export class Subscription {
     try {
       const success = await this._postData(data)
       if (success) {
-        if (typeof this.callback === "function") {
+        if (typeof this.callback === "function" && isRedirectRequired) {
           this.callback()
+        } else {
+          this._clear(form)
+          this._toggleButtonState(btn, false)
         }
       }
     } catch (error) {
       console.error("Subscription Error:", error)
+      this._toggleButtonState(btn, false)
     }
+  }
+
+  _clear(form) {
+    const fields = form.querySelectorAll('textarea, input:not([type="submit"]):not([type="button"])');
+    fields.forEach(field => {
+      if (field.type === 'checkbox' || field.type === 'radio') {
+        field.checked = false;
+      } else {
+        field.value = '';
+      }
+    });
   }
 
   async _postData(data) {
