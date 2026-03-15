@@ -1,7 +1,7 @@
 // Add a generic image loading effect
 // Fade-in images when they enter the viewport
 document.addEventListener("DOMContentLoaded", function () {
-  const SELECTOR = "img:not(.swiper-slide img)";
+  const SELECTOR = "img:not(.swiper-slide) img:not(.email-subscribe-dialog-holder) img)";
   const BASE_OPACITY = 0;
   const IN_OPACITY = 1;
 

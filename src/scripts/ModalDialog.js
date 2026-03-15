@@ -66,9 +66,14 @@ class ModalDialog extends HTMLElement {
 
   _handleClose() {
     if (this.dialog.open) {
-      this.dialog.close();
+      this.dialog.classList.add('is-closing');
+
+      setTimeout(() => {
+        this.dialog.close()
+        this.dialog.classList.remove('is-closing')
+      }, 300)
       document.body.classList.remove('modal-open');
-      setCookie(this.modalClosedCookieName, 'true', 30);
+      //setCookie(this.modalClosedCookieName, 'true', 30);
       const subscriptionDialog = this.querySelector('subscription-dialog');
       if (subscriptionDialog) subscriptionDialog.reset();
     }
@@ -93,7 +98,7 @@ class ModalDialog extends HTMLElement {
         dialog {
           opacity: 0;
           width: 100%;
-          max-width: 61rem;
+          max-width: 100dvw;
           border: none;
           padding: 0;
           border-radius: var(--border-radius-18) var(--border-radius-18) 0 0;
@@ -106,7 +111,10 @@ class ModalDialog extends HTMLElement {
         }
 
         dialog::backdrop {
-          background: rgba(0, 0, 0, 0);
+          background-color: rgba(168, 176, 183, .8);
+          backdrop-filter: blur(5px);
+          -webkit-backdrop-filter: blur(5px);
+          opacity: 0;
           transition:
             background 0.3s ease-out,
             display 0.3s ease-out allow-discrete;
@@ -117,7 +125,7 @@ class ModalDialog extends HTMLElement {
         }
 
         dialog[open]::backdrop {
-          background: rgba(0, 0, 0, 0.1);
+          opacity: 1;
         }
 
         dialog.is-closing {
@@ -143,6 +151,7 @@ class ModalDialog extends HTMLElement {
             border-radius: var(--border-radius-30);
             inset: 0;
             width: calc(100% - 2rem);
+            max-width: 100rem;
           }
         }
 
