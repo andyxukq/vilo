@@ -155,10 +155,10 @@ subscription-dialog .email-input-field.error + .error-tooltip {
   .email-subscribe-dialog-image-holder {
     display: flex;
     padding: 1.6rem 0 1.6rem 2rem;
-    border-radius: var(--border-radius-30);
   }
   .email-subscribe-dialog-image-holder img {
     border-radius: var(--border-radius-30);
+    object-fit: cover;
   }
   .email-subscribe-dialog-holder {
     height: 60rem;
@@ -175,7 +175,7 @@ subscription-dialog .email-input-field.error + .error-tooltip {
   }
   .step-2 .email-subscribe-dialog-content-holder,
   .email-subscribe-dialog-content-holder {
-    padding: 0 4.4rem;
+    padding: 0 2rem;
     justify-content: center;
   }
   .email-subscribe-dialog-content-holder .logo-holder {
@@ -199,5 +199,12 @@ subscription-dialog .email-input-field.error + .error-tooltip {
   }
   .email-subscribe-dialog-content-holder .close-link-btn {
     padding-top: 1.4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .step-2 .email-subscribe-dialog-content-holder,
+  .email-subscribe-dialog-content-holder {
+    padding: 0 4.4rem;
   }
 }

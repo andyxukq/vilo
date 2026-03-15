@@ -73,7 +73,7 @@ class ModalDialog extends HTMLElement {
         this.dialog.classList.remove('is-closing')
       }, 300)
       document.body.classList.remove('modal-open');
-      //setCookie(this.modalClosedCookieName, 'true', 30);
+      setCookie(this.modalClosedCookieName, 'true', 30);
       const subscriptionDialog = this.querySelector('subscription-dialog');
       if (subscriptionDialog) subscriptionDialog.reset();
     }
