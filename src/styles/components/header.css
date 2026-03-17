@@ -18,6 +18,7 @@ body.dm-open .header-is-sticky header {
     top: 0;
 }
 
+body.modal-open header,
 body:not(.dm-open).header-is-sticky header.header--hidden {
     top: -200px;
 }

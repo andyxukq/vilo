@@ -1,7 +1,15 @@
+const excludedSelectors = [
+  '.swiper-slide',
+  '.email-subscribe-dialog-holder',
+  'card-modal img'
+];
+const getExcludedSelector = (baseTag, exclusions) =>
+  `${baseTag}${exclusions.filter((i) => i.trim()).map((i) => `:not(${i})`).join('')}`;
+
 // Add a generic image loading effect
 // Fade-in images when they enter the viewport
 document.addEventListener("DOMContentLoaded", function () {
-  const SELECTOR = "img:not(.swiper-slide) img:not(.email-subscribe-dialog-holder) img)";
+  const SELECTOR = getExcludedSelector('img', excludedSelectors);
   const BASE_OPACITY = 0;
   const IN_OPACITY = 1;
 
@@ -99,4 +107,4 @@ const initStickyState = () => {
   }
 };
 
-window.addEventListener('DOMContentLoaded', initStickyState);
+globalThis.addEventListener('DOMContentLoaded', initStickyState);

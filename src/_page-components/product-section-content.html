@@ -126,6 +126,32 @@
           </label>
         </div>
       </fieldset>
+      <size-guide>
+        <load ="/_page-components/card-modal-component.html" />
+        <div class="size-guide-promo-holder">
+          <p class="size-guide-promo">Not sure of your ring size?</p>
+          <p class="size-guide-subpromo">Explore our sizing options and guide <strong>in minutes.</strong></p>
+          <template class="js-modal-content-template">
+            <h3 class="slider-title">Size Guide</h3>
+            <load ="/_page-components/size-guide-slider.html" />
+          </template>
+        </div>
+        <div class="size-guide-cta-holder">
+          <button class="js-size-guide-modal-open">
+            <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g transform="translate(-1402, -942)" fill="currentColor">
+                        <g transform="translate(1052, 227)" fill-rule="nonzero">
+                            <g transform="translate(1, 698)">
+                              <path d="M360.538462,23.4615385 L349.461538,23.4615385 C349.207692,23.4615385 349,23.2538462 349,23 C349,22.7461538 349.207692,22.5384615 349.461538,22.5384615 L360.538462,22.5384615 C360.792308,22.5384615 361,22.7461538 361,23 C361,23.2538462 360.792308,23.4615385 360.538462,23.4615385 Z M355,29 C354.746154,29 354.538462,28.7923077 354.538462,28.5384615 L354.538462,17.4615385 C354.538462,17.2076923 354.746154,17 355,17 C355.253846,17 355.461538,17.2076923 355.461538,17.4615385 L355.461538,28.5384615 C355.461538,28.7923077 355.253846,29 355,29 Z"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+          </button>
+        </div>
+      </size-guide>
       <fieldset class="swatch-container payment-plan-picker" data-option-name="payment-plan">
         <legend class="swatch-container-label">Lock in founder perks. <span class="light-text"> Best terms, while
             available.</span></legend>
