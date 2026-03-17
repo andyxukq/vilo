@@ -442,6 +442,52 @@ size-guide .size-guide-footnote a {
   line-height: 2.2rem;
   height: 4.8rem;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  transition: all 0.3s ease-out, padding-right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15), inset 1px 4px 12px 0 #42577C;
+}
+
+.preorder-button span {
+  transition: all 0.3s ease-out, padding-right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(1.5rem);
+}
+
+.preorder-button:hover {
+  background: var(--white);
+  color: var(--primary-color);
+  gap: 1rem;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15);
+  border-color: var(--border-color-animated-btn-inverse);
+  transform: translateX(0);
+}
+
+.preorder-button .animation-icon {
+  width: 3rem;
+  height: 3rem;
+  background: var(--primary-color);
+  color: var(--primary-color-inverse);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateX(100%) scale(0);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+.preorder-button:hover span {
+    transform: translateX(0);
+}
+
+.preorder-button:hover .animation-icon {
+    opacity: 1;
+    transform: translateX(0) scale(1);
 }
 
 product-payment-variant-marquee {

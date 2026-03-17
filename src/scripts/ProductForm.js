@@ -27,7 +27,7 @@ class ProductForm extends HTMLElement {
     this.comparePriceElArray = Array.from(
       document.querySelectorAll("[data-compare-price]"),
     );
-    this.customBuyBtn = this.querySelector(".preorder-button");
+    this.customBuyBtn = this.querySelector(".js-preorder-button");
     this.toggleUIState(false);
     if (globalThis.ShopifyBuy?.UI) {
       this.initShopify();
