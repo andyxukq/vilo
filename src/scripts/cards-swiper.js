@@ -52,14 +52,16 @@ const initCardsScroll = () => {
     },
     on: {
       click: (s) => {
-        if (!cardModal || !s.clickedSlide) return;
         const slide = s.clickedSlide;
-        cardModal.open({
-          name: slide.dataset.name,
-          role: slide.dataset.role,
-          description: slide.dataset.description,
-          imageUrl: slide.dataset.imageUrl,
-        });
+        if (!cardModal || !slide) return;
+
+        const template = slide.querySelector('.js-modal-content-template');
+        if (!template) return;
+
+        cardModal.innerHTML = '';
+        cardModal.appendChild(document.importNode(template.content, true));
+
+        cardModal.open();
       }
     }
   });

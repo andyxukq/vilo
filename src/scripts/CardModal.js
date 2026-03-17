@@ -34,7 +34,7 @@ class CardModal extends HTMLElement {
   connectedCallback() {
     this.overlay = this.shadowRoot.querySelector('.overlay')
     this.modal = this.shadowRoot.querySelector('.modal')
-    this.descriptionEl = this.shadowRoot.querySelector('.js-modal-card-description')
+    this.slotEl = this.shadowRoot.querySelector('slot')
 
     this.shadowRoot.addEventListener('click', this._onComponentClick)
 
@@ -58,7 +58,11 @@ class CardModal extends HTMLElement {
     if (!this._mobileState) return
 
     const touchPath = e.composedPath()
-    this.isTouchingScrollable = touchPath.includes(this.descriptionEl)
+
+    this.isTouchingScrollable = touchPath.some(el =>
+      el.scrollHeight > el.clientHeight &&
+      globalThis.getComputedStyle(el).overflowY !== 'visible'
+    );
 
     this.isDragging = true
     this.startY = e.touches[0].pageY
@@ -130,19 +134,7 @@ class CardModal extends HTMLElement {
     }
   }
 
-  _setContent(data) {
-    const shadow = this.shadowRoot
-    shadow.querySelector('.js-modal-card-name').textContent = data.name || ''
-    shadow.querySelector('.js-modal-card-role').textContent = data.role || ''
-    this.descriptionEl.innerHTML = data.description || ''
-    this.descriptionEl.scrollTop = 0
-    const img = shadow.querySelector('.js-modal-card-image')
-    img.src = data.imageUrl || ''
-    img.alt = data.name || ''
-  }
-
-  open(data) {
-    this._setContent(data)
+  open() {
     this.modal.style.transition = 'none'
     this.modal.style.transform = this._mobileState ? 'translateY(100%)' : 'translateX(100%)'
 

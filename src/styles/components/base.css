@@ -349,6 +349,7 @@ body.modal-open {
     padding-top: 2.5rem;
 }
 
+size-guide .size-guide-swiper-pagination,
 .cards-section .swiper-pagination,
 .gallery-section .swiper-pagination,
 .alter-gallery-section .swiper-pagination {
@@ -360,6 +361,7 @@ body.modal-open {
     top: 0 !important;
 }
 
+size-guide .swiper-nav-btns,
 .cards-section .swiper-nav-btns,
 .gallery-section .swiper-nav-btns,
 .alter-gallery-section .swiper-nav-btns {
@@ -369,6 +371,8 @@ body.modal-open {
     height: 100%;
 }
 
+size-guide .size-guide-swiper-button-prev,
+size-guide .size-guide-swiper-button-next,
 .cards-section .swiper-button-prev,
 .cards-section .swiper-button-next,
 .gallery-section .swiper-button-prev,
@@ -385,6 +389,8 @@ body.modal-open {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+size-guide .size-guide-swiper-button-prev svg,
+size-guide .size-guide-swiper-button-next svg,
 .cards-section .swiper-button-prev svg,
 .cards-section .swiper-button-next svg,
 .gallery-section .swiper-button-prev svg,
@@ -395,6 +401,7 @@ body.modal-open {
     color: var(--white);
 }
 
+size-guide .swiper-button-disabled,
 .cards-section .swiper-button-disabled,
 .gallery-section .swiper-button-disabled,
 .alter-gallery-section .swiper-button-disabled {
@@ -402,10 +409,28 @@ body.modal-open {
     background-color: var(--white);
 }
 
+size-guide .swiper-button-disabled svg,
 .cards-section .swiper-button-disabled svg,
 .gallery-section .swiper-button-disabled svg,
 .alter-gallery-section .swiper-button-disabled svg {
     color: var(--arrow-icon-color);
+}
+
+size-guide .size-guide-swiper-nav-holder {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-top: 2.6rem;
+    border-top: 1px solid #d1d1d1;
+}
+
+size-guide .size-guide-swiper-button-prev,
+size-guide .size-guide-swiper-button-next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* swiper nav and pagination end */
@@ -428,5 +453,7 @@ body.modal-open {
         display: none !important;
     }
     /* swiper nav and pagination end */
-
+    size-guide .size-guide-swiper-nav-holder {
+        margin-top: 1.7rem;
+    }
 }
