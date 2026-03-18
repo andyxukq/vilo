@@ -340,7 +340,7 @@ size-guide .slider-title {
   line-height: 3.4rem;
   display: inline-block;
   text-align: center;
-  padding-block: 1.4rem 3.6rem;
+  padding-block: .6rem 2.6rem;
   color: var(--text-color-secondary);
 }
 
@@ -364,7 +364,7 @@ size-guide .size-guide-step-description {
   font-size: 1.5rem;
   line-height: 2.2rem;
   color: var(--text-color-tertiary);
-  padding-bottom: 1.7rem;
+  padding-bottom: 1rem;
 }
 
 size-guide .size-guide-footnote {
@@ -627,9 +627,7 @@ product-media .product-section-promo {
   size-guide .size-guide-step-description {
     font-size: 1.6rem;
     line-height: 2.1rem;
-    padding-bottom: 1rem;
   }
-
   size-guide .size-guide-footnote a {
     display: inline;
   }
