@@ -1,4 +1,3 @@
-<card-modal>
   <template shadowrootmode="open">
     <style>
       :host {
@@ -7,6 +6,8 @@
         z-index: 9999;
         --backdrop-alpha: 0.8;
         --backdrop-blur: 5px;
+        --modal-height-mobile: 80dvh;
+        --modal-height-desktop: 100dvh;
       }
 
       .overlay {
@@ -83,7 +84,7 @@
           bottom: 0;
           left: 0;
           width: 100%;
-          height: 80svh;
+          height: var(--modal-height-mobile);
           border-radius: 3rem 3rem 0 0;
           transform: translateY(100%);
         }
@@ -98,7 +99,7 @@
           top: 0;
           right: 0;
           width: 60rem;
-          height: 100dvh;
+          height: var(--modal-height-desktop);
           transform: translateX(100%);
         }
 
