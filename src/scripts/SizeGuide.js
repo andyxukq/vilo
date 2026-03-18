@@ -49,7 +49,7 @@ class SizeGuide extends HTMLElement {
     if (!sliderEl) return;
     this.swiperInstance = new Swiper(sliderEl, {
       modules: [Navigation, Pagination],
-      slidesPerView: 1.2,
+      slidesPerView: 1.25,
       spaceBetween: 20,
       grabCursor: true,
       observer: true,
