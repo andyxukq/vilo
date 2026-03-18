@@ -4,7 +4,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-const swiperInstances = new Map();
+const gallerySwiperInstances = new Map();
 
 function getScopedEls(sliderEl) {
   const sectionEl = sliderEl.closest('.gallery-section') || sliderEl.parentElement;
@@ -24,7 +24,7 @@ function initSwiper() {
 
   sliderEls.forEach((sliderEl) => {
     if (isMobile) {
-      if (swiperInstances.has(sliderEl)) return;
+      if (gallerySwiperInstances.has(sliderEl)) return;
 
       const { paginationEl, nextEl, prevEl } = getScopedEls(sliderEl);
       if (!paginationEl || !nextEl || !prevEl) return;
@@ -44,10 +44,10 @@ function initSwiper() {
         },
       });
 
-      swiperInstances.set(sliderEl, instance);
-    } else if (swiperInstances.has(sliderEl)) {
-      swiperInstances.get(sliderEl)?.destroy(true, true);
-      swiperInstances.delete(sliderEl);
+      gallerySwiperInstances.set(sliderEl, instance);
+    } else if (gallerySwiperInstances.has(sliderEl)) {
+      gallerySwiperInstances.get(sliderEl)?.destroy(true, true);
+      gallerySwiperInstances.delete(sliderEl);
     }
   });
 }
