@@ -4,11 +4,23 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-let swiperAlterGalleryInstance = null;
+const swiperAlterGalleryInstances = new Map();
 
 function initAlterSwiper() {
-  if (!swiperAlterGalleryInstance) {
-    swiperAlterGalleryInstance = new Swiper('.alter-gallery-slider', {
+  const sliderEls = document.querySelectorAll('.alter-gallery-slider');
+
+  sliderEls.forEach((sliderEl) => {
+    if (swiperAlterGalleryInstances.has(sliderEl)) return;
+
+    const sectionEl = sliderEl.closest('.alter-gallery-section') || sliderEl.parentElement;
+    if (!sectionEl) return;
+
+    const paginationEl = sectionEl.querySelector('.swiper-pagination');
+    const nextEl = sectionEl.querySelector('.swiper-button-next');
+    const prevEl = sectionEl.querySelector('.swiper-button-prev');
+    if (!paginationEl || !nextEl || !prevEl) return;
+
+    const instance = new Swiper(sliderEl, {
       modules: [Pagination, Navigation],
       slidesPerView: 1.2,
       spaceBetween: 16,
@@ -20,20 +32,17 @@ function initAlterSwiper() {
         }
       },
       pagination: {
-        el: '.swiper-pagination',
+        el: paginationEl,
         type: 'fraction',
       },
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl,
+        prevEl,
       },
     });
-  }
 
-  else if (swiperAlterGalleryInstance) {
-    swiperAlterGalleryInstance.destroy(true, true);
-    swiperAlterGalleryInstance = null;
-  }
+    swiperAlterGalleryInstances.set(sliderEl, instance);
+  });
 }
 
 globalThis.addEventListener('DOMContentLoaded', initAlterSwiper);
