@@ -98,7 +98,7 @@
         .modal {
           top: 0;
           right: 0;
-          width: 60rem;
+          width: 50rem;
           height: var(--modal-height-desktop);
           transform: translateX(100%);
         }
@@ -123,6 +123,11 @@
 
         .body {
           padding-inline: 5rem;
+        }
+      }
+      @media (min-width: 1600px) {
+        .modal {
+          width: 60rem;
         }
       }
     </style>
