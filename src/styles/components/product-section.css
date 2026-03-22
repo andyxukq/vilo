@@ -361,25 +361,26 @@ size-guide .size-guide-step-title {
 }
 
 size-guide .size-guide-step-description {
-  font-size: 1.5rem;
-  line-height: 2.2rem;
+  font-size: 1.2rem;
+  line-height: 2rem;
   color: var(--text-color-tertiary);
   padding-bottom: 1rem;
 }
 
 size-guide .size-guide-footnote {
-  font-size: 1.3rem;
-  line-height: 2.2rem;
-  color: var(--text-color-tertiary);
   padding-block: 3rem 2rem;
   display: none;
 }
 
 size-guide .size-guide-footnote a {
+  padding-left: .6ch;
+}
+
+size-guide .size-guide-footnote a,
+size-guide .size-guide-footnote {
   font-size: 1.3rem;
   line-height: 2.2rem;
   color: var(--text-color-tertiary);
-  padding-left: .6ch;
 }
 
 .payment-plan-picker {
@@ -628,11 +629,9 @@ product-media .product-section-promo {
     font-size: 1.6rem;
     line-height: 2.1rem;
   }
-  size-guide .size-guide-footnote a {
-    display: inline;
-  }
+  size-guide .size-guide-footnote a,
   size-guide .size-guide-footnote {
-    display: flex;
+    display: inline;
   }
 }
 

@@ -125,6 +125,7 @@
   display: flex;
   flex: 1;
   overflow: hidden;
+  gap: 1.6rem;
 }
 
 .modal-card-social-links {
@@ -266,4 +267,11 @@
 
   /* modal cards styles end */
 
+}
+
+@media (min-width: 1200px) {
+  .modal-card-description {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+  }
 }
