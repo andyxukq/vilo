@@ -1,0 +1,198 @@
+.brand-page {
+  --brand-page-shadow-rgb: 0, 0, 0;
+  --brand-page-shadow-soft: 0 2px 4px rgba(var(--brand-page-shadow-rgb), 0.12);
+  --brand-page-content-text-shadow: var(--brand-page-shadow-soft);
+  --brand-page-content-drop-shadow: drop-shadow(var(--brand-page-shadow-soft));
+  --brand-page-contact-glass-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.85),
+    inset 0 0 16px rgba(255, 255, 255, 0.4),
+    0 1px 8px rgba(var(--brand-page-shadow-rgb), 0.12);
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-page-hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  min-height: 100dvh;
+  position: relative;
+  color: var(--white);
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+.brand-page-hero-picture {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.brand-page-hero-picture .brand-page-hero-bg {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.brand-page-hero-section .brand-page-logo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  filter: var(--brand-page-content-drop-shadow);
+  padding-block: 8.5rem;
+  box-sizing: border-box;
+}
+
+.brand-page-hero-section .brand-page-logo .logo {
+  width: 8rem;
+  height: 2.4rem;
+  max-width: 100%;
+}
+
+.brand-page-hero-body {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.brand-page-hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  gap: 0;
+}
+
+.brand-page-headline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  box-sizing: border-box;
+  padding: 0 0 2rem;
+  text-shadow: var(--brand-page-content-text-shadow);
+  font-size: 4.4rem;
+  line-height: 4rem;
+}
+
+@media (min-width: 768px) {
+  .brand-page-hero-section .brand-page-logo {
+    position: absolute;
+    top: 8.5rem;
+    left: 0;
+    right: 0;
+    padding: 0;
+    z-index: 1;
+  }
+
+  .brand-page-hero-body {
+    justify-content: center;
+  }
+
+  .brand-page-headline {
+    font-size: 8rem;
+    line-height: 6.8rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .brand-page-headline {
+    font-size: 10rem;
+    line-height: 8.8rem;
+  }
+}
+
+.brand-page-body-text {
+  max-width: 32rem;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  padding: 0;
+  text-shadow: var(--brand-page-content-text-shadow);
+  box-sizing: border-box;
+}
+
+.brand-page-contact-us {
+  position: relative;
+  width: 100%;
+  margin-inline: auto;
+  box-sizing: border-box;
+  padding: 2.5rem 0.6rem;
+}
+
+.brand-page-contact-us .contact-us-wrapper.brand-page-contact-us-overlay {
+  position: absolute;
+  inset: auto;
+  left: 50%;
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+  width: 90%;
+}
+
+.brand-page-contact-us .contact-us-wrapper.brand-page-contact-us-overlay::before {
+  z-index: 0;
+  opacity: 1;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 36%,
+    rgba(255, 255, 255, 0.9) 100%
+  );
+  box-shadow: var(--brand-page-contact-glass-shadow);
+}
+
+.brand-page-contact-us .contact-us-content .title {
+  font-size: 2.6rem;
+  line-height: 3.2rem;
+}
+
+.brand-page-contact-us .contact-us-content p {
+  padding-left: 1.2rem;
+}
+
+@media (min-width: 768px) {
+  .brand-page-contact-us {
+    padding-block: 10rem 12rem;
+    padding-inline: 12rem;
+  }
+
+  .brand-page-contact-us .contact-us-wrapper.brand-page-contact-us-overlay {
+    width: 95%;
+  }
+
+  .brand-page-contact-us .contact-us-wrapper.brand-page-contact-us-overlay::before {
+    background-image: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 1) 6%,
+      rgba(255, 255, 255, 0.85) 100%
+    );
+  }
+
+  .brand-page-contact-us .contact-us-content .title {
+    font-size: 2.8rem;
+    line-height: 3.4rem;
+  }
+
+  .brand-page-contact-us .contact-us-content,
+  .brand-page-contact-us .contact-us-form {
+    max-width: 52rem;
+  }
+
+  .brand-page-contact-us .contact-us-content p {
+    padding-left: 0;
+    padding-bottom: 6rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-page * {
+    transition: none !important;
+  }
+}
