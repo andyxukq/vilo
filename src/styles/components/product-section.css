@@ -30,7 +30,6 @@ product-media {
 .product-thumb-swiper .swiper-slide {
   aspect-ratio: 4 / 3;
   cursor: pointer;
-  border-color: var(--border-color-primary);
 }
 
 .product-thumb-swiper .swiper-slide-thumb-active img{
@@ -734,7 +733,7 @@ product-media .product-section-promo {
   }
 }
 
-@media screen and (min-width: 640px) and (max-width: 1024px) {
+@media screen and (min-width: 640px) and (max-width: 1023px) {
   product-media {
     max-height: 90dvh;
     overflow: hidden;

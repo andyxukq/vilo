@@ -49,6 +49,7 @@ header .container {
 .dm-open .header-content-wrapper  {
     background: transparent;
     backdrop-filter: unset;
+    -webkit-backdrop-filter: unset;
 }
 
 header .nav-links {
@@ -137,9 +138,6 @@ header .mobile-menu-btn {
         transform: scaleX(1);
     }
 
-    .container {
-        padding-inline: 8rem;
-    }
     header .nav-links a[variant="outlined"] {
         border: 1px solid var(--primary-color);
         color: var(--primary-color);

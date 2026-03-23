@@ -1,6 +1,5 @@
 body {
     font-family: var(--primary-font), sans-serif;
-    line-height: 1.4rem;
     color: var(--text-color);
     background-color: var(--background-color);
 }
@@ -160,7 +159,7 @@ body.modal-open {
     outline: none;
     font-family: inherit;
     background: var(--primary-color);
-    border: 1px solid var(--border-color-btn-alternative);
+    border: 1px solid var(--border-color-animated-btn);
     color: var(--primary-color-inverse);
     padding: 1.8rem 3.5rem;
     border-radius: var(--border-radius-full);
@@ -455,5 +454,11 @@ size-guide .size-guide-swiper-button-next {
     /* swiper nav and pagination end */
     size-guide .size-guide-swiper-nav-holder {
         margin-top: 1.7rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding-inline: 8rem;
     }
 }
