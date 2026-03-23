@@ -27,6 +27,7 @@ class ProductForm extends HTMLElement {
     this.comparePriceElArray = Array.from(
       document.querySelectorAll("[data-compare-price]"),
     );
+    this.depositLabelEl = document.querySelector("[data-deposit-label]");
     this.customBuyBtn = this.querySelector(".js-preorder-button");
     this.toggleUIState(false);
     if (globalThis.ShopifyBuy?.UI) {
@@ -122,9 +123,15 @@ class ProductForm extends HTMLElement {
 
     if (matchedVariant) {
       this.updatePrice(matchedVariant);
+      this.updateDepositLabel(selectedOptions);
       this.currentVariantId = matchedVariant.id.split("/").pop();
       this.toggleUIState(matchedVariant.available);
     }
+  }
+
+  updateDepositLabel(selectedOptions) {
+    if (!this.depositLabelEl) return;
+    this.depositLabelEl.style.display = selectedOptions.includes("Deposit") ? "inline" : "none";
   }
 
   updatePrice(variant) {

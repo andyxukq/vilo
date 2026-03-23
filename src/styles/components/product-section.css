@@ -130,6 +130,12 @@ product-media {
   padding-bottom: 1.4rem;
 }
 
+.deposit-label-text {
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  color: #3F4142;
+}
+
 .compare-at-price {
   font-size: 1.8rem;
   line-height: 2.2rem;
