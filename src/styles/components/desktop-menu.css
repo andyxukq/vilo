@@ -47,15 +47,12 @@ desktop-menu {
   justify-content: center;
   max-height: 17rem;
   width: 100%;
-  opacity: 0;
   visibility: hidden;
   display: none;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .desktop-menu-row.is-active {
   display: flex;
-  opacity: 1;
   visibility: visible;
 }
 

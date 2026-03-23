@@ -143,7 +143,8 @@
 }
 
 .modal-card-social-link svg {
-  size: 1.4rem;
+  width: 1.4rem;
+  height: 1.4rem;
 }
 
 .modal-card-role {
@@ -257,16 +258,10 @@
   }
 
   .modal-card-social-link svg {
-    size: 1.7rem;
+    width: 1.7rem;
+    height: 1.7rem;
   }
-
-  .modal-card-description {
-    font-size: 1.8rem;
-    line-height: 2.6rem;
-  }
-
   /* modal cards styles end */
-
 }
 
 @media (min-width: 1200px) {
