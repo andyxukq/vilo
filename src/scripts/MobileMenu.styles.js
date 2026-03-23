@@ -38,7 +38,7 @@ mobileMenuStyles.replaceSync(`
      display: flex;
      flex-direction: column;
      justify-content: space-between;
-     max-height: calc(100% - 20rem);
+     max-height: calc(100% - 12rem);
      position: relative;
      overflow: hidden;
    }

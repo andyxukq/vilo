@@ -202,10 +202,11 @@ header .mobile-menu-btn {
     opacity: 0;
     pointer-events: none;
     will-change: transform;
-    padding-top: 2.4rem;
+    padding-block: 2.4rem;
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    overflow-y: scroll;
 }
 
 .second-level-menus .secondary-menu-item.is-active {
