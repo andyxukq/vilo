@@ -119,7 +119,8 @@ product-media {
   font-size: 1.6rem;
   line-height: 2rem;
   color: var(--primary-color);
-  font-family: var(--primary-media-font);
+  font-family: var(--primary-font);
+  font-weight: 500;
   padding-bottom: 1.8rem;
 }
 
@@ -166,7 +167,8 @@ product-media {
 .swatch-container-label {
   font-size: 1.4rem;
   line-height: 1.7rem;
-  font-family: var(--primary-media-font);
+  font-family: var(--primary-font);
+  font-weight: 500;
   padding-bottom: 1.5rem;
 }
 
@@ -286,7 +288,8 @@ product-media {
   line-height: 1.8rem;
   height: 5rem;
   padding-inline: 1.8rem;
-  font-family: var(--primary-media-font);
+  font-family: var(--primary-font);
+  font-weight: 500;
 }
 
 .size-item {
@@ -319,7 +322,8 @@ size-guide .size-guide-promo-holder {
 size-guide .size-guide-promo {
   font-size: 1.8rem;
   line-height: 2.2rem;
-  font-family: var(--primary-media-font);
+  font-family: var(--primary-font);
+  font-weight: 500;
 }
 
 size-guide .size-guide-subpromo {
@@ -360,7 +364,8 @@ size-guide .swiper-slide img {
 size-guide .size-guide-step-title {
   font-size: 1.6rem;
   line-height: 2rem;
-  font-family: var(--primary-media-font);
+  font-family: var(--primary-font);
+  font-weight: 500;
   color: var(--text-color-secondary);
   padding-block: 1.4rem 1rem;
 }
@@ -404,7 +409,8 @@ size-guide .size-guide-footnote {
   line-height: 2rem;
   color: var(--primary-color);
   padding-bottom: 1rem;
-  font-family: var(--primary-media-font);
+  font-family: var(--primary-font);
+  font-weight: 500;
 }
 
 .buy-option-visual p {
@@ -423,7 +429,8 @@ size-guide .size-guide-footnote {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
-  font-family: var(--primary-media-font);
+  font-family: var(--primary-font);
+  font-weight: 500;
   padding-bottom: 1.2rem;
 }
 
@@ -435,7 +442,8 @@ size-guide .size-guide-footnote {
 }
 
 .buy-option-visual strong {
-  font-family: var(--primary-bold-font);
+  font-family: var(--primary-font);
+  font-weight: 600;
 }
 
 .preorder-button {
@@ -514,7 +522,8 @@ product-payment-variant-marquee {
 }
 
 .marquee-content span {
-  font-family: var(--primary-media-font);
+  font-family: var(--primary-font);
+  font-weight: 500;
   font-size: 1.3rem;
   color: var(--green-badge);
   letter-spacing: -0.02px;
@@ -583,7 +592,8 @@ product-media .product-section-promo {
 .product-section-promo-block-heading .promo-block-title {
   font-size: 1.4rem;
   line-height: 1.8rem;
-  font-family: var(--primary-media-font);
+  font-family: var(--primary-font);
+  font-weight: 500;
   width: 8rem;
 }
 .product-section-promo-block-description {

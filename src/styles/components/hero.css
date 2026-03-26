@@ -77,7 +77,8 @@
     font-size: 1.8rem;
     line-height: 2.1rem;
     padding: .5rem 1.3rem;
-    font-family: var(--primary-media-font);
+    font-family: var(--primary-font);
+    font-weight: 500;
     border: 0.9px solid var(--primary-color-inverse);
     border-radius: var(--border-radius-full);
 }
