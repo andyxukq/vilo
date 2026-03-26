@@ -79,7 +79,8 @@
 .tech-specifications-details h6 {
   font-size: 1.8rem;
   line-height: 2.2rem;
-  font-family: var(--primary-media-font);
+  font-family: var(--primary-font);
+  font-weight: 500;
 }
 .tech-specifications-details-info {
   display: flex;

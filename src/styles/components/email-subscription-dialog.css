@@ -39,7 +39,8 @@ subscription-dialog .close-icon {
 .email-subscribe-dialog-content-holder .subtitle {
   font-size: 1.8rem;
   line-height: 1.8rem;
-  font-family: var(--primary-media-font);
+  font-family: var(--primary-font);
+  font-weight: 500;
   padding-top: 1.6rem;
 }
 .email-subscribe-dialog-content-holder .description {
