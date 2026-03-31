@@ -32,6 +32,7 @@
 
 .page-hero-main-image-desktop {
   position: relative;
+  border-radius: var(--border-radius-20);
   bottom: 0;
   right: 2rem;
   height: auto;
