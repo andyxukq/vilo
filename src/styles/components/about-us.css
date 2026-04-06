@@ -28,16 +28,37 @@
 
 .images-with-text-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem .8rem;
+  grid-template-columns: 1fr;
+  gap: 4rem;
 }
 
-.images-with-text-wrapper img {
-  aspect-ratio: 1/1;
+.images-with-text-media {
+  display: flex;
+  flex-direction: row;
+  gap: 0.8rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x proximity;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+}
+
+.images-with-text-media::-webkit-scrollbar {
+  display: none;
+}
+
+/* ~2 full tiles + half of the third visible; horizontal scroll for the rest */
+.images-with-text-media img {
+  flex: 0 0 calc((100% - 1.6rem) / 2.5);
+  min-width: 0;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--border-radius-14);
+  scroll-snap-align: start;
 }
 
 .images-with-text-content {
-  grid-column: span 2;
   padding-inline: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -197,13 +218,29 @@
   }
 
   .images-with-text-wrapper {
-    padding-left: 13%;
+    grid-template-columns: 1fr 1fr;
     gap: 6rem 3rem;
+    padding-left: 13%;
+    padding-right: 4rem;
+  }
+
+  .images-with-text-media {
+    grid-column: 1 / -1;
+    width: 100%;
+    min-width: 0;
+    overflow-x: visible;
+    gap: 2rem;
+  }
+
+  .images-with-text-media img {
+    flex: 1 1 0;
+    min-width: 0;
+    border-radius: var(--border-radius-30);
   }
 
   .images-with-text-content {
-    grid-column: initial;
-    padding: 0 4rem 0 0;
+    grid-column: 1;
+    padding: 0;
     gap: 2.2rem;
   }
 
