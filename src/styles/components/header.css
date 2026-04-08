@@ -29,14 +29,15 @@ header .container {
 
 .header-content-wrapper {
     height: 64px;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    justify-content: space-between;
+    column-gap: 0.75rem;
     width: calc(100% - 2rem);
     padding-inline: 1.8rem;
     border-radius: var(--border-radius-12);
-    backdrop-filter: blur(.5rem) saturate(103%) brightness(92%);
-    -webkit-backdrop-filter: blur(.5rem) saturate(103%) brightness(92%);
+    backdrop-filter: blur(1rem) saturate(103%) brightness(80%);
+    -webkit-backdrop-filter: blur(1rem) saturate(103%) brightness(80%);
     background: rgba(255, 255, 255, 0.05);
     transition: background-color 0.4s ease-in-out, backdrop-filter 0.4s ease-in-out;
     position: absolute;
@@ -50,6 +51,10 @@ header .container {
     background: transparent;
     backdrop-filter: unset;
     -webkit-backdrop-filter: unset;
+    .logo,
+    .nav-links a:not(.btn-with-animation) {
+        color: var(--primary-color);
+    }
 }
 
 header .nav-links {
@@ -58,34 +63,75 @@ header .nav-links {
     align-items: center;
     font-size: 1.4rem;
     line-height: 1.8rem;
+    grid-column: 3;
+    justify-self: end;
+    min-width: 0;
 }
 
 header .nav-links a {
-    color: var(--primary-color);
     text-decoration: none;
     display: none;
-}
-
-header .nav-links a[variant="outlined"] {
-    display: block;
-    text-decoration: none;
-    border: 1px solid var(--primary-color-inverse);
     color: var(--primary-color-inverse);
+    &.btn-with-animation {
+        display: inline-flex;
+        color: var(--primary-color-inverse);
+        padding: 1rem;
+        width: 11rem;
+        height: 3.6rem;
+        justify-content: center;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        /* Wins over .nav-links a:not([variant="outlined"]) { transition: color only } at ≥1024px */
+        transition: color 0.3s ease-out,
+            background-color 0.3s ease-out,
+            border-color 0.3s ease-out,
+            box-shadow 0.3s ease-out,
+            padding 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        .header-cta-label {
+            display: inline-block;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        span.animation-icon {
+            width: 2.6rem;
+            height: 2.6rem;
+            svg {
+                width: 1.2rem;
+                height: 1.2rem;
+            }
+        }
+    }
+    &.btn-with-animation:hover {
+        color: var(--primary-color);
+        padding-left: 0.55rem;
+        padding-right: 2rem;
+        font-weight: 500;
+        .header-cta-label {
+            transform: translateX(-0.9rem);
+        }
+        span.animation-icon {
+            right: 1rem;
+        }
+    }
 }
 
 .logo-container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    grid-column: 1;
+    justify-self: start;
+    min-width: 0;
 }
 
 header .logo-link {
     display: flex;
+    grid-column: 2;
+    justify-self: center;
 }
 
 header .logo {
     height: auto;
-    width: 3.4rem;
+    width: 4.6rem;
     object-fit: contain;
     color: var(--primary-color-inverse);
 }
@@ -98,10 +144,30 @@ header .mobile-menu-btn {
 
 @media (min-width: 1024px) {
     .header-content-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        column-gap: 0;
         height: var(--header-height-desktop);
         padding-inline: 4rem;
         width: calc(100% - 16rem);
         top: calc(100% + 3.5rem);
+    }
+
+    .logo-container {
+        grid-column: unset;
+        justify-self: unset;
+    }
+
+    header .logo-link {
+        grid-column: unset;
+        justify-self: unset;
+    }
+
+    header .nav-links {
+        grid-column: unset;
+        justify-self: unset;
+        margin-left: auto;
     }
     header .nav-links a {
         display: inline-block;
@@ -138,13 +204,8 @@ header .mobile-menu-btn {
         transform: scaleX(1);
     }
 
-    header .nav-links a[variant="outlined"] {
-        border: 1px solid var(--primary-color);
-        color: var(--primary-color);
-    }
     header .logo {
         width: 6.8rem;
-        color: var(--primary-color);
     }
     header .mobile-menu-btn {
         display: none;

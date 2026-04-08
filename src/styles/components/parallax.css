@@ -36,7 +36,8 @@
 }
 
 .parallax-text-content .arrow-icon svg {
-  width: 1.8rem;
+  width: 2.6rem;
+  height: 100%;
 }
 
 .parallax-images-wrapper {
@@ -95,7 +96,7 @@
     }
 
     .parallax-text-content .arrow-icon svg {
-        width: 2.5rem;
+        width: 3.4rem;
     }
 
     .pos-top-left { top: 10%; left: 11%; }

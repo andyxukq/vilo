@@ -208,12 +208,25 @@ body.modal-open {
 
 /* floating-cta-btn */
 
-.floating-cta-btn {
+.floating-cta-wrapper {
     position: fixed;
     bottom: 2rem;
     left: 50%;
     z-index: 20;
+    width: max-content;
+    max-width: calc(100vw - 2rem);
+    transform: translateX(-50%);
+    pointer-events: none;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
+}
 
+.floating-cta-wrapper .floating-cta-btn {
+    pointer-events: auto;
+}
+
+.floating-cta-btn {
     display: flex;
     align-items: center;
     gap: 1.3rem;
@@ -317,14 +330,21 @@ body.modal-open {
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
-        transform: translateX(-50%) translateY(2rem);
+        transform: translateY(2rem);
     }
     to {
         opacity: 1;
         visibility: visible;
         pointer-events: auto;
-        transform: translateX(-50%) translateY(0);
+        transform: translateY(0);
     }
+}
+
+/* Hidden when footer intersects viewport (see floating-cta-footer.js) */
+.floating-cta-wrapper.floating-cta-wrapper--footer-visible {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
 /* floating-cta-btn end */
 
@@ -435,11 +455,15 @@ size-guide .size-guide-swiper-button-next {
 /* swiper nav and pagination end */
 
 @media (min-width: 768px) {
-    .floating-cta-btn {
+    .floating-cta-wrapper {
         right: 6rem;
         bottom: 6rem;
         left: initial;
         transform: none;
+        max-width: min(100vw - 12rem, 40rem);
+    }
+
+    .floating-cta-btn {
         opacity: 1;
         visibility: visible;
         pointer-events: auto;
