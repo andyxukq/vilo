@@ -1,4 +1,5 @@
 import './script.js';
+import './floating-cta-footer.js';
 import './header-logic.js';
 import './EventTracking.js';
 
