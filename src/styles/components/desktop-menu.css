@@ -25,7 +25,7 @@ desktop-menu {
 .desktop-menu-container {
   min-height: 26rem;
   width: 100%;
-  max-width: 1875px;
+  max-width: 187.5rem;
   padding: 2.8rem 8rem;
   display: flex;
 }
@@ -76,7 +76,7 @@ desktop-menu {
 .menu-list-item-link {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.2rem;
   text-decoration: none;
   color: var(--text-color-secondary);
   font-size: 2rem;
@@ -92,6 +92,15 @@ desktop-menu {
 
 .menu-list-item-icon {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-list-item-icon img {
+  width: 2.2rem;
+  height: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .menu-list-item-link:hover .menu-list-item-icon{

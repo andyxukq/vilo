@@ -184,6 +184,18 @@ body.modal-open {
     border-color: var(--border-color-animated-btn-inverse)
 }
 
+.animation-icon img {
+    width: 1.8rem;
+    height: 1.2rem;
+    object-fit: contain;
+}
+
+.icon-plus img {
+    width: 1rem;
+    height: 1rem;
+    object-fit: contain;
+}
+
 .btn-with-animation .animation-icon {
     position: absolute;
     right: 1.4rem;
@@ -416,8 +428,48 @@ size-guide .size-guide-swiper-button-next svg,
 .gallery-section .swiper-button-next svg,
 .alter-gallery-section .swiper-button-prev svg,
 .alter-gallery-section .swiper-button-next svg {
-    width: 2rem !important;
+    width: 2.8rem !important;
     color: var(--white);
+}
+
+size-guide .size-guide-swiper-button-prev .slide-nav-arrow,
+size-guide .size-guide-swiper-button-next .slide-nav-arrow,
+.cards-section .swiper-button-prev .slide-nav-arrow,
+.cards-section .swiper-button-next .slide-nav-arrow,
+.gallery-section .swiper-button-prev .slide-nav-arrow,
+.gallery-section .swiper-button-next .slide-nav-arrow,
+.alter-gallery-section .swiper-button-prev .slide-nav-arrow,
+.alter-gallery-section .swiper-button-next .slide-nav-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+}
+
+size-guide .size-guide-swiper-button-prev .slide-nav-arrow img,
+size-guide .size-guide-swiper-button-next .slide-nav-arrow img,
+.cards-section .swiper-button-prev .slide-nav-arrow img,
+.cards-section .swiper-button-next .slide-nav-arrow img,
+.gallery-section .swiper-button-prev .slide-nav-arrow img,
+.gallery-section .swiper-button-next .slide-nav-arrow img,
+.alter-gallery-section .swiper-button-prev .slide-nav-arrow img,
+.alter-gallery-section .swiper-button-next .slide-nav-arrow img {
+    width: 2.8rem !important;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.slide-nav-arrow__muted {
+    display: none !important;
+}
+
+.swiper-button-disabled .slide-nav-arrow__default {
+    display: none !important;
+}
+
+.swiper-button-disabled .slide-nav-arrow__muted {
+    display: block !important;
 }
 
 size-guide .swiper-button-disabled,

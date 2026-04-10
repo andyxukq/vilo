@@ -10,6 +10,7 @@ function initProductHomePageSwiper() {
   if (!productSwiperInstance) {
     productSwiperInstance = new Swiper('.product-media-slider', {
       modules: [Pagination, Navigation],
+      rewind: true,
       slidesPerView: 1.2,
       spaceBetween: 16,
       centeredSlides: false,
@@ -24,6 +25,7 @@ function initProductHomePageSwiper() {
         type: 'fraction',
       },
       navigation: {
+        addIcons: false,
         nextEl: '.swiper-ps-button-next',
         prevEl: '.swiper-ps-button-prev',
       },

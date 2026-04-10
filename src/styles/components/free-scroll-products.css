@@ -69,9 +69,24 @@
 }
 
 .free-scroll-swiper-navigation-btn svg {
-  height: 3rem;
-  width: auto;
+  width: 2.8rem;
+  height: auto;
   color: var(--white);
+  opacity: 0.6;
+}
+
+.free-scroll-swiper-navigation-btn .slide-nav-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}
+
+.free-scroll-swiper-navigation-btn .slide-nav-arrow img {
+  width: 2.8rem;
+  height: auto;
+  object-fit: contain;
+  display: block;
   opacity: 0.6;
 }
 

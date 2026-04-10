@@ -1,7 +1,8 @@
 const excludedSelectors = [
   '.swiper-slide',
   '.email-subscribe-dialog-holder',
-  'card-modal img'
+  'card-modal img',
+  '.skip-img-fadein',
 ];
 const getExcludedSelector = (baseTag, exclusions) =>
   `${baseTag}${exclusions.filter((i) => i.trim()).map((i) => `:not(${i})`).join('')}`;

@@ -39,6 +39,7 @@ function initSwiper() {
           type: 'fraction',
         },
         navigation: {
+          addIcons: false,
           nextEl,
           prevEl,
         },

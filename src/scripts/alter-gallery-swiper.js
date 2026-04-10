@@ -36,6 +36,7 @@ function initAlterSwiper() {
         type: 'fraction',
       },
       navigation: {
+        addIcons: false,
         nextEl,
         prevEl,
       },

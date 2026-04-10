@@ -141,9 +141,24 @@ product-media .product-media-images-grid > .product-main-swiper-pagination.swipe
 }
 
 .product-main-swiper-navigation-btn svg {
-  height: 3rem;
-  width: auto;
+  width: 2.8rem;
+  height: auto;
   color: var(--white);
+  opacity: 0.6;
+}
+
+.product-main-swiper-navigation-btn .slide-nav-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}
+
+.product-main-swiper-navigation-btn .slide-nav-arrow img {
+  width: 2.8rem;
+  height: auto;
+  object-fit: contain;
+  display: block;
   opacity: 0.6;
 }
 
@@ -886,6 +901,22 @@ product-media .product-section-promo {
   border: none;
   cursor: pointer;
   width: 2.4rem;
+}
+
+.swiper-ps-nav-holder .swiper-ps-button-prev .slide-nav-arrow,
+.swiper-ps-nav-holder .swiper-ps-button-next .slide-nav-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}
+
+.swiper-ps-nav-holder .swiper-ps-button-prev .slide-nav-arrow img,
+.swiper-ps-nav-holder .swiper-ps-button-next .slide-nav-arrow img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
 }
 
 @media (min-width: 1024px) {
