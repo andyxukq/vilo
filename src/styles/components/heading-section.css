@@ -36,7 +36,14 @@
 .heading-section-with-cta .icon-holder {
     display: flex;
     justify-content: center;
+    align-items: center;
     padding-top: 4rem;
+}
+
+.heading-section-with-cta .icon-holder img {
+    width: 2.6rem;
+    height: auto;
+    object-fit: contain;
 }
 
 @media (min-width: 768px) {
@@ -73,7 +80,9 @@
     .heading-section-with-cta .icon-holder{
         padding-top: 2.4rem;
     }
-    .heading-section-with-cta .icon-holder svg{
-        width: 2.5rem;
+    .heading-section-with-cta .icon-holder img {
+        width: 3.4rem;
+        height: auto;
+        object-fit: contain;
     }
 }

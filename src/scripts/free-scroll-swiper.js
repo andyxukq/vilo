@@ -27,6 +27,7 @@ const initFreeScroll = () => {
     slidesOffsetBefore: 15,
     slidesOffsetAfter: 15,
     navigation: {
+      addIcons: false,
       nextEl: nextBtn,
       prevEl: prevBtn,
     },

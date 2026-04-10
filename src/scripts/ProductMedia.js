@@ -76,6 +76,7 @@ class ProductMedia extends HTMLElement {
           },
         }),
         navigation: {
+          addIcons: false,
           nextEl: nextBtn,
           prevEl: prevBtn,
         },

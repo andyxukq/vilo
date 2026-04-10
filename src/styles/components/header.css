@@ -75,18 +75,18 @@ header .nav-links a {
     &.btn-with-animation {
         display: inline-flex;
         color: var(--primary-color-inverse);
-        padding: 1rem;
-        width: 11rem;
-        height: 3.6rem;
+        padding: 1.5rem 1rem;
+        width: 8rem;
+        height: 4.2rem;
         justify-content: center;
         font-size: 1.2rem;
         line-height: 1.4rem;
-        /* Wins over .nav-links a:not([variant="outlined"]) { transition: color only } at ≥1024px */
         transition: color 0.3s ease-out,
             background-color 0.3s ease-out,
             border-color 0.3s ease-out,
             box-shadow 0.3s ease-out,
-            padding 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            padding 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+            width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         .header-cta-label {
             display: inline-block;
             transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -94,11 +94,10 @@ header .nav-links a {
         span.animation-icon {
             width: 2.6rem;
             height: 2.6rem;
-            svg {
-                width: 1.2rem;
-                height: 1.2rem;
-            }
         }
+    }
+    &.btn-with-animation:active {
+        width: 10rem;
     }
     &.btn-with-animation:hover {
         color: var(--primary-color);
@@ -109,7 +108,7 @@ header .nav-links a {
             transform: translateX(-0.9rem);
         }
         span.animation-icon {
-            right: 1rem;
+            right: .7rem;
         }
     }
 }
@@ -138,8 +137,17 @@ header .logo {
 
 header .mobile-menu-btn {
     display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--primary-color-inverse);
     padding-right: 4px;
+}
+
+header .mobile-menu-btn img {
+    width: 1.9rem;
+    height: 1.8rem;
+    object-fit: contain;
+    display: block;
 }
 
 @media (min-width: 1024px) {
@@ -171,6 +179,14 @@ header .mobile-menu-btn {
     }
     header .nav-links a {
         display: inline-block;
+        &.btn-with-animation {
+            width: 11rem;
+        }
+        &.btn-with-animation:hover {
+            span.animation-icon {
+                right: 1rem;
+            }
+        }
     }
 
     .nav-links a:not([variant="outlined"]) {

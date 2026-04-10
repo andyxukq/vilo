@@ -29,6 +29,7 @@ const initCardsScroll = () => {
       type: 'fraction',
     },
     navigation: {
+      addIcons: false,
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },

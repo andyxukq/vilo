@@ -35,9 +35,11 @@
   padding-top: 5rem;
 }
 
-.parallax-text-content .arrow-icon svg {
+.parallax-text-content .arrow-icon img {
+  display: inline-block;
   width: 2.6rem;
-  height: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .parallax-images-wrapper {
@@ -95,7 +97,7 @@
         padding-top: 6rem;
     }
 
-    .parallax-text-content .arrow-icon svg {
+    .parallax-text-content .arrow-icon img {
         width: 3.4rem;
     }
 

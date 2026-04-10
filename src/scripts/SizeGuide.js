@@ -61,6 +61,7 @@ class SizeGuide extends HTMLElement {
         type: 'fraction',
       },
       navigation: {
+        addIcons: false,
         nextEl: nextBtn,
         prevEl: prevBtn,
       },
