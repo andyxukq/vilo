@@ -47,6 +47,13 @@ mobileMenuStyles.replaceSync(`
      border: none;
      cursor: pointer;
      padding: 0;
+     line-height: 0;
+   }
+   .close-btn img {
+     display: block;
+     width: 4.2rem;
+     height: 4.2rem;
+     object-fit: contain;
    }
    .overlay {
        position: fixed;
@@ -81,6 +88,12 @@ mobileMenuStyles.replaceSync(`
    }
    .icon-back {
      color: var(--text-color-secondary);
+   }
+   .icon-back img {
+     display: block;
+     width: 1.6rem;
+     height: 2rem;
+     object-fit: contain;
    }
    .icon-back { opacity: 0; visibility: hidden; }
    .icon-logo { opacity: 1; visibility: visible; }

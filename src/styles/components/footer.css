@@ -21,8 +21,12 @@ footer .promo-grid {
   gap: 3rem;
 }
 
-footer .promo-item-icon svg{
+footer .promo-item-icon img {
+  display: block;
   height: 3.8rem;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 footer .promo-item {
