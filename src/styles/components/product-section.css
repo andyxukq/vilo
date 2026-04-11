@@ -696,6 +696,14 @@ product-media .product-section-promo {
 .green-badge {
   background-color: var(--green-badge);
 }
+
+.product-payment-plan-badge {
+  display: block;
+  height: 2rem;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
 .orange-badge {
   background-color: var(--orange-badge);
 }

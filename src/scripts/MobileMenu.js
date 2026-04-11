@@ -129,14 +129,7 @@ class MobileMenu extends HTMLElement {
                     <div class="drawer-header">
                       <div class="drawer-header-btn">
                         <div class="icon-back" aria-label="Back to main menu">
-                          <svg width="10px" height="16px" viewBox="0 0 10 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                              <title>Back</title>
-                              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                  <g transform="translate(-22, -149)" fill="currentColor" fill-rule="nonzero">
-                                      <path d="M30.6183185,149.32494 C30.9883505,148.954908 31.5248804,148.891497 31.8166916,149.183308 C32.1085028,149.47512 32.0450923,150.01165 31.6750603,150.381681 L25.067,156.989 L31.6750603,163.618319 C32.0450923,163.98835 32.1085028,164.52488 31.8166916,164.816692 C31.5248804,165.108503 30.9883505,165.045092 30.6183185,164.67506 L22.9330038,157 Z"></path>
-                                  </g>
-                              </g>
-                          </svg>
+                          <img src="/images/icons/icon-caret-left.png" alt="" width="16" height="20" decoding="async">
                         </div>
                         <div class="icon-logo" >
                           <svg width="68px" height="22px" viewBox="0 0 68 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
@@ -151,18 +144,8 @@ class MobileMenu extends HTMLElement {
                           </svg>
                         </div>
                       </div>
-                      <button class="close-btn" role="button" aria-label="Close menu">
-                        <svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                          <title>Close menu</title>
-                          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                              <g transform="translate(-350, -136)">
-                                  <g transform="translate(350, 136)">
-                                      <circle stroke="#514A44" stroke-width="0.8" fill="#D6DBDD" cx="21" cy="21" r="20.6"></circle>
-                                      <path d="M27.6183185,13.3249397 C27.9883505,12.9549077 28.5248804,12.8914972 28.8166916,13.1833084 C29.1085028,13.4751196 29.0450923,14.0116495 28.6750603,14.3816815 L22.057,21 L28.6750603,27.6183185 C29.0450923,27.9883505 29.1085028,28.5248804 28.8166916,28.8166916 C28.5248804,29.1085028 27.9883505,29.0450923 27.6183185,28.6750603 L21,22.057 L14.3816815,28.6750603 C14.0424855,29.0142563 13.5633851,29.095805 13.2611216,28.882272 L13.1833084,28.8166916 C12.8914972,28.5248804 12.9549077,27.9883505 13.3249397,27.6183185 L19.943,21 L13.3249397,14.3816815 C12.9549077,14.0116495 12.8914972,13.4751196 13.1833084,13.1833084 C13.4751196,12.8914972 14.0116495,12.9549077 14.3816815,13.3249397 L21,19.943 Z" fill="var(--text-color-secondary)" fill-rule="nonzero"></path>
-                                  </g>
-                              </g>
-                          </g>
-                        </svg>
+                      <button class="close-btn" type="button" aria-label="Close menu">
+                        <img src="/images/icons/icon-menu-close.png" alt="" width="42" height="42" decoding="async">
                       </button>
                     </div>
                     <div class="container drawer-content">
