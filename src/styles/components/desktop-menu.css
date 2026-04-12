@@ -71,6 +71,7 @@ desktop-menu {
   justify-content: space-between;
   height: 100%;
   padding-block: 1rem;
+  min-width: 23rem;
 }
 
 .menu-list-item-link {
@@ -94,6 +95,7 @@ desktop-menu {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .menu-list-item-icon img {
