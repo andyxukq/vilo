@@ -36,11 +36,8 @@
   <main>
     <section class="hero-section">
       <div class="hero-section-wrapper gsap-hero-section-wrapper">
-        <div class="container h-full">
-          <div class="hero-section-content gsap-hero-content-animation">
-
+          <div class="container hero-section-content gsap-hero-content-animation">
             <h1 class="hero-section-title"><span class="secondary-text">The Ring</span> That <br> Listens to You </h1>
-            
             <div class="hero-section-ctas">
               <a href="/product/" class="btn-with-animation">
                 Join the Quiet Revolution
@@ -48,18 +45,18 @@
               </a>
             </div>
           </div>
-          <div class="hero-image-holder gsap-hero-image-holder">
+          <div class="hero-image-holder">
             <!-- !! in case of updating this images src, please update the 'href' for preload links in the head -->
             <img
-              class="hero-main-image-mobile"
+              class="hero-main-image-mobile skip-img-fadein"
               src="/images/home-page/hero-background-mobile.webp"
               fetchpriority="high"
               loading="eager"
               decoding="async"
               alt="">
             <img
-              class="hero-main-image-desktop"
-              src="/images/home-page/vilo-hero-image-main.webp"
+              class="hero-main-image-desktop skip-img-fadein"
+              src="/images/home-page/hero-background-desktop.webp"
               fetchpriority="high"
               loading="eager"
               decoding="async"
@@ -67,14 +64,13 @@
           </div>
           <div class="hero-secondary-image-holder">
             <img
-              class="hero-secondary-image gsap-hero-secondary-image"
+              class="hero-secondary-image gsap-hero-secondary-image skip-img-fadein"
               src="/images/home-page/vilo-hero-image-secondary.webp"
               fetchpriority="high"
               loading="eager"
               decoding="async"
               alt="">
           </div>
-        </div>
       </div>
     </section>
 

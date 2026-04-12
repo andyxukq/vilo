@@ -8,7 +8,7 @@
 }
 
 .hero-section-wrapper > .container {
-    padding: 0;
+    padding-inline: 0;
 }
 
 .hero-section-content{
@@ -34,27 +34,23 @@
     z-index: 1;
 }
 
+.hero-secondary-image-holder--hidden {
+    display: none;
+}
+
 .hero-secondary-image {
     border-radius: var(--border-radius-30);
     display: block;
     position: absolute;
-    bottom: -60dvh;
+    bottom: -50dvh;
     right: 0;
     width: 45%;
     height: auto;
     max-width: 54rem;
 }
-
 .hero-main-image-desktop {
-    border-radius: 8rem;
-    position: relative;
-    bottom: 0;
-    right: 2rem;
-    height: auto;
-    width: 52%;
     display: none;
 }
-
 .hero-section-title,
 .hero-section-subhead,
 .hero-section-ctas {
@@ -135,41 +131,22 @@
         margin: 0;
         position: relative;
     }
-    .hero-main-image {
-        display: block;
-    }
     .hero-main-image-mobile {
         display: none;
     }
-    .hero-main-image-desktop {
-        display: block;
-    }
     .hero-secondary-image {
-        bottom: -15dvh;
+        bottom: -70dvh;
         right: 50%;
         width: 25%;
         max-width: 54rem;
     }
-    .hero-section-wrapper {
-        height: 70dvh;
-        align-items: flex-start;
-        justify-content: center;
-        padding-block: 14rem 8rem;
-        text-align: left;
-        background-image: linear-gradient(207deg,
-                rgba(179, 203, 218, 0.77) 6%,
-                rgba(104, 142, 176, 0.77) 94%);
-    }
     .hero-section-content{
         justify-content: center;
         align-items: flex-start;
-        height: auto;
-        top:0;
         padding-block: 0;
-        padding-top: calc(100dvh / 3);
+        text-align: left;
         position: absolute;
         box-sizing: border-box;
-        width: auto;
     }
     .hero-section-wrapper > .container {
         padding-inline: 8rem;
@@ -177,10 +154,9 @@
 }
 
 @media (min-width: 1024px) {
-    .hero-section-wrapper {
-        height: 110dvh;
+    .hero-main-image-desktop {
+        display: block;
     }
-
     .hero-section-title {
         max-width: 95rem;
         font-size: 8rem;
@@ -194,15 +170,7 @@
     .hero-section-subhead,
     .hero-section-title {
         margin-bottom: 3.6rem;
-        padding-left: 5.8rem;
     }
-    .hero-section-eyebrow {
-        padding-left: 5.8rem;
-    }
-    .hero-section-ctas {
-        padding-left: 5.8rem;
-    }
-
 }
 
 @media (min-width: 1600px) {

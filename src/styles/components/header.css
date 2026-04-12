@@ -20,7 +20,7 @@ body.dm-open .header-is-sticky header {
 
 body.modal-open header,
 body:not(.dm-open).header-is-sticky header.header--hidden {
-    top: -200px;
+    top: -12rem;
 }
 
 header .container {
@@ -36,8 +36,8 @@ header .container {
     width: calc(100% - 2rem);
     padding-inline: 1.8rem;
     border-radius: var(--border-radius-12);
-    backdrop-filter: blur(1rem) saturate(103%) brightness(80%);
-    -webkit-backdrop-filter: blur(1rem) saturate(103%) brightness(80%);
+    backdrop-filter: blur(1rem) saturate(103%) brightness(90%);
+    -webkit-backdrop-filter: blur(1rem) saturate(103%) brightness(90%);
     background: rgba(255, 255, 255, 0.05);
     transition: background-color 0.4s ease-in-out, backdrop-filter 0.4s ease-in-out;
     position: absolute;

@@ -1,33 +1,40 @@
-const headerNode = document.querySelector('header')
-const bodyNode = document.body
-let lastScrollY = window.scrollY
-let ticking = false
+const headerNode = document.querySelector('header');
+const bodyNode = document.body;
 
-const updateHeader = () => {
+if (headerNode && bodyNode) {
+  let lastScrollY = window.scrollY;
+  let scrollRafId = 0;
 
-  if (bodyNode.classList.contains('dm-open')) {
-    ticking = false;
-    return;
-  }
-  const currentScrollY = window.scrollY
-  const threshold = 30
+  const HIDE_AFTER_Y = 150;
+  const reducedMotion =
+    globalThis.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches === true;
 
-  if (Math.abs(currentScrollY - lastScrollY) > threshold) {
-    headerNode.classList.toggle('header--hidden', currentScrollY > lastScrollY && currentScrollY > 100)
-    lastScrollY = currentScrollY
-  }
+  const flushScroll = () => {
+    scrollRafId = 0;
 
-  ticking = false
-}
+    if (!headerNode.isConnected || bodyNode.classList.contains('dm-open')) {
+      return;
+    }
 
-if (headerNode) {
+    const y = window.scrollY;
+    const delta = y - lastScrollY;
+    lastScrollY = y;
+
+    if (delta === 0) return;
+
+    headerNode.classList.toggle('header--hidden', delta > 0 && y > HIDE_AFTER_Y);
+  };
+
+  const onScroll = () => {
+    if (scrollRafId !== 0) return;
+    scrollRafId = globalThis.requestAnimationFrame(flushScroll);
+  };
+
   headerNode.addEventListener('focusin', () => {
     headerNode.classList.remove('header--hidden');
   });
-  globalThis.addEventListener('scroll', () => {
-    if (!ticking) {
-      globalThis.requestAnimationFrame(updateHeader)
-      ticking = true
-    }
-  })
+
+  if (!reducedMotion) {
+    globalThis.addEventListener('scroll', onScroll, { passive: true });
+  }
 }

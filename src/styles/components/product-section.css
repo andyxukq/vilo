@@ -663,7 +663,16 @@ product-media .product-section-promo {
   color: var(--primary-color)
 }
 .product-section-promo-block-heading .promo-block-icon {
-  width: 2.8rem;
+  width: 3rem;
+  height: 3rem;
+  flex-shrink: 0;
+}
+.product-section-promo-block-heading .promo-block-icon img {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  max-width: 100%;
+  object-fit: contain;
 }
 .product-section-promo-block-heading .promo-block-title {
   font-size: 1.4rem;
