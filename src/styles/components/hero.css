@@ -134,6 +134,9 @@
     .hero-main-image-mobile {
         display: none;
     }
+    .hero-main-image-desktop {
+        display: block;
+    }
     .hero-secondary-image {
         bottom: -70dvh;
         right: 50%;
@@ -154,9 +157,6 @@
 }
 
 @media (min-width: 1024px) {
-    .hero-main-image-desktop {
-        display: block;
-    }
     .hero-section-title {
         max-width: 95rem;
         font-size: 8rem;
