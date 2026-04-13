@@ -159,7 +159,7 @@ body.modal-open {
     outline: none;
     font-family: inherit;
     background: var(--primary-color);
-    border: 1px solid var(--border-color-animated-btn);
+    /* border: 1px solid var(--border-color-animated-btn); */ 
     color: var(--primary-color-inverse);
     padding: 1.8rem 3.5rem;
     border-radius: var(--border-radius-full);
