@@ -25,16 +25,6 @@
     z-index: 2;
 }
 
-.hero-secondary-image {
-    border-radius: var(--border-radius-30);
-    display: block;
-    position: absolute;
-    bottom: -50dvh;
-    right: 0;
-    width: 45%;
-    height: auto;
-    max-width: 54rem;
-}
 .hero-main-image-desktop {
     display: none;
 }
@@ -123,12 +113,6 @@
     }
     .hero-main-image-desktop {
         display: block;
-    }
-    .hero-secondary-image {
-        bottom: -70dvh;
-        right: 50%;
-        width: 25%;
-        max-width: 54rem;
     }
     .hero-section-content{
         justify-content: center;
