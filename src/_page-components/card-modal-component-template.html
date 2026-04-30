@@ -8,6 +8,7 @@
         --backdrop-blur: 5px;
         --modal-height-mobile: 80dvh;
         --modal-height-desktop: 100dvh;
+        --modal-hide-y: calc(100% + env(safe-area-inset-bottom, 0px) + 8px);
       }
 
       .overlay {
@@ -86,7 +87,7 @@
           width: 100%;
           height: var(--modal-height-mobile);
           border-radius: 3rem 3rem 0 0;
-          transform: translateY(100%);
+          transform: translateY(var(--modal-hide-y));
         }
 
         :host([open]) .modal {

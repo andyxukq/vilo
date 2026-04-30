@@ -136,7 +136,7 @@ class CardModal extends HTMLElement {
 
   open() {
     this.modal.style.transition = 'none'
-    this.modal.style.transform = this._mobileState ? 'translateY(100%)' : 'translateX(100%)'
+    this.modal.style.transform = this._mobileState ? 'translateY(var(--modal-hide-y))' : 'translateX(100%)'
 
     this.style.setProperty('--backdrop-alpha', '0.8')
     this.style.setProperty('--backdrop-blur', '5px')
@@ -157,7 +157,7 @@ class CardModal extends HTMLElement {
     document.body.classList.remove('modal-open')
     this.modal.style.transition = 'transform 0.3s cubic-bezier(0.2, 0, 0, 1)'
 
-    this.modal.style.transform = this._mobileState ? 'translateY(100%)' : 'translateX(100%)'
+    this.modal.style.transform = this._mobileState ? 'translateY(var(--modal-hide-y))' : 'translateX(100%)'
 
     this.removeAttribute('open')
 
